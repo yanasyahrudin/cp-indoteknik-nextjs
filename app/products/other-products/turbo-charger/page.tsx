@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import categories from './../../../data/turboChargerCategory';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const TurboChargerCategories = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -60,11 +61,13 @@ const TurboChargerCategories = () => {
                         >
                             <a href={category.link}>
                                 <div className='p-2 flex justify-center'>
-                                    <img
+                                    <Image
                                         className='rounded-md'
                                         src={category.imgSrc}
                                         loading='lazy'
                                         alt={category.name}
+                                        width={300}
+                                        height={200}
                                     />
                                 </div>
                                 <div className='px-4 pb-3'>

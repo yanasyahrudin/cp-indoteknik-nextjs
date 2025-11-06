@@ -7,6 +7,7 @@ import categories from '../../../../../data/injectorCategory';
 import { descriptionDetailCategory } from './../../../../../data/descriptionDetailCategory';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 const categoryDetails = {
     name: 'Nozzle',
@@ -46,7 +47,7 @@ const NozzleInjectorDetails = () => {
                 <GoBack />
                 <div className='flex flex-col md:flex-row rounded-xl'>
                     <div className='md:w-1/2 lg:ml-8 md:ml-8 xs:m-6 mb-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl'>
-                        <img
+                        <Image
                             src={categoryDetails.imageUrl}
                             alt={categoryDetails.name}
                             className='h-full w-full object-contain'

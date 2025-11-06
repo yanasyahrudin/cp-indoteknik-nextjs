@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 const UnitPumpCategories = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -72,11 +73,13 @@ const UnitPumpCategories = () => {
                         >
                             <a href={category.link}>
                                 <div className='p-2 flex justify-center'>
-                                    <img
+                                    <Image
                                         className='rounded-md'
                                         src={category.imgSrc}
                                         loading='lazy'
                                         alt={category.name}
+                                        width={900}
+                                        height={600}
                                     />
                                 </div>
                                 <div className='px-4 pb-3'>

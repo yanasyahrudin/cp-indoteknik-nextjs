@@ -6,6 +6,7 @@ import blogPosts from '../data/blogPostsData';
 import Head from 'next/head';
 import AnimatedSection from '../components/animated-section/page';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 function BlogPost({ post }) {
     useEffect(() => {
@@ -18,10 +19,13 @@ function BlogPost({ post }) {
             <div className='rounded-lg shadow-md flex flex-col sm:flex-row gap-4 pr-4'>
                 <div className='w-full sm:w-1/4 sm:py-4 sm:pl-4'>
                     <Link href={post.link}>
-                        <img
+                        <Image
                             className='w-full sm:w-56 rounded-xl'
                             src={post.image}
                             alt={post.title}
+                            width={900} 
+                            height={600}
+                            priority
                         />
                     </Link>
                 </div>

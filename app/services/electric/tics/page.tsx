@@ -7,6 +7,7 @@ import ContactUsService from './../../../components/contact-us-service/page';
 import AnimatedSection from './../../../components/animated-section/page';
 import Head from 'next/head';
 import GoogleReviewWidget from './../../../components/google-review-widget/page';
+import Image from 'next/image';
 
 const TICS = () => {
     const { t } = useTranslation('global');
@@ -83,10 +84,13 @@ const TICS = () => {
                 <div className='px-4'>
                     <div className='mt-5 flex flex-col sm:flex-row mx-4 lg:w-[1200px] lg:mx-auto mx-auto overflow-hidden bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl p-6'>
                         <div className='p-2 sm:w-1/2'>
-                            <img
+                            <Image
                                 className='rounded-xl object-cover h-[340px] w-[340px] '
                                 src='https://res.cloudinary.com/dcbryptkx/image/upload/w_500/v1724731302/cp-indoteknik-v3/services/services_tics_it_ib3skj.png'
                                 alt='TICS'
+                                width={900}
+                                height={600}
+                                priority
                             />
                         </div>
                         <div className='sm:p-4 p-2 sm:w-1/2 lg:p-0 lg:w-full flex flex-col '>

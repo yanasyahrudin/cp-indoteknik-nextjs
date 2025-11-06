@@ -7,6 +7,7 @@ import categories from '../../../../data/brakeCatgeory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const categoryDetails = {
     name: 'Brake Disc',
@@ -47,10 +48,13 @@ const BrakeDiscDetails = () => {
                 <GoBack />
                 <div className='flex flex-col md:flex-row rounded-xl'>
                     <div className='md:w-1/2 lg:ml-8 md:ml-8 xs:m-6 mb-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl'>
-                        <img
+                        <Image
                             src={categoryDetails.imageUrl}
                             alt={categoryDetails.name}
                             className='h-full w-full object-contain'
+                            width={900}
+                            height={600}
+                            priority
                         />
                     </div>
                     <div className='md:w-1/2 py-6 lg:pr-8 md:pr-8 xs:pr-6 xs:pl-6 md:pl-0 lg:pl-0 flex flex-col justify-start pb-10'>

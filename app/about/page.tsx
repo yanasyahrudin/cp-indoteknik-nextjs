@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { FaCheckCircle } from 'react-icons/fa';
 import AnimatedSection from './../components/animated-section/page';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const AboutUs = () => {
     const { t } = useTranslation('global');
@@ -40,10 +41,13 @@ const AboutUs = () => {
                     </h1>
                     <AnimatedSection zoomType='zoomIn'>
                         <div className='relative w-full sm:max-w-screen-lg my-4 rounded-xl sm:mt-10 mx-auto'>
-                            <img
+                            <Image
                                 className='w-full rounded-xl'
                                 src='https://res.cloudinary.com/dcbryptkx/image/upload/w_900/v1720083872/cp-indoteknik-v3/about/DSC_0387b_a7lshk.jpg'
                                 alt={t('about.imageAlt')}
+                                width={900}
+                                height={600}
+                                priority
                             />
                             <div className='absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent rounded-xl'></div>
                         </div>
@@ -110,27 +114,36 @@ const AboutUs = () => {
                 <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-5 lg:w-[1200px] lg:mx-auto mb-20 px-4 lg:px-0'>
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5 '>
                         <figure className='relative w-full h-60 '>
-                            <img
+                            <Image
                                 className='w-full h-full absolute top-0 start-0 object-cover rounded-xl'
                                 src='https://res.cloudinary.com/dcbryptkx/image/upload/w_600/v1720080589/cp-indoteknik-v3/about/DSC_0371bb_mk3g3v.jpg'
                                 alt={t('about.imageDescription')}
+                                width={900}
+                                height={600}
+                                priority
                             />
                             <div className='absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent rounded-xl'></div>
                         </figure>
                         <figure className='relative w-full h-60'>
-                            <img
+                            <Image
                                 className='w-full h-full absolute top-0 start-0 object-cover rounded-xl'
                                 src='https://res.cloudinary.com/dcbryptkx/image/upload/w_600/v1720080611/cp-indoteknik-v3/about/DSC_0371b_vdjybw.jpg'
                                 alt={t('about.imageDescription')}
+                                width={900}
+                                height={600}
+                                priority
                             />
                             <div className='absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent rounded-xl'></div>
                         </figure>
                     </div>
                     <figure className='relative w-full h-72 sm:h-96 lg:h-full '>
-                        <img
+                        <Image
                             className='w-full h-full absolute top-0 start-0 object-cover rounded-xl'
                             src='https://res.cloudinary.com/dcbryptkx/image/upload/h_600/v1720080580/cp-indoteknik-v3/about/DSC_0380b_q17gkh.jpg'
                             alt={t('about.imageDescription')}
+                            width={900}
+                                height={600}
+                                priority
                         />
                         <div className='absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent rounded-xl'></div>
                     </figure>

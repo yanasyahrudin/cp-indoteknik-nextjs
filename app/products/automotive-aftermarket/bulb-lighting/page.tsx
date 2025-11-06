@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import categories from './../../../data/bulbCategory';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const BulbsLightingCategories = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -67,11 +68,14 @@ const BulbsLightingCategories = () => {
                         >
                             <a href={category.link}>
                                 <div className='p-2 flex justify-center'>
-                                    <img
+                                    <Image
                                         className='rounded-md'
                                         src={category.imgSrc}
                                         loading='lazy'
                                         alt={category.name}
+                                        width={900}
+                                        height={600}
+                                        priority
                                     />
                                 </div>
                                 <div className='px-4 pb-3'>

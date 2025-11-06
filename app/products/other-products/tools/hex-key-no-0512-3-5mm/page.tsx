@@ -7,6 +7,7 @@ import categories from '../../../../data/toolsCategory'; // Update to the approp
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const categoryDetails = {
     name: 'Hex Key No. 0512 (3.5MM)',

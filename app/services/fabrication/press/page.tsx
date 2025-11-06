@@ -7,6 +7,7 @@ import ContactUsService from './../../../components/contact-us-service/page';
 import AnimatedSection from './../../../components/animated-section/page';
 import Head from 'next/head';
 import GoogleReviewWidget from './../../../components/google-review-widget/page';
+import Image from 'next/image';
 
 const Press = () => {
     const { t } = useTranslation('global');
@@ -76,10 +77,13 @@ const Press = () => {
                 <div className='px-4'>
                     <div className='mt-5 flex flex-col sm:flex-row mx-4 lg:w-[1200px] lg:mx-auto mx-auto overflow-hidden bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl p-6'>
                         <div className='p-2 sm:w-1/2'>
-                            <img
+                            <Image
                                 className='rounded-xl object-cover h-[340px] w-[340px] '
                                 src='https://res.cloudinary.com/dcbryptkx/image/upload/c_scale,w_600/v1721715379/cp-indoteknik-v3/services/Screenshot_2024-07-23_111244boo_l6bsb1.png'
                                 alt={t('services.press.imageAlt')}
+                                width={900}
+                                height={600}
+                                priority
                             />
                         </div>
                         <div className='sm:p-4 p-2 sm:w-1/2 lg:p-0 lg:w-full flex flex-col '>
