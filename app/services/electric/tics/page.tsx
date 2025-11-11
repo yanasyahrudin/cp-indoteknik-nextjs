@@ -2,11 +2,19 @@ import TICSClient from './TICSClient';
 
 export const metadata = {
   title: "Layanan TICS | Indo Teknik",
-  description: "Ini adalah halaman layanan TICS indo teknik",
+  description: "Layanan perbaikan dan servis TICS (Timing & Injection Control System) diesel di Indo Teknik Pekanbaru. Teknisi berpengalaman, alat modern, dan jaminan kualitas untuk kebutuhan industri dan otomotif Anda.",
   keywords: [
-    "alamat indo teknik",
-    "jam operasional indo teknik",
-    "kontak indo teknik",
+    "servis TICS diesel",
+    "perbaikan TICS",
+    "Timing & Injection Control System",
+    "Toyota TICS",
+    "Indo Teknik Pekanbaru",
+    "teknisi diesel profesional",
+    "spare part TICS",
+    "bengkel diesel Pekanbaru",
+    "alamat Indo Teknik",
+    "jam operasional Indo Teknik",
+    "kontak Indo Teknik"
   ],
 };
 

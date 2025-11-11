@@ -1,15 +1,23 @@
 import StarterAlternatorClient from './StarterAlternatorClient';
 
 export const metadata = {
-  title: "Kontak Kami | Indo Teknik",
-  description: "Ini adalah halaman kontak indo teknik",
+  title: "Starter dan Alternator | Indo Teknik",
+  description:
+    "Temukan starter dan alternator berkualitas untuk kendaraan dan mesin industri. Indo Teknik menyediakan berbagai pilihan starter dan alternator asli dari merek terpercaya untuk performa optimal.",
   keywords: [
-    "alamat indo teknik",
-    "jam operasional indo teknik",
-    "kontak indo teknik",
+    "starter",
+    "alternator",
+    "suku cadang starter",
+    "suku cadang alternator",
+    "Indo Teknik",
+    "sparepart otomotif",
+    "starter mobil",
+    "alternator mobil",
+    "komponen mesin",
+    "produk starter alternator",
   ],
 };
 
-export default function VP44Page() {
+export default function StarterAlternatorPage() {
   return <StarterAlternatorClient />;
 }

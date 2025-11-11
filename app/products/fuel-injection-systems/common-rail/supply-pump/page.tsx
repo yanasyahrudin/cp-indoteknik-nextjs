@@ -1,17 +1,30 @@
 import SupplyPumpClient from './SupplyPumpClient';
 
 export const metadata = {
-  title: "Supply Pump | Indo Teknik",
-  description: "Menyediakan suku cadang diesel dan otomotif purnajual asli dan lengkap dengan beragam merek dari Eropa, Jepang, dan Tiongkok. Kami hanya menjual suku cadang asli dan suku cadang pengganti berkualitas yang telah kami uji dan gunakan untuk perbaikan di bengkel kami.",
-  keywords: [
-    "supply pump kategori",
-    "indo teknik",
-    "bosch",
-    "itech",
-    "zexel",
-  ],
+    title: 'Supply Pump | Indo Teknik',
+    description:
+        'Temukan berbagai komponen supply pump seperti camshaft supply pump, filter supply pump, plunger, SCV, sensor temperature, repair kit, dan lainnya untuk sistem bahan bakar diesel. Indo Teknik menyediakan supply pump dan suku cadang asli untuk kebutuhan otomotif dan industri.',
+    keywords: [
+        'supply pump',
+        'camshaft supply pump',
+        'filter supply pump',
+        'plunger',
+        'SCV',
+        'sensor temperature',
+        'repair kit',
+        'pipe hose',
+        'rotor set feed pump',
+        'spring plunger',
+        'supply pump assy',
+        'valve pressure regulator',
+        'suku cadang diesel',
+        'Indo Teknik',
+        'komponen supply pump',
+        'sparepart bahan bakar',
+        'produk supply pump',
+    ],
 };
 
-export default function AboutPage() {
-  return <SupplyPumpClient />;
+export default function SupplyPumpPage() {
+    return <SupplyPumpClient />;
 }

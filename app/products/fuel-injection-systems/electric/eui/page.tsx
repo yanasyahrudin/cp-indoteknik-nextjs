@@ -3,8 +3,20 @@ import EUIClient from './EUIClient';
 export const metadata = {
     title: 'EUI | Indo Teknik',
     description:
-        'Menyediakan suku cadang diesel dan otomotif purnajual asli dan lengkap dengan beragam merek dari Eropa, Jepang, dan Tiongkok. Kami hanya menjual suku cadang asli dan suku cadang pengganti berkualitas yang telah kami uji dan gunakan untuk perbaikan di bengkel kami.',
-    keywords: ['eui kategori', 'indo teknik', 'bosch', 'itech', 'zexel'],
+        'Temukan suku cadang EUI (Electronic Unit Injector) asli dan berkualitas untuk sistem injeksi bahan bakar diesel. Indo Teknik menyediakan produk dari merek terpercaya seperti Bosch, Itech, dan Zexel, cocok untuk berbagai aplikasi otomotif dan industri.',
+    keywords: [
+        'EUI',
+        'Electronic Unit Injector',
+        'suku cadang diesel',
+        'fuel injection',
+        'Bosch',
+        'Itech',
+        'Zexel',
+        'Indo Teknik',
+        'kategori EUI',
+        'injektor elektrik',
+        'sparepart diesel',
+    ],
 };
 
 export default function EUIPage() {

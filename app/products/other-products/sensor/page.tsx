@@ -2,15 +2,22 @@ import SensorClient from './SensorClient';
 
 export const metadata = {
   title: "Sensor | Indo Teknik",
-  description: "Ini adalah halaman sensor indo teknik",
+  description:
+    "Temukan berbagai sensor seperti CKP sensor, common rail sensor, limiter sensor, dan MAP sensor berkualitas untuk sistem otomotif dan industri. Indo Teknik menyediakan sensor asli untuk monitoring dan kontrol mesin.",
   keywords: [
-    "tentang Indo Teknik",
-    "spare part diesel",
-    "sejarah perusahaan",
-    "profil perusahaan",
+    "sensor",
+    "CKP sensor",
+    "common rail sensor",
+    "limiter sensor",
+    "MAP sensor",
+    "sensor otomotif",
+    "sensor industri",
+    "suku cadang sensor",
     "Indo Teknik",
-    "distributor spare part",
-    "diesel Indonesia"
+    "komponen sensor",
+    "monitoring mesin",
+    "kontrol mesin",
+    "produk sensor",
   ],
 };
 

@@ -2,15 +2,27 @@ import InjectorClient from './InjectorClient';
 
 export const metadata = {
   title: "Injector | Indo Teknik",
-  description: "Pelajari lebih lanjut tentang Indo Teknik, penyedia spare part diesel terpercaya di Indonesia. Temukan sejarah, visi, misi, dan komitmen kami dalam menyediakan produk berkualitas dan layanan terbaik untuk kebutuhan industri Anda.",
+  description:
+    "Temukan berbagai komponen injector seperti nozzle, control valve, command piston, cup nozzle injector, solenoid, repair kit injector, dan lainnya untuk sistem injeksi bahan bakar diesel. Indo Teknik menyediakan injector dan suku cadang asli untuk kebutuhan otomotif dan industri.",
   keywords: [
-    "tentang Indo Teknik",
-    "spare part diesel",
-    "sejarah perusahaan",
-    "profil perusahaan",
+    "injector",
+    "nozzle",
+    "control valve",
+    "command piston",
+    "cup nozzle injector",
+    "solenoid",
+    "repair kit injector",
+    "shim calibration",
+    "micro filter injector",
+    "orifice valve",
+    "solenoid spring",
+    "solenoid valve",
+    "valve seat retaining nut",
+    "suku cadang diesel",
     "Indo Teknik",
-    "distributor spare part",
-    "diesel Indonesia"
+    "komponen injector",
+    "sparepart injeksi",
+    "produk injector",
   ],
 };
 

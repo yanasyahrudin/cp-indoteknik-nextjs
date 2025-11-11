@@ -2,13 +2,18 @@ import CommonRailPipeClient from './CommonRailPipeClient';
 
 export const metadata = {
   title: "Common Rail Pipe | Indo Teknik",
-  description: "Menyediakan suku cadang diesel dan otomotif purnajual asli dan lengkap dengan beragam merek dari Eropa, Jepang, dan Tiongkok. Kami hanya menjual suku cadang asli dan suku cadang pengganti berkualitas yang telah kami uji dan gunakan untuk perbaikan di bengkel kami.",
+  description: "Temukan berbagai pilihan pipa common rail diesel berkualitas di Indo Teknik Pekanbaru. Produk original, harga kompetitif, dan dukungan teknisi profesional untuk kebutuhan industri dan otomotif Anda.",
   keywords: [
-    "common rail pipe kategori",
-    "indo teknik",
-    "bosch",
-    "itech",
-    "zexel",
+    "pipa common rail diesel",
+    "produk common rail",
+    "spare part common rail",
+    "pipa common rail Pekanbaru",
+    "Indo Teknik Pekanbaru",
+    "kategori produk diesel",
+    "spare part diesel",
+    "teknisi diesel profesional",
+    "bengkel diesel Pekanbaru",
+    "jual pipa common rail"
   ],
 };
 

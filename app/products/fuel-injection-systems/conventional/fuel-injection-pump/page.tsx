@@ -2,16 +2,31 @@ import FuelInjectionClient from './FuelInjectionPumpClient';
 
 export const metadata = {
   title: "Fuel Injection Pump | Indo Teknik",
-  description: "Menyediakan suku cadang diesel dan otomotif purnajual asli dan lengkap dengan beragam merek dari Eropa, Jepang, dan Tiongkok. Kami hanya menjual suku cadang asli dan suku cadang pengganti berkualitas yang telah kami uji dan gunakan untuk perbaikan di bengkel kami.",
+  description:
+    "Temukan berbagai komponen fuel injection pump seperti arm assy, camshaft, delivery valve, plunger, rotor head, dan lainnya untuk sistem injeksi bahan bakar diesel konvensional. Indo Teknik menyediakan suku cadang asli dan berkualitas untuk kebutuhan otomotif dan industri.",
   keywords: [
-    "fuel injection pump kategori",
-    "indo teknik",
-    "bosch",
-    "itech",
-    "zexel",
+    "fuel injection pump",
+    "arm assy",
+    "camshaft",
+    "delivery valve",
+    "plunger",
+    "rotor head",
+    "pump assy",
+    "governor",
+    "bushing",
+    "gasket inline",
+    "gasket rotary",
+    "roller inline",
+    "roller rotary",
+    "solenoid FIP",
+    "suku cadang diesel",
+    "Indo Teknik",
+    "komponen injeksi bahan bakar",
+    "sparepart konvensional",
+    "produk fuel injection pump",
   ],
 };
 
-export default function AboutPage() {
+export default function FuelInjectionPumpPage() {
   return <FuelInjectionClient />;
 }

@@ -2,15 +2,20 @@ import SocketClient from './SocketClient';
 
 export const metadata = {
   title: "Socket | Indo Teknik",
-  description: "Pelajari lebih lanjut tentang Indo Teknik, penyedia spare part diesel terpercaya di Indonesia. Temukan sejarah, visi, misi, dan komitmen kami dalam menyediakan produk berkualitas dan layanan terbaik untuk kebutuhan industri Anda.",
+  description:
+    "Temukan berbagai socket seperti oil temperature sensor socket, SCV injector socket, dan solenoid valve hydraulic socket untuk kebutuhan otomotif, industri, dan bengkel. Indo Teknik menyediakan socket asli dan tahan lama untuk berbagai aplikasi.",
   keywords: [
-    "tentang Indo Teknik",
-    "spare part diesel",
-    "sejarah perusahaan",
-    "profil perusahaan",
+    "socket",
+    "oil temperature sensor socket",
+    "SCV injector socket",
+    "solenoid valve hydraulic socket",
+    "suku cadang socket",
+    "socket industri",
+    "socket otomotif",
     "Indo Teknik",
-    "distributor spare part",
-    "diesel Indonesia"
+    "alat bengkel",
+    "produk socket",
+    "komponen mesin",
   ],
 };
 

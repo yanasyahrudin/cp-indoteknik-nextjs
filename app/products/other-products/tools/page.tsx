@@ -2,15 +2,23 @@ import ToolsClient from './ToolsClient';
 
 export const metadata = {
   title: "Tools | Indo Teknik",
-  description: "Pelajari lebih lanjut tentang Indo Teknik, penyedia spare part diesel terpercaya di Indonesia. Temukan sejarah, visi, misi, dan komitmen kami dalam menyediakan produk berkualitas dan layanan terbaik untuk kebutuhan industri Anda.",
+  description:
+    "Temukan berbagai tools berkualitas untuk kebutuhan otomotif, industri, dan bengkel. Indo Teknik menyediakan alat khusus seperti injector tool, nozzle tester, digital caliper, dan lainnya dari merek terpercaya.",
   keywords: [
-    "tentang Indo Teknik",
-    "spare part diesel",
-    "sejarah perusahaan",
-    "profil perusahaan",
+    "tools",
+    "alat industri",
+    "alat bengkel",
+    "injector tool",
+    "nozzle tester",
+    "digital caliper",
+    "pressure gauge",
+    "stand sketmat",
+    "seal kit removal tool",
     "Indo Teknik",
-    "distributor spare part",
-    "diesel Indonesia"
+    "suku cadang alat",
+    "produk tools",
+    "alat otomotif",
+    "alat mekanik",
   ],
 };
 

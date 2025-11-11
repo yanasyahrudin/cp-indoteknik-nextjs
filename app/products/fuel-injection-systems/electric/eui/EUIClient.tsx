@@ -85,11 +85,9 @@ const EUICategories = () => {
                                 </div>
                                 <div className='px-4 pb-3'>
                                     <div>
-                                        <a>
                                             <h5 className='text-xl text-center font-semibold tracking-tight text-gray-900 dark:text-white '>
                                                 {category.name}
                                             </h5>
-                                        </a>
                                     </div>
                                 </div>
                             </a>

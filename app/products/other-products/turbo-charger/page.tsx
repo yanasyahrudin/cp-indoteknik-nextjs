@@ -2,15 +2,20 @@ import TurboChargerClient from './TurboChargerClient';
 
 export const metadata = {
   title: "Turbo Charger | Indo Teknik",
-  description: "Pelajari lebih lanjut tentang Indo Teknik, penyedia spare part diesel terpercaya di Indonesia. Temukan sejarah, visi, misi, dan komitmen kami dalam menyediakan produk berkualitas dan layanan terbaik untuk kebutuhan industri Anda.",
+  description:
+    "Temukan turbo charger, cartridge turbo, repair kit turbo, dan solenoid turbo berkualitas untuk kendaraan dan mesin industri. Indo Teknik menyediakan produk turbo charger asli dari merek terpercaya untuk performa optimal.",
   keywords: [
-    "tentang Indo Teknik",
-    "spare part diesel",
-    "sejarah perusahaan",
-    "profil perusahaan",
+    "turbo charger",
+    "cartridge turbo",
+    "repair kit turbo",
+    "solenoid turbo",
+    "turbo assy",
+    "suku cadang turbo",
+    "komponen turbo",
     "Indo Teknik",
-    "distributor spare part",
-    "diesel Indonesia"
+    "sparepart otomotif",
+    "turbo mesin",
+    "produk turbo charger",
   ],
 };
 

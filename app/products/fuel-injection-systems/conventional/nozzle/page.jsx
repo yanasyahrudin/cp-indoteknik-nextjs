@@ -1,17 +1,24 @@
-import AboutUsClient from './ClientNozzle';
+import ClientNozzle from './ClientNozzle';
 
 export const metadata = {
   title: "Nozzle | Indo Teknik",
-  description: "Menyediakan suku cadang diesel dan otomotif purnajual asli dan lengkap dengan beragam merek dari Eropa, Jepang, dan Tiongkok. Kami hanya menjual suku cadang asli dan suku cadang pengganti berkualitas yang telah kami uji dan gunakan untuk perbaikan di bengkel kami.",
+  description: "Temukan berbagai pilihan nozzle fuel injection diesel original dan berkualitas dari Bosch, Itech, Zexel, dan merek ternama lainnya di Indo Teknik Pekanbaru. Produk bergaransi, harga kompetitif, dan dukungan teknisi profesional untuk kebutuhan industri dan otomotif Anda.",
   keywords: [
-    "nozzle kategori",
-    "indo teknik",
-    "bosch",
-    "itech",
-    "zexel",
+    "nozzle fuel injection diesel",
+    "produk nozzle diesel",
+    "spare part nozzle",
+    "bosch nozzle",
+    "itech nozzle",
+    "zexel nozzle",
+    "Indo Teknik Pekanbaru",
+    "kategori produk diesel",
+    "spare part diesel",
+    "teknisi diesel profesional",
+    "bengkel diesel Pekanbaru",
+    "jual nozzle diesel"
   ],
 };
 
-export default function AboutPage() {
-  return <AboutUsClient />;
+export default function NozzlePage() {
+  return <ClientNozzle />;
 }
