@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
 import Image from 'next/image';
+import AnimatedSection from './../../../components/animated-section/page';
 
 const BrakeCategories = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -44,21 +45,7 @@ const BrakeCategories = () => {
 
     return (
         <div className='mt-10 mb-20 max-w-6xl mx-auto'>
-            <Head>
-                <title>{t('Brake Category')} | Indo Teknik</title>
-                <meta
-                    name='description'
-                    content={t(
-                        'Providing original and complete aftermarket diesel and automotive spare parts with a wide selection of brands from Europe, Japan and China. And only sell original spare parts and quality replacement parts that we have tested and used in repairs in our workshop.'
-                    )}
-                />
-                <meta
-                    name='keywords'
-                    content={`${t('Brake Category')}, ${t(
-                        'Brake Category'
-                    )} Indo Teknik, Bosch`}
-                />
-            </Head>
+            
             <h1 className='text-center font-bold text-3xl text-blue-900 animate-bounceIn'>
                 {t('Brake Category')}
             </h1>
@@ -77,36 +64,39 @@ const BrakeCategories = () => {
                     </button>
                 ))}
             </div>
-            <div className='h-full flex w-full justify-center items-center dark:bg-gray-800 p-2 mt-8'>
-                <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5'>
-                    {filteredCategories.map((category) => (
-                        <div
-                            key={category.id}
-                            className='relative hover:scale-105 shadow-md animate-bounceIn animate-bounceIn bg-gradient-to-bl from-neutral-50 to-blue-100 border rounded-xl  dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 '
-                        >
-                            <a href={category.link}>
-                                <div className='p-2 flex justify-center'>
-                                    <Image
-                                        className='rounded-md'
-                                        src={category.imgSrc}
-                                        loading='lazy'
-                                        alt={category.name}
-                                        width={900}
-                                        height={600}
-                                    />
-                                </div>
-                                <div className='px-4 pb-3'>
-                                    <div>
-                                        <h5 className='text-xl text-center font-semibold tracking-tight text-gray-900 dark:text-white '>
-                                            {category.name}
-                                        </h5>
+
+            <AnimatedSection zoomType='zoomIn'>
+                <div className='h-full flex w-full justify-center items-center dark:bg-gray-800 p-2 mt-8'>
+                    <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5'>
+                        {filteredCategories.map((category) => (
+                            <div
+                                key={category.id}
+                                className='relative hover:scale-105 shadow-md animate-bounceIn animate-bounceIn bg-gradient-to-bl from-neutral-50 to-blue-100 border rounded-xl  dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 '
+                            >
+                                <a href={category.link}>
+                                    <div className='p-2 flex justify-center'>
+                                        <Image
+                                            className='rounded-md'
+                                            src={category.imgSrc}
+                                            loading='lazy'
+                                            alt={category.name}
+                                            width={900}
+                                            height={600}
+                                        />
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                    ))}
+                                    <div className='px-4 pb-3'>
+                                        <div>
+                                            <h5 className='text-xl text-center font-semibold tracking-tight text-gray-900 dark:text-white '>
+                                                {category.name}
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </AnimatedSection>
         </div>
     );
 };

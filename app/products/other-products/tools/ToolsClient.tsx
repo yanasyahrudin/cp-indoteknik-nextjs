@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import categories from '../../../data/toolsCategory';
-import Head from 'next/head';
 import Image from 'next/image';
+import AnimatedSection from '@/app/components/animated-section/page';
 
 const ToolCategories = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -20,7 +20,7 @@ const ToolCategories = () => {
     const indexOfFirstCategory = indexOfLastCategory - categoriesPerPage;
     const currentCategories = filteredCategories.slice(
         indexOfFirstCategory,
-        indexOfLastCategory,
+        indexOfLastCategory
     );
 
     const paginate = (pageNumber) => {
@@ -38,20 +38,6 @@ const ToolCategories = () => {
 
     return (
         <div className='mt-10 mb-20 max-w-6xl mx-auto'>
-            <Head>
-                <title>{t('Tools Category')} | Indo Teknik</title>
-                <meta
-                    name='description'
-                    content={t(
-                        'Providing original and complete aftermarket diesel and automotive spare parts with a wide selection of brands from Europe, Japan and China. And only sell original spare parts and quality replacement parts that we have tested and used in repairs in our workshop.',
-                    )}
-                />
-                <meta
-                    name='keywords'
-                    content={`${t('Tools Category')}, ${t('Tools Category')} Indo Teknik, Itech`}
-                />
-            </Head>
-
             <h1 className='text-center font-bold text-3xl text-blue-900 animate-bounceIn'>
                 {t('Tools Category')}
             </h1>
@@ -68,7 +54,11 @@ const ToolCategories = () => {
                 ].map((tab) => (
                     <button
                         key={tab}
-                        className={`px-4 py-2 shadow-lg rounded-xl ${activeTab === tab ? 'bg-blue-900 text-white font-bold' : 'bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900'}`}
+                        className={`px-4 py-2 shadow-lg rounded-xl ${
+                            activeTab === tab
+                                ? 'bg-blue-900 text-white font-bold'
+                                : 'bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900'
+                        }`}
                         onClick={() => {
                             setActiveTab(tab);
                             setCurrentPage(1); // Reset to page 1 when changing tab
@@ -79,38 +69,38 @@ const ToolCategories = () => {
                 ))}
             </div>
 
-            <div className='h-full flex w-full justify-center items-center dark:bg-gray-800 p-2 mt-8'>
-                <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5'>
-                    {currentCategories.map((category) => (
-                        <div
-                            key={category.id}
-                            className='relative hover:scale-105 shadow-md animate-bounceIn animate-bounceIn bg-gradient-to-bl from-neutral-50 to-blue-100 border rounded-xl  dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 '
-                        >
-                            <a href={category.link}>
-                                <div className='p-2 flex justify-center'>
-                                    <Image
-                                        className='rounded-md'
-                                        src={category.imgSrc}
-                                        loading='lazy'
-                                        alt={category.name}
-                                        width={900}
-                                        height={600}
-                                    />
-                                </div>
-                                <div className='px-4 pb-3'>
-                                    <div>
-                                        
+            <AnimatedSection zoomType='zoomIn'>
+                <div className='h-full flex w-full justify-center items-center dark:bg-gray-800 p-2 mt-8'>
+                    <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5'>
+                        {currentCategories.map((category) => (
+                            <div
+                                key={category.id}
+                                className='relative hover:scale-105 shadow-md animate-bounceIn animate-bounceIn bg-gradient-to-bl from-neutral-50 to-blue-100 border rounded-xl  dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 '
+                            >
+                                <a href={category.link}>
+                                    <div className='p-2 flex justify-center'>
+                                        <Image
+                                            className='rounded-md'
+                                            src={category.imgSrc}
+                                            loading='lazy'
+                                            alt={category.name}
+                                            width={900}
+                                            height={600}
+                                        />
+                                    </div>
+                                    <div className='px-4 pb-3'>
+                                        <div>
                                             <h5 className='text-xl text-center font-semibold tracking-tight text-gray-900 dark:text-white '>
                                                 {category.name}
                                             </h5>
-                                        
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                    ))}
+                                </a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </AnimatedSection>
 
             <div className='flex justify-center mt-8'>
                 <nav>
@@ -119,14 +109,18 @@ const ToolCategories = () => {
                             ...Array(
                                 Math.ceil(
                                     filteredCategories.length /
-                                        categoriesPerPage,
-                                ),
+                                        categoriesPerPage
+                                )
                             ).keys(),
                         ].map((number) => (
                             <li key={number + 1} className='px-3'>
                                 <button
                                     onClick={() => paginate(number + 1)}
-                                    className={`px-4 py-2 shadow-lg rounded-xl ${currentPage === number + 1 ? 'bg-blue-900 text-white font-bold' : 'bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900'}`}
+                                    className={`px-4 py-2 shadow-lg rounded-xl ${
+                                        currentPage === number + 1
+                                            ? 'bg-blue-900 text-white font-bold'
+                                            : 'bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900'
+                                    }`}
                                 >
                                     {number + 1}
                                 </button>

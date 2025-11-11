@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import categories from '../../../data/sparkSplugCategory';
 import Head from 'next/head';
 import Image from 'next/image';
+import AnimatedSection from './../../../components/animated-section/page';
 
 const SparkPlugCategories = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -52,6 +53,8 @@ const SparkPlugCategories = () => {
                     </button>
                 ))}
             </div>
+
+            <AnimatedSection zoomType='zoomIn'>
             <div className='h-full flex w-full justify-center items-center dark:bg-gray-800 p-2 mt-8'>
                 <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5'>
                     {filteredSparkPlugs.map((category) => (
@@ -82,6 +85,7 @@ const SparkPlugCategories = () => {
                     ))}
                 </div>
             </div>
+            </AnimatedSection>
         </div>
     );
 };
