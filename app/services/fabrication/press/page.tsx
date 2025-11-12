@@ -3,6 +3,10 @@ import PressClient from './PressClient';
 export const metadata = {
   title: "Layanan Press | Indo Teknik",
   description: "Layanan press, fabrikasi, dan modifikasi mesin diesel di Indo Teknik Pekanbaru. Teknisi berpengalaman, alat modern, dan hasil presisi untuk kebutuhan industri dan otomotif Anda.",
+  
+  alternates: {
+    canonical: 'https://indo-teknik.com/services/fabrication/press',
+  },
   keywords: [
     "servis press mesin",
     "fabrikasi mesin diesel",

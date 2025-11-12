@@ -3,6 +3,10 @@ import UnleashMaximumPowerBoostYourCat320dPerformanceClient from './UnleashMaxim
 export const metadata = {
   title: "Unleash Maximum Power: Boost Your CAT 320D Performance | Indo Teknik",
   description: "Temukan cara meningkatkan performa mesin CAT 320D Anda dengan tips perawatan, solusi spare part, dan produk unggulan dari Indo Teknik Pekanbaru.",
+  alternates: {
+    canonical:
+      'https://indo-teknik.com/blog/2024/12/unleash-maximum-power-boost-your-cat-320d-performance',
+  },
   keywords: [
     "CAT 320D",
     "boost performance",

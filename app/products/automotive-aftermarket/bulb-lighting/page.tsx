@@ -4,6 +4,9 @@ export const metadata = {
     title: 'Lampu Bohlam | Indo Teknik',
     description:
         'Temukan berbagai jenis lampu bohlam aftermarket seperti all weather plus, fusion bright, plus 120, rallye, sportec bright, dan standard untuk kendaraan mobil dan motor. Indo Teknik menyediakan produk lampu bohlam berkualitas untuk pencahayaan optimal dan keselamatan berkendara.',
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/bulb-lighting',
+    },
     keywords: [
         'lampu bohlam',
         'bulb lighting',

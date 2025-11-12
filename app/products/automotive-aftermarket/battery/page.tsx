@@ -4,6 +4,10 @@ export const metadata = {
     title: 'Battery | Indo Teknik',
     description:
         'Temukan berbagai jenis aki/battery aftermarket seperti dry charged, dry charged motorcycle, dan maintenance free untuk kendaraan mobil dan motor. Indo Teknik menyediakan produk battery berkualitas untuk performa optimal dan daya tahan lama.',
+    alternates: {
+        canonical:
+            'https://indo-teknik.com/products/automotive-aftermarket/battery',
+    },
     keywords: [
         'battery',
         'aki',

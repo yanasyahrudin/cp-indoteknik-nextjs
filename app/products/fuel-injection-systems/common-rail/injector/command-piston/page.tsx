@@ -24,6 +24,9 @@ export const metadata = {
         'komponen mesin',
         'fuel injection',
     ],
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/fuel-injection-systems/common-rail/injector/command-piston',
+    },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
         description: `Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas untuk sistem injeksi bahan bakar diesel di Indo Teknik.`,

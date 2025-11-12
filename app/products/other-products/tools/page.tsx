@@ -4,7 +4,10 @@ export const metadata = {
   title: "Tools | Indo Teknik",
   description:
     "Temukan berbagai tools berkualitas untuk kebutuhan otomotif, industri, dan bengkel. Indo Teknik menyediakan alat khusus seperti injector tool, nozzle tester, digital caliper, dan lainnya dari merek terpercaya.",
-  keywords: [
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/other-products/tools',
+    },
+    keywords: [
     "tools",
     "alat industri",
     "alat bengkel",

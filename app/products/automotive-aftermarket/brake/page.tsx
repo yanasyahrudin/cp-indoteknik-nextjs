@@ -4,6 +4,9 @@ export const metadata = {
     title: 'Rem | Indo Teknik',
   description:
     "Temukan berbagai jenis rem aftermarket seperti brake disc, brake pad, dan komponen rem lainnya untuk kendaraan mobil dan motor. Indo Teknik menyediakan produk rem berkualitas untuk performa optimal dan keselamatan berkendara.",
+  alternates: {
+    canonical: 'https://indo-teknik.com/products/automotive-aftermarket/brake',
+  },
   keywords: [
     "brake",
     "rem",

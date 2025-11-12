@@ -17,6 +17,9 @@ export const metadata = {
         'Indo Teknik',
         'Automotive Aftermarket',
     ],
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/bulb-lighting/plus-120',
+    },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
         description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,

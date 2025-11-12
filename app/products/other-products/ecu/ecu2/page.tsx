@@ -1,13 +1,6 @@
-'use client';
-import React from 'react';
-import FindMarketplace from '../../../../components/find-market-place/page';
-import GoBack from '../../../../components/go-back/page';
-import RelatedCategories from '../../../../components/related-categories/page';
-import categories from '../../../../data/ecuCategory'; // Update to the appropriate category data if needed
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
-import Head from 'next/head';
-import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
+
+import EcuDetailsClient from './EcuDetailsClient'
 
 const categoryDetails = {
     name: 'Engine Control Unit (ECU)',
@@ -15,65 +8,38 @@ const categoryDetails = {
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721378469/cp-indoteknik-v3/productsEcu/High-Quality-D04FR-Engine-Controller-ECU-D04FR-004559-0281020220-for-Kobelco-SK130-8-SK140-8-SK135SR-removebg-preview_fmdog4.png', // Replace with actual image URL
 };
 
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+export const metadata = {
+    title: 'Engine Control Unit (ECU) | Indo Teknik',
+    description: 'ECU (Engine Control Unit) untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',
+    keywords: [
+        'ECU',
+        'Engine Control Unit',
+        'sistem injeksi bahan bakar',
+        'diesel',
+        'spare part diesel',
+        'otomotif',
+        'Indo Teknik',
+        'aftermarket',
+        'komponen mesin',
+        'fuel injection',
+    ],
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/other-products/ecu/ecu2',
+    },
+    openGraph: {
+        title: 'Engine Control Unit (ECU) | Indo Teknik',
+        description: 'ECU (Engine Control Unit) untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',
+        images: [
+            {
+                url: categoryDetails.imageUrl,
+                width: 600,
+                height: 400,
+                alt: 'Engine Control Unit (ECU)',
+            },
+        ],
+    },
 };
 
-const EngineControlUnit2Details = () => {
-    const filteredCategories = categories.filter(
-        (category) => category.imgSrc !== categoryDetails.imageUrl,
-    );
-
-    const shuffledCategories = shuffleArray([...filteredCategories]);
-
-    const { t } = useTranslation();
-
-    // Dynamically generated meta description and keywords
-    const metaDescription = `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`;
-    const metaKeywords = `${categoryDetails.name}, komponen otomotif, part diesel, Indo Teknik`;
-
-    return (
-        <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
-            <Head>
-                <title>{categoryDetails.name} | Indo Teknik</title>
-                <meta name='description' content={metaDescription} />
-                <meta name='keywords' content={metaKeywords} />
-            </Head>
-            <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
-                <GoBack />
-                <div className='flex flex-col md:flex-row rounded-xl'>
-                    <div className='md:w-1/2 lg:ml-8 md:ml-8 xs:m-6 mb-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl'>
-                        <Image
-                            src={categoryDetails.imageUrl}
-                            alt={categoryDetails.name}
-                            className='h-full w-full object-contain'
-                            width={900}
-                            height={600}
-                            priority
-                        />
-                    </div>
-                    <div className='md:w-1/2 py-6 lg:pr-8 md:pr-8 xs:pr-6 xs:pl-6 md:pl-0 lg:pl-0 flex flex-col justify-start pb-10'>
-                        <h3 className='text-4xl font-bold text-gray-800 mb-4'>
-                            {categoryDetails.name}
-                        </h3>
-                        <p className='text-lg text-gray-600 mb-6 text-justify'>
-                        {t(categoryDetails.description)}
-                        </p>
-
-                        <FindMarketplace />
-                    </div>
-                </div>
-            </div>
-
-            {/* Use the RelatedCategories component */}
-            <RelatedCategories categories={shuffledCategories} />
-        </div>
-    );
-};
-
-export default EngineControlUnit2Details;
+export default function EcuDetailsPage() {
+    return <EcuDetailsClient />;
+}

@@ -4,7 +4,11 @@ export const metadata = {
   title: "Socket | Indo Teknik",
   description:
     "Temukan berbagai socket seperti oil temperature sensor socket, SCV injector socket, dan solenoid valve hydraulic socket untuk kebutuhan otomotif, industri, dan bengkel. Indo Teknik menyediakan socket asli dan tahan lama untuk berbagai aplikasi.",
-  keywords: [
+  
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/other-products/socket',
+    },
+    keywords: [
     "socket",
     "oil temperature sensor socket",
     "SCV injector socket",

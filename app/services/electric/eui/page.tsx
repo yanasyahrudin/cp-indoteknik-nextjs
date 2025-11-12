@@ -3,6 +3,9 @@ import EUIClient from './EUIClient';
 export const metadata = {
   title: "Layanan EUI | Indo Teknik",
   description: "Layanan perbaikan dan servis EUI (Electronic Unit Injector) diesel di Indo Teknik Pekanbaru. Teknisi berpengalaman, alat modern, dan jaminan kualitas untuk kebutuhan industri dan otomotif Anda.",
+  alternates: {
+    canonical: 'https://indo-teknik.com/services/electric/eui',
+  },
   keywords: [
     "servis EUI diesel",
     "perbaikan EUI",

@@ -4,7 +4,11 @@ export const metadata = {
   title: "Starter dan Alternator | Indo Teknik",
   description:
     "Temukan starter dan alternator berkualitas untuk kendaraan dan mesin industri. Indo Teknik menyediakan berbagai pilihan starter dan alternator asli dari merek terpercaya untuk performa optimal.",
-  keywords: [
+  
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/other-products/starter-alternator',
+    },
+    keywords: [
     "starter",
     "alternator",
     "suku cadang starter",

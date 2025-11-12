@@ -3,6 +3,9 @@ import FabricationClient from './FabricationClient';
 export const metadata = {
   title: "Layanan Fabrikasi | Indo Teknik",
   description: "Layanan fabrikasi, modifikasi, dan pengelasan mesin diesel di Indo Teknik Pekanbaru. Didukung teknisi berpengalaman dan peralatan modern untuk kebutuhan industri dan otomotif Anda.",
+  alternates: {
+    canonical: 'https://indo-teknik.com/services/fabrication/fabrication',
+  },
   keywords: [
     "servis fabrikasi mesin",
     "pengelasan mesin diesel",

@@ -4,6 +4,10 @@ export const metadata = {
     title: 'Gasoline System | Indo Teknik',
     description:
         'Temukan komponen sistem bensin aftermarket seperti fuel pump, injector, regulator, dan filter bahan bakar untuk mobil. Solusi terbaik menjaga performa dan efisiensi mesin di Indo Teknik.',
+    
+        alternates: {
+        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/gasoline-system',
+    },
     keywords: [
         'gasoline system',
         'fuel pump',

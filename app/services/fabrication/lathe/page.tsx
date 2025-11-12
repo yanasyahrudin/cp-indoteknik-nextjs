@@ -3,6 +3,10 @@ import LatheClient from './LatheClient';
 export const metadata = {
   title: "Layanan Bubut | Indo Teknik",
   description: "Layanan bubut, fabrikasi, dan modifikasi mesin diesel di Indo Teknik Pekanbaru. Teknisi berpengalaman, alat modern, dan hasil presisi untuk kebutuhan industri dan otomotif Anda.",
+  
+  alternates: {
+    canonical: 'https://indo-teknik.com/services/fabrication/lathe',
+  },
   keywords: [
     "servis bubut mesin",
     "fabrikasi mesin diesel",

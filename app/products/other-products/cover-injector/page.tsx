@@ -4,6 +4,10 @@ export const metadata = {
     title: 'Cover Injector | Indo Teknik',
     description:
         'Temukan cover injector asli dan berkualitas untuk sistem injeksi bahan bakar diesel. Indo Teknik menyediakan berbagai pilihan cover injector untuk kebutuhan otomotif dan industri.',
+    
+        alternates: {
+        canonical: 'https://indo-teknik.com/products/other-products/cover-injector',
+    },
     keywords: [
         'cover injector',
         'cover injektor',

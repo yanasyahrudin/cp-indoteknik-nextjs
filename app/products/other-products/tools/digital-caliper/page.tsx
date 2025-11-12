@@ -1,79 +1,46 @@
-'use client';
-import React from 'react';
-import FindMarketplace from '../../../../components/find-market-place/page';
-import GoBack from '../../../../components/go-back/page';
-import RelatedCategories from '../../../../components/related-categories/page';
-import categories from '../../../../data/toolsCategory'; 
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
-import Head from 'next/head';
-import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
+
+import DigitalCaliperDetailsClient from './DigitalCaliperDetailsClient';
 
 const categoryDetails = {
     name: 'Digital Caliper',
-    description: descriptionDetailCategory,   imageUrl:
+    description: descriptionDetailCategory,
+    imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721963452/cp-indoteknik-v3/productsTools/digital_caliper_DSC_0013-removebg-preview_dlbjco.png', // Replace with actual image URL
 };
 
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+export const metadata = {
+    title: 'Digital Caliper | Indo Teknik',
+    description: 'Digital Caliper untuk pengukuran presisi pada berbagai material. Temukan spesifikasi, informasi, dan alat berkualitas hanya di Indo Teknik.',
+    keywords: [
+        'Digital Caliper',
+        'caliper digital',
+        'alat ukur',
+        'alat teknik',
+        'Indo Teknik',
+        'alat industri',
+        'alat bengkel',
+        'pengukuran presisi',
+        'alat pertukangan',
+        'digital measuring tool',
+    ],
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/other-products/tools/digital-caliper',
+    },
+    openGraph: {
+        title: 'Digital Caliper | Indo Teknik',
+        description: 'Digital Caliper untuk pengukuran presisi pada berbagai material. Temukan spesifikasi, informasi, dan alat berkualitas hanya di Indo Teknik.',
+        images: [
+            {
+                url: categoryDetails.imageUrl,
+                width: 600,
+                height: 400,
+                alt: 'Digital Caliper',
+            },
+        ],
+    },
 };
 
-const DigitalCaliperDetails = () => {
-    const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
-    );
-
-    const shuffledCategories = shuffleArray([...filteredCategories]);
-
-    const { t } = useTranslation();
-
-    // Dynamically generated meta description and keywords
-    const metaDescription = `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`;
-    const metaKeywords = `${categoryDetails.name}, komponen otomotif, part diesel, Indo Teknik`;
-
-    return (
-        <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
-            <Head>
-                <title>{categoryDetails.name} | Indo Teknik</title>
-                <meta name='description' content={metaDescription} />
-                <meta name='keywords' content={metaKeywords} />
-            </Head>
-            <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
-                <GoBack />
-                <div className='flex flex-col md:flex-row rounded-xl'>
-                    <div className='md:w-1/2 lg:ml-8 md:ml-8 xs:m-6 mb-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl'>
-                        <Image
-                            src={categoryDetails.imageUrl}
-                            alt={categoryDetails.name}
-                            className='h-full w-full object-contain'
-                            width={900}
-                            height={600}
-                            priority
-                        />
-                    </div>
-                    <div className='md:w-1/2 py-6 lg:pr-8 md:pr-8 xs:pr-6 xs:pl-6 md:pl-0 lg:pl-0 flex flex-col justify-start pb-10'>
-                        <h3 className='text-4xl font-bold text-gray-800 mb-4'>
-                            {categoryDetails.name}
-                        </h3>
-                        <p className='text-lg text-gray-600 mb-6 text-justify'>
-                        {t(categoryDetails.description)}
-                        </p>
-
-                        <FindMarketplace />
-                    </div>
-                </div>
-            </div>
-
-            {/* Use the RelatedCategories component */}
-            <RelatedCategories categories={shuffledCategories} />
-        </div>
-    );
-};
-
-export default DigitalCaliperDetails;
+export default function DigitalCaliperDetailsPage() {
+    return <DigitalCaliperDetailsClient />;
+}

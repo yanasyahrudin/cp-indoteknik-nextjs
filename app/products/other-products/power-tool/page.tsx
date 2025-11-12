@@ -4,7 +4,11 @@ export const metadata = {
   title: "Power Tool | Indo Teknik",
   description:
     "Temukan berbagai power tool seperti electric drill, grinder, circular saw, jet cleaner, dan alat ukur berkualitas untuk kebutuhan otomotif, industri, dan konstruksi. Indo Teknik menyediakan produk power tool asli dari merek terpercaya.",
-  keywords: [
+  
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/other-products/power-tool',
+    },
+    keywords: [
     "power tool",
     "electric drill",
     "electric grinder",

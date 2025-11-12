@@ -4,6 +4,9 @@ export const metadata = {
     title: 'Wiper | Indo Teknik',
     description:
         'Temukan berbagai jenis filter aftermarket seperti filter udara, filter oli, dan filter bahan bakar untuk kendaraan mobil dan motor. Indo Teknik menyediakan produk filter berkualitas untuk menjaga performa mesin dan efisiensi bahan bakar.',
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/wiper',
+    },
     keywords: [
         'lampu bohlam',
         'bulb lighting',

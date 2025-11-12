@@ -25,6 +25,9 @@ export const metadata = {
         'komponen mesin',
         'fuel injection',
     ],
+    alternates: {
+        canonical: 'https://indo-teknik.com/products/fuel-injection-systems/common-rail/injector/nop-shim',
+    },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
         description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,
