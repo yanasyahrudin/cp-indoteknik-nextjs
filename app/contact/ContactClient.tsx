@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoIosTime } from "react-icons/io";
 import { RiContactsBook2Fill } from "react-icons/ri";
-import Head from "next/head";
+
 import AnimatedSection from "../components/animated-section/page"; // Tambahkan import ini
 
 const ContactUs = () => {
@@ -20,17 +20,7 @@ const ContactUs = () => {
   }, []); // Empty dependency array to run only once on mount
   return (
     <>
-      <Head>
-        <title>{t("header.contact")} | Indo Teknik</title>
-        <meta
-          name="description"
-          content="Ini adalah halaman kontak indo teknik"
-        />
-        <meta
-          name="keywords"
-          content="alamat indo teknik, jam operasional indo teknik, kontak indo teknik"
-        />
-      </Head>
+
 
       <AnimatedSection zoomType="zoomIn">
         <div className="lg:w-[1200px] mx-4 lg:mx-auto py-8 lg:py-10">
