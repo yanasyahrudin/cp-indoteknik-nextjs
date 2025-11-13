@@ -2,31 +2,20 @@
 import React, { useEffect } from 'react';
 import SharePost from '../../../../components/share-post/page';
 import SidebarPost from '../../../../components/sidebar-post/page';
-import blogPosts from '../../../../data/blogPostsData';
+
 import Link from 'next/link';
 import GoBack from '../../../../components/go-back/page';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
 const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInjector =
-    () => {
-        const currentPostTitle =
-            'Tingkatkan Performa CAT 320D Anda: Dapatkan Tenaga Maksimal dengan Injector Hebat Ini!';
-        // Find the current post in blogPosts using the title
-        const currentPost = blogPosts.find(
-            (post) => post.title === currentPostTitle,
-        );
-
-        // Extract the publication date from the current post
-        const publicationDate = currentPost
-            ? new Date(currentPost.date).toLocaleDateString()
-            : 'Unknown Date';
-
-        // Sort blog posts by date (latest first)
-        const latestPosts = [...blogPosts].sort(
-            (a, b) => new Date(b.date) - new Date(a.date),
-        );
-
+    ({
+        currentPost,
+        publicationDate,
+        latestPosts,
+        jsonLd,
+        currentPostTitle,
+    }) => {
         useEffect(() => {
             // Scroll to the top when the component is mounted
             window.scrollTo({
@@ -37,17 +26,8 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
 
         const { t } = useTranslation('dec2024Blog');
 
-            const jsonLd = {
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: t(currentPostTitle),
-            datePublished: currentPost ? currentPost.date : '',
-            image: currentPost ? currentPost.image : '',
-        };
-
         return (
             <div className='my-10 lg:flex max-w-[1200px] lg:mx-auto gap-8 rounded-xl md:mx-4 mx-4'>
-
                 <div className='max-w-4xl px-8 pb-10 rounded-lg bg-gradient-to-bl from-neutral-50 to-blue-100'>
                     <div>
                         <div className='-mx-5 mb-5'>
@@ -79,16 +59,16 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
                             <p className='text-justify mt-5 text-gray-600 mb-4'>
                                 <strong>
                                     {t(
-                                        'Awet dan Tahan Lama: Performa Mesin Terjaga, Hemat Biaya Perawatan, dan Bahan Bakar',
+                                        'Awet dan Tahan Lama: Performa Mesin Terjaga, Hemat Biaya Perawatan, dan Bahan Bakar'
                                     )}
                                 </strong>{' '}
                                 <br />
                                 {t(
-                                    'Mesin yang handal adalah investasi jangka panjang. Dengan menggunakan',
+                                    'Mesin yang handal adalah investasi jangka panjang. Dengan menggunakan'
                                 )}{' '}
                                 <strong>{t('Injector CAT 320D,')} </strong>
                                 {t(
-                                    'performa mesin diesel Anda tetap terjaga dalam kondisi optimal. Selain itu, efisiensi bahan bakar yang lebih baik membuat pengeluaran harian menjadi lebih hemat, sekaligus mengurangi biaya perawatan yang sering muncul karena komponen yang cepat aus.',
+                                    'performa mesin diesel Anda tetap terjaga dalam kondisi optimal. Selain itu, efisiensi bahan bakar yang lebih baik membuat pengeluaran harian menjadi lebih hemat, sekaligus mengurangi biaya perawatan yang sering muncul karena komponen yang cepat aus.'
                                 )}{' '}
                             </p>
                         </div>
@@ -112,7 +92,7 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
                                         {t('Injector CAT 320D hadir dengan')}{' '}
                                         <strong>{t('harga ekonomis,')} </strong>
                                         {t(
-                                            'tanpa mengorbankan kualitas. Dengan banyak keunggulan yang ditawarkan, produk ini menjadi pilihan ideal untuk menjaga kinerja kendaraan Anda tetap prima. Anda tidak perlu khawatir soal anggaran—solusi hemat ini tetap memberikan standar premium yang layak Anda dapatkan.',
+                                            'tanpa mengorbankan kualitas. Dengan banyak keunggulan yang ditawarkan, produk ini menjadi pilihan ideal untuk menjaga kinerja kendaraan Anda tetap prima. Anda tidak perlu khawatir soal anggaran—solusi hemat ini tetap memberikan standar premium yang layak Anda dapatkan.'
                                         )}{' '}
                                     </p>
                                 </div>
@@ -147,13 +127,13 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
                                             </li>
                                             <li className='font-semibold'>
                                                 {t(
-                                                    'Kekuatan dan daya tahan lebih baik',
+                                                    'Kekuatan dan daya tahan lebih baik'
                                                 )}
                                             </li>
                                         </ul>
                                         <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                             {t(
-                                                'Dengan komponen ini, kendaraan Anda siap menghadapi segala tantangan di medan kerja, baik untuk proyek berat maupun aktivitas sehari-hari.',
+                                                'Dengan komponen ini, kendaraan Anda siap menghadapi segala tantangan di medan kerja, baik untuk proyek berat maupun aktivitas sehari-hari.'
                                             )}{' '}
                                         </p>
                                     </div>
@@ -177,25 +157,30 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
                             <p className='text-gray-600 mb-4 mt-6'>
                                 <strong>INDO TEKNIK</strong>{' '}
                                 {t(
-                                    'adalah solusi lengkap untuk semua kebutuhan diesel Anda. Kami menyediakan Injector CAT 320D berkualitas tinggi yang dirancang untuk memberikan tenaga maksimal pada mesin diesel Anda.',
+                                    'adalah solusi lengkap untuk semua kebutuhan diesel Anda. Kami menyediakan Injector CAT 320D berkualitas tinggi yang dirancang untuk memberikan tenaga maksimal pada mesin diesel Anda.'
                                 )}
                             </p>
                             <p className='text-gray-600 mb-4'>
                                 <strong>
                                     {t(
-                                        'BURUAN! BELANJA SEKARANG SEBELUM KEHABISAN!',
+                                        'BURUAN! BELANJA SEKARANG SEBELUM KEHABISAN!'
                                     )}
                                 </strong>
                                 <br />
                                 {t(
-                                    'Pastikan Anda tidak melewatkan kesempatan untuk mendapatkan',
+                                    'Pastikan Anda tidak melewatkan kesempatan untuk mendapatkan'
                                 )}{' '}
-                                <Link className='font-bold underline text-blue-900' href='/products/fuel-injection-systems/common-rail/injector'>{t('Injector CAT 320D')}</Link> {t('hanya di')}{' '}
-                                <strong>INDO TEKNIK</strong>.{' '}
+                                <Link
+                                    className='font-bold underline text-blue-900'
+                                    href='/products/fuel-injection-systems/common-rail/injector'
+                                >
+                                    {t('Injector CAT 320D')}
+                                </Link>{' '}
+                                {t('hanya di')} <strong>INDO TEKNIK</strong>.{' '}
                                 {t('Rasakan sendiri perbedaannya:')}{' '}
                                 <strong>
                                     {t(
-                                        'kinerja lebih halus, efisiensi bahan bakar meningkat, dan daya tahan luar biasa.',
+                                        'kinerja lebih halus, efisiensi bahan bakar meningkat, dan daya tahan luar biasa.'
                                     )}
                                 </strong>
                             </p>
@@ -224,7 +209,7 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
                                 </strong>{' '}
                                 <br />{' '}
                                 {t(
-                                    'Kunjungi kami sekarang dan buat mesin Anda bekerja lebih baik dari sebelumnya!',
+                                    'Kunjungi kami sekarang dan buat mesin Anda bekerja lebih baik dari sebelumnya!'
                                 )}
                             </p>
                         </div>
@@ -232,9 +217,9 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
                     <SharePost currentPostTitle={currentPostTitle} />
                 </div>
                 <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
+                    type='application/ld+json'
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <SidebarPost latestPosts={latestPosts} />
             </div>
         );

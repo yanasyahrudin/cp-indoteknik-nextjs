@@ -1,3 +1,4 @@
+import blogPosts from '@/app/data/blogPostsData.js';
 import TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4Hilux2GDITechClient from './TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4Hilux2GDITechClient.tsx';
 
 export const metadata = {
@@ -22,7 +23,30 @@ export const metadata = {
 };
 
 export default function TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4Hilux2GDITechPage() {
+    const currentPostTitle =
+        'Rahasia Mesin Diesel Lebih Awet dan Optimal: Valve G4 Hilux 2GD Itech';
+    // Find the current post in blogPosts using the title
+
+    const currentPost = blogPosts.find(
+        (post) => post.title === currentPostTitle
+    );
+
+    // Extract the publication date from the current post
+    const publicationDate = currentPost
+        ? new Date(currentPost.date).toLocaleDateString()
+        : 'Unknown Date';
+
+    // Sort blog posts by date (latest first)
+    const latestPosts = [...blogPosts].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+    );
     return (
-        <TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4Hilux2GDITechClient />
+        <TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4Hilux2GDITechClient
+            currentPost={currentPost}
+            publicationDate={publicationDate}
+            latestPosts={latestPosts}
+            currentPostTitle={currentPostTitle}
+            jsonLd={jsonLd}
+        />
     );
 }

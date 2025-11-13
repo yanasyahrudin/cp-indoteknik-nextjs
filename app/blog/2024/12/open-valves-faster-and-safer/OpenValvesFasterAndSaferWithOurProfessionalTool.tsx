@@ -2,30 +2,19 @@
 import React, { useEffect } from 'react';
 import SharePost from '../../../../components/share-post/page';
 import SidebarPost from '../../../../components/sidebar-post/page';
-import blogPosts from '../../../../data/blogPostsData';
 import Link from 'next/link';
 import GoBack from '../../../../components/go-back/page';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
-    const currentPostTitle =
-        'Buka Valve Lebih Cepat dan Aman dengan Tool Injector Ford 2.2 dari Itech!';
-    // Find the current post in blogPosts using the title
-    const currentPost = blogPosts.find(
-        (post) => post.title === currentPostTitle
-    );
-
-    // Extract the publication date from the current post
-    const publicationDate = currentPost
-        ? new Date(currentPost.date).toLocaleDateString()
-        : 'Unknown Date';
-
-    // Sort blog posts by date (latest first)
-    const latestPosts = [...blogPosts].sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
-    );
-
+const OpenValvesFasterAndSaferWithOurProfessionalTool = ({
+    currentPost,
+    publicationDate,
+    latestPosts,
+    jsonLd,
+    currentPostTitle,
+}) => {
+   
     useEffect(() => {
         // Scroll to the top when the component is mounted
         window.scrollTo({
@@ -36,13 +25,6 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
 
     const { t } = useTranslation('dec2024Blog');
 
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: t(currentPostTitle),
-        datePublished: currentPost ? currentPost.date : '',
-        image: currentPost ? currentPost.image : '',
-    };
 
     return (
         <div className='my-16 lg:flex max-w-[1200px] lg:mx-auto gap-8 rounded-xl md:mx-4 mx-4'>

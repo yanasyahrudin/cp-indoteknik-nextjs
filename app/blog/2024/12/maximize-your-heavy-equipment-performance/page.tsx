@@ -1,4 +1,5 @@
 import MaximizeYourHeavyEquipmentPerformanceClient from './MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPumpClient';
+import blogPosts from '../../../../data/blogPostsData';
 
 export const metadata = {
     title: 'Maksimalkan Performa Alat Berat Anda dengan Injection Pump CAT 320D | Indo Teknik',
@@ -22,5 +23,37 @@ export const metadata = {
 };
 
 export default function MaximizeYourHeavyEquipmentPerformancePage() {
-    return <MaximizeYourHeavyEquipmentPerformanceClient />;
+    const currentPostTitle =
+        'Maksimalkan Performa Alat Berat Anda dengan Injection Pump CAT 320D!';
+    // Find the current post in blogPosts using the title
+
+    const currentPost = blogPosts.find(
+        (post) => post.title === currentPostTitle
+    );
+
+    // Extract the publication date from the current post
+    const publicationDate = currentPost
+        ? new Date(currentPost.date).toLocaleDateString()
+        : 'Unknown Date';
+
+    // Sort blog posts by date (latest first)
+    const latestPosts = [...blogPosts].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+    );
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: currentPostTitle,
+        datePublished: currentPost ? currentPost.date : '',
+        image: currentPost ? currentPost.image : '',
+    };
+    return (
+        <MaximizeYourHeavyEquipmentPerformanceClient
+            jsonLd={jsonLd}
+            currentPost={currentPost}
+            publicationDate={publicationDate}
+            latestPosts={latestPosts}
+            currentPostTitle={currentPostTitle}
+        />
+    );
 }

@@ -2,31 +2,18 @@
 import React, { useEffect } from 'react';
 import SharePost from '../../../../components/share-post/page';
 import SidebarPost from '../../../../components/sidebar-post/page';
-import blogPosts from '../../../../data/blogPostsData';
 import Link from 'next/link';
 import GoBack from '../../../../components/go-back/page';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
-    const currentPostTitle =
-        'Maksimalkan Performa Alat Berat Anda dengan Injection Pump CAT 320D!';
-    // Find the current post in blogPosts using the title
-
-    const currentPost = blogPosts.find(
-        (post) => post.title === currentPostTitle,
-    );
-
-    // Extract the publication date from the current post
-    const publicationDate = currentPost
-        ? new Date(currentPost.date).toLocaleDateString()
-        : 'Unknown Date';
-
-    // Sort blog posts by date (latest first)
-    const latestPosts = [...blogPosts].sort(
-        (a, b) => new Date(b.date) - new Date(a.date),
-    );
-
+const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = ({
+    currentPost,
+    latestPosts,
+    jsonLd,
+    publicationDate,
+    currentPostTitle,
+}) => {
     useEffect(() => {
         // Scroll to the top when the component is mounted
         window.scrollTo({
@@ -37,17 +24,8 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
 
     const { t } = useTranslation('dec2024Blog');
 
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: t(currentPostTitle),
-        datePublished: currentPost ? currentPost.date : '',
-        image: currentPost ? currentPost.image : '',
-    };
-
     return (
         <div className='my-16 lg:flex max-w-[1200px] lg:mx-auto gap-8 rounded-xl md:mx-4 mx-4'>
-
             <div className='max-w-4xl px-8 pb-10 rounded-lg bg-gradient-to-bl from-neutral-50 to-blue-100'>
                 <div>
                     <div className='-mx-5 mb-5'>
@@ -77,11 +55,11 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
                         />
                         <p className='text-justify mt-5 text-gray-600 mb-4 lg:w-[800px]'>
                             {t(
-                                'Apakah Anda ingin meningkatkan performa alat berat Anda sambil tetap menghemat biaya operasional?',
+                                'Apakah Anda ingin meningkatkan performa alat berat Anda sambil tetap menghemat biaya operasional?'
                             )}{' '}
                             <strong>{t('Injection Pump CAT 320D')}</strong>{' '}
                             {t(
-                                'adalah solusi terbaik untuk kebutuhan alat berat Anda. Dirancang untuk memberikan kinerja maksimal, produk ini telah menjadi pilihan utama bagi para profesional di industri alat berat.',
+                                'adalah solusi terbaik untuk kebutuhan alat berat Anda. Dirancang untuk memberikan kinerja maksimal, produk ini telah menjadi pilihan utama bagi para profesional di industri alat berat.'
                             )}
                         </p>
                     </div>
@@ -112,7 +90,7 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
                                                 {t('Injection Pump CAT 320D ')}
                                             </strong>{' '}
                                             {t(
-                                                'dibuat dengan material unggulan yang dirancang untuk menghadapi kondisi kerja paling ekstrem. Banyak pengguna yang telah membuktikan keandalannya. Anda tidak perlu khawatir soal ketahanan, karena produk ini mampu bertahan dalam jangka waktu yang lama.',
+                                                'dibuat dengan material unggulan yang dirancang untuk menghadapi kondisi kerja paling ekstrem. Banyak pengguna yang telah membuktikan keandalannya. Anda tidak perlu khawatir soal ketahanan, karena produk ini mampu bertahan dalam jangka waktu yang lama.'
                                             )}
                                         </p>
                                     </div>
@@ -134,13 +112,13 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
                                     <div>
                                         <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                             {t(
-                                                'Meski memiliki banyak keunggulan,',
+                                                'Meski memiliki banyak keunggulan,'
                                             )}{' '}
                                             <strong>
                                                 {t('Injection Pump CAT 320D')}
                                             </strong>{' '}
                                             {t(
-                                                'tetap hadir dengan harga yang ekonomis. Ini menjadikannya pilihan yang sangat realistis tanpa harus mengorbankan kualitas. Dengan produk ini, Anda mendapatkan performa premium tanpa membebani anggaran.',
+                                                'tetap hadir dengan harga yang ekonomis. Ini menjadikannya pilihan yang sangat realistis tanpa harus mengorbankan kualitas. Dengan produk ini, Anda mendapatkan performa premium tanpa membebani anggaran.'
                                             )}
                                         </p>
                                     </div>
@@ -150,7 +128,7 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
                             <div className='ml-4'>
                                 <h3 className='text-lg font-semibold text-gray-800 mt-4 mb-2'>
                                     {t(
-                                        '3. Hemat Bahan Bakar dan Performa Tinggi',
+                                        '3. Hemat Bahan Bakar dan Performa Tinggi'
                                     )}
                                 </h3>
                                 <div className='lg:flex gap-4'>
@@ -164,13 +142,13 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
                                     <div>
                                         <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                             {t(
-                                                'Teknologi canggih yang digunakan dalam',
+                                                'Teknologi canggih yang digunakan dalam'
                                             )}{' '}
                                             <strong>
                                                 {t('Injection Pump CAT 320D')}
                                             </strong>{' '}
                                             {t(
-                                                'dirancang untuk menyelesaikan proyek besar dengan lebih cepat dan efisien. Selain itu, produk ini membantu Anda menghemat bahan bakar, sehingga operasional alat berat Anda menjadi lebih hemat biaya.',
+                                                'dirancang untuk menyelesaikan proyek besar dengan lebih cepat dan efisien. Selain itu, produk ini membantu Anda menghemat bahan bakar, sehingga operasional alat berat Anda menjadi lebih hemat biaya.'
                                             )}
                                         </p>
                                     </div>
@@ -183,18 +161,18 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
                 <div>
                     <h2 className='text-lg font-semibold text-gray-800 mt-6 mb-2'>
                         {t(
-                            'Mengapa Pilih Injection Pump CAT 320D dari INDO TEKNIK?',
+                            'Mengapa Pilih Injection Pump CAT 320D dari INDO TEKNIK?'
                         )}
                     </h2>
                     <div className=' gap-6 text-justify'>
                         <p className='text-gray-600 mb-4'>
                             <strong>{t('INDO TEKNIK')} </strong>
                             {t(
-                                'adalah tempat terpercaya untuk mendapatkan',
+                                'adalah tempat terpercaya untuk mendapatkan'
                             )}{' '}
                             <strong>{t('Injection Pump CAT 320D.')}</strong>{' '}
                             {t(
-                                'Dengan reputasi yang telah teruji, kami menyediakan produk berkualitas tinggi yang siap membantu Anda menyelesaikan proyek-proyek besar dengan lebih mudah.',
+                                'Dengan reputasi yang telah teruji, kami menyediakan produk berkualitas tinggi yang siap membantu Anda menyelesaikan proyek-proyek besar dengan lebih mudah.'
                             )}
                         </p>
                     </div>
@@ -206,36 +184,40 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
                     </h2>
                     <div className='gap-6 text-justify'>
                         <p className='text-gray-600 mb-4'>
-                            {t('Jangan lewatkan kesempatan untuk memiliki')}
-                                {' '}
-                            <Link className='font-bold underline text-blue-900' href='/products/fuel-injection-systems/conventional/fuel-injection-pump'>
-
+                            {t('Jangan lewatkan kesempatan untuk memiliki')}{' '}
+                            <Link
+                                className='font-bold underline text-blue-900'
+                                href='/products/fuel-injection-systems/conventional/fuel-injection-pump'
+                            >
                                 {t('Injection Pump CAT 320D.')}
                             </Link>{' '}
                             {t('Stok terbatas! Pesan sekarang hanya di')}{' '}
                             <strong>{t('INDO TEKNIK')}</strong>{' '}
-                            {t(
-                                'dan rasakan sendiri keunggulan produk ini.',
-                            )}
+                            {t('dan rasakan sendiri keunggulan produk ini.')}
                         </p>
                         <p className='text-gray-600 mb-4'>
                             {' '}
-                            <Link className='font-bold underline text-blue-900' href='/contact'>
-                            {t('Hubungi kami')}
-                            </Link>
-                            {' '}
+                            <Link
+                                className='font-bold underline text-blue-900'
+                                href='/contact'
+                            >
+                                {t('Hubungi kami')}
+                            </Link>{' '}
                             {t('untuk pemesan online atau kunjungi')}{' '}
                             <strong>{t('INDO TEKNIK')} </strong>
                             {t('langsung di')}{' '}
-                            <Link className='font-bold underline text-blue-900' href="https://maps.app.goo.gl/4xGp2xYfn98Uo5437">
-                            {t(
-                                'Jl. Riau Ujung, Kel. Tampan, Kec. Payung Sekaki, Pekanbaru - Riau, 28292.',
-                            )}
+                            <Link
+                                className='font-bold underline text-blue-900'
+                                href='https://maps.app.goo.gl/4xGp2xYfn98Uo5437'
+                            >
+                                {t(
+                                    'Jl. Riau Ujung, Kel. Tampan, Kec. Payung Sekaki, Pekanbaru - Riau, 28292.'
+                                )}
                             </Link>
                         </p>
                         <p className='text-gray-600 mb-4'>
                             {t(
-                                'Tingkatkan efisiensi kerja alat berat Anda hari ini juga!',
+                                'Tingkatkan efisiensi kerja alat berat Anda hari ini juga!'
                             )}
                         </p>
                     </div>
@@ -244,7 +226,7 @@ const MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPump = () => {
                 <SharePost currentPostTitle={currentPostTitle} />
             </div>
             <script
-                type="application/ld+json"
+                type='application/ld+json'
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <SidebarPost latestPosts={latestPosts} />
