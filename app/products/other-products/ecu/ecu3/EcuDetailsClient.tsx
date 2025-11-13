@@ -5,7 +5,7 @@ import GoBack from '../../../../components/go-back/page';
 import RelatedCategories from '../../../../components/related-categories/page';
 import categories from '../../../../data/ecuCategory'; // Update to the appropriate category data if needed
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
-import Head from 'next/head';
+
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
@@ -33,6 +33,14 @@ const EngineControlUnit2Details = () => {
 
     const { t } = useTranslation();
 
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+    
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
             
@@ -61,6 +69,11 @@ const EngineControlUnit2Details = () => {
                     </div>
                 </div>
             </div>
+
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             {/* Use the RelatedCategories component */}
             <RelatedCategories categories={shuffledCategories} />

@@ -14,7 +14,7 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
             'Jaga Mesin Diesel Anda Tetap Prima dengan Pipa Common Rail Kobelco SK130!';
         // Find the current post in blogPosts using the title
         const currentPost = blogPosts.find(
-            (post) => post.title === currentPostTitle,
+            (post) => post.title === currentPostTitle
         );
 
         // Extract the publication date from the current post
@@ -24,7 +24,7 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
 
         // Sort blog posts by date (latest first)
         const latestPosts = [...blogPosts].sort(
-            (a, b) => new Date(b.date) - new Date(a.date),
+            (a, b) => new Date(b.date) - new Date(a.date)
         );
 
         useEffect(() => {
@@ -37,9 +37,21 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
 
         const { t } = useTranslation('dec2024Blog');
 
+        const jsonLd = {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: t(currentPostTitle),
+            description: t(
+                'Mesin diesel yang andal dan efisien adalah kunci untuk produktivitas dan performa terbaik. Salah satu komponen vital yang memengaruhi kinerja mesin diesel adalah pipa common rail. Dalam artikel ini, kita akan membahas mengapa Pipa Common Rail Kobelco SK130 adalah pilihan terbaik untuk menjaga mesin diesel tetap dalam kondisi prima.'
+            ),
+            datePublished: currentPost
+                ? new Date(currentPost.date).toISOString()
+                : '',
+            image: currentPost ? currentPost.image : '',
+        };
+
         return (
             <div className='my-16 lg:flex max-w-[1200px] lg:mx-auto gap-8 rounded-xl md:mx-4 mx-4'>
-
                 <div className='max-w-4xl px-8 pb-10 rounded-lg bg-gradient-to-bl from-neutral-50 to-blue-100'>
                     <div>
                         <div className='-mx-5 mb-5'>
@@ -70,13 +82,13 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
                             />
                             <p className='text-justify mt-5 text-gray-600 mb-4'>
                                 {t(
-                                    'Mesin diesel yang andal dan efisien adalah kunci untuk produktivitas dan performa terbaik. Salah satu komponen vital yang memengaruhi kinerja mesin diesel adalah pipa common rail. Dalam artikel ini, kita akan membahas mengapa',
+                                    'Mesin diesel yang andal dan efisien adalah kunci untuk produktivitas dan performa terbaik. Salah satu komponen vital yang memengaruhi kinerja mesin diesel adalah pipa common rail. Dalam artikel ini, kita akan membahas mengapa'
                                 )}{' '}
                                 <strong>
                                     {t('Pipa Common Rail Kobelco SK130')}
                                 </strong>{' '}
                                 {t(
-                                    'adalah pilihan terbaik untuk menjaga mesin diesel tetap dalam kondisi prima.',
+                                    'adalah pilihan terbaik untuk menjaga mesin diesel tetap dalam kondisi prima.'
                                 )}
                             </p>
                         </div>
@@ -87,7 +99,7 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
                             <div>
                                 <h2 className='text-xl font-semibold text-gray-800 mt-4 mb-2'>
                                     {t(
-                                        'Pipa Common Rail Kobelco SK130: Awet dan Tahan Lama',
+                                        'Pipa Common Rail Kobelco SK130: Awet dan Tahan Lama'
                                     )}
                                 </h2>
                                 <div className='lg:flex gap-4'>
@@ -101,7 +113,7 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
                                     <div>
                                         <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                             {t(
-                                                'Pipa Common Rail Kobelco SK130 dirancang dengan daya tahan tinggi dan desain yang efisien. Komponen ini dibuat untuk menghadapi tantangan berat, baik di jalan maupun di lingkungan kerja yang keras. Dengan material berkualitas tinggi, pipa ini memiliki ketahanan yang luar biasa terhadap tekanan dan keausan, menjadikannya solusi andal untuk kebutuhan mesin diesel Anda.',
+                                                'Pipa Common Rail Kobelco SK130 dirancang dengan daya tahan tinggi dan desain yang efisien. Komponen ini dibuat untuk menghadapi tantangan berat, baik di jalan maupun di lingkungan kerja yang keras. Dengan material berkualitas tinggi, pipa ini memiliki ketahanan yang luar biasa terhadap tekanan dan keausan, menjadikannya solusi andal untuk kebutuhan mesin diesel Anda.'
                                             )}
                                         </p>
                                     </div>
@@ -121,7 +133,7 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
                                     <div>
                                         <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                             {t(
-                                                'Salah satu keunggulan utama dari Pipa Common Rail Kobelco SK130 adalah harganya yang ekonomis tanpa mengorbankan kualitas. Ini adalah pilihan realistis bagi Anda yang ingin mendapatkan produk premium dengan anggaran yang bersahabat. Dengan investasi ini, Anda mendapatkan performa optimal sekaligus efisiensi biaya.',
+                                                'Salah satu keunggulan utama dari Pipa Common Rail Kobelco SK130 adalah harganya yang ekonomis tanpa mengorbankan kualitas. Ini adalah pilihan realistis bagi Anda yang ingin mendapatkan produk premium dengan anggaran yang bersahabat. Dengan investasi ini, Anda mendapatkan performa optimal sekaligus efisiensi biaya.'
                                             )}
                                         </p>
                                     </div>
@@ -129,7 +141,7 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
 
                                 <h2 className='text-xl font-semibold text-gray-800 mt-4 mb-2'>
                                     {t(
-                                        'Performa Terbaik untuk Mesin Diesel Anda',
+                                        'Performa Terbaik untuk Mesin Diesel Anda'
                                     )}
                                 </h2>
 
@@ -144,7 +156,7 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
                                     <div>
                                         <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                             {t(
-                                                'Pipa common rail dirancang untuk menahan tekanan tinggi yang diperlukan dalam sistem injeksi mesin diesel. Hal ini memastikan pembakaran bahan bakar yang lebih efisien, meningkatkan tenaga mesin, dan mengurangi emisi. Dengan Pipa Common Rail Kobelco SK130, Anda dapat mengandalkan kinerja mesin diesel yang maksimal setiap saat.',
+                                                'Pipa common rail dirancang untuk menahan tekanan tinggi yang diperlukan dalam sistem injeksi mesin diesel. Hal ini memastikan pembakaran bahan bakar yang lebih efisien, meningkatkan tenaga mesin, dan mengurangi emisi. Dengan Pipa Common Rail Kobelco SK130, Anda dapat mengandalkan kinerja mesin diesel yang maksimal setiap saat.'
                                             )}
                                         </p>
                                     </div>
@@ -159,12 +171,37 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
                         </h2>
                         <div className=' gap-6 text-justify'>
                             <p className='text-gray-600 mb-4'>
+                                {t('Jangan sampai ketinggalan! Dapatkan')}{' '}
+                                <Link
+                                    href='#'
+                                    className='font-bold text-blue-900 underline'
+                                >
+                                    {t('Pipa Common Rail Kobelco SK130')}
+                                </Link>{' '}
+                                {t('berkualitas tinggi ini hanya di')}{' '}
+                                <strong>INDO TEKNIK</strong>.{' '}
                                 {t(
-                                    'Jangan sampai ketinggalan! Dapatkan')} <Link href="#" className='font-bold text-blue-900 underline'>{t('Pipa Common Rail Kobelco SK130')}</Link> {t('berkualitas tinggi ini hanya di')} <strong>INDO TEKNIK</strong>. {t('Dengan stok terbatas, pastikan Anda segera melakukan pembelian agar tidak kehabisan.',
+                                    'Dengan stok terbatas, pastikan Anda segera melakukan pembelian agar tidak kehabisan.'
                                 )}
                             </p>
                             <p className='text-gray-600 mb-4'>
-                                <Link className='font-bold text-blue-900 underline' href="/contact">{t('Hubungi kami')}</Link> {t('untuk pemesanan online atau kunjungi langsung')} <strong>INDO TEKNIK</strong> {t('di alamat')} <Link className='font-bold text-blue-900 underline' href='https://maps.app.goo.gl/4xGp2xYfn98Uo5437'>Jl. Riau Ujung, Kel. Tampan, Kec. Payung Sekaki, Pekanbaru - Riau, 28292.</Link>
+                                <Link
+                                    className='font-bold text-blue-900 underline'
+                                    href='/contact'
+                                >
+                                    {t('Hubungi kami')}
+                                </Link>{' '}
+                                {t(
+                                    'untuk pemesanan online atau kunjungi langsung'
+                                )}{' '}
+                                <strong>INDO TEKNIK</strong> {t('di alamat')}{' '}
+                                <Link
+                                    className='font-bold text-blue-900 underline'
+                                    href='https://maps.app.goo.gl/4xGp2xYfn98Uo5437'
+                                >
+                                    Jl. Riau Ujung, Kel. Tampan, Kec. Payung
+                                    Sekaki, Pekanbaru - Riau, 28292.
+                                </Link>
                             </p>
                         </div>
                     </div>
@@ -175,13 +212,22 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
                         <div className=' gap-6 text-justify'>
                             <ul className='text-gray-600 mb-4'>
                                 <li>
-                                    <strong>{t('Daya Tahan Tinggi')}:</strong> {t('Material berkualitas yang tahan terhadap tekanan dan keausan.')}
+                                    <strong>{t('Daya Tahan Tinggi')}:</strong>{' '}
+                                    {t(
+                                        'Material berkualitas yang tahan terhadap tekanan dan keausan.'
+                                    )}
                                 </li>
                                 <li>
-                                    <strong>{t('Desain Efisien')}:</strong> {t('Memastikan pembakaran bahan bakar yang optimal.')}
+                                    <strong>{t('Desain Efisien')}:</strong>{' '}
+                                    {t(
+                                        'Memastikan pembakaran bahan bakar yang optimal.'
+                                    )}
                                 </li>
                                 <li>
-                                    <strong>{t('Harga Kompetitif')}:</strong> {t('Solusi ekonomis untuk kebutuhan premium.')}
+                                    <strong>{t('Harga Kompetitif')}:</strong>{' '}
+                                    {t(
+                                        'Solusi ekonomis untuk kebutuhan premium.'
+                                    )}
                                 </li>
                             </ul>
                         </div>
@@ -190,14 +236,20 @@ const KeepYourDieselEngineInTopConditionWithTheKobelcoSK130CommonRailPipe =
                     <div>
                         <div className=' gap-6 text-justify'>
                             <p className='text-gray-600 mb-4'>
-                                {t('Buruan, belanja sekarang juga dan pastikan mesin diesel Anda tetap dalam kondisi terbaik dengan Pipa Common Rail Kobelco SK130!')}
+                                {t(
+                                    'Buruan, belanja sekarang juga dan pastikan mesin diesel Anda tetap dalam kondisi terbaik dengan Pipa Common Rail Kobelco SK130!'
+                                )}
                             </p>
-                            
                         </div>
                     </div>
 
                     <SharePost currentPostTitle={currentPostTitle} />
                 </div>
+
+                <script
+                    type='application/ld+json'
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <SidebarPost latestPosts={latestPosts} />
             </div>
         );

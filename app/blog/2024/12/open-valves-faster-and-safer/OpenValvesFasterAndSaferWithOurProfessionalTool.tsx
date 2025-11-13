@@ -13,7 +13,7 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
         'Buka Valve Lebih Cepat dan Aman dengan Tool Injector Ford 2.2 dari Itech!';
     // Find the current post in blogPosts using the title
     const currentPost = blogPosts.find(
-        (post) => post.title === currentPostTitle,
+        (post) => post.title === currentPostTitle
     );
 
     // Extract the publication date from the current post
@@ -23,7 +23,7 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
 
     // Sort blog posts by date (latest first)
     const latestPosts = [...blogPosts].sort(
-        (a, b) => new Date(b.date) - new Date(a.date),
+        (a, b) => new Date(b.date) - new Date(a.date)
     );
 
     useEffect(() => {
@@ -36,9 +36,16 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
 
     const { t } = useTranslation('dec2024Blog');
 
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: t(currentPostTitle),
+        datePublished: currentPost ? currentPost.date : '',
+        image: currentPost ? currentPost.image : '',
+    };
+
     return (
         <div className='my-16 lg:flex max-w-[1200px] lg:mx-auto gap-8 rounded-xl md:mx-4 mx-4'>
-
             <div className='max-w-4xl px-8 pb-10 rounded-lg bg-gradient-to-bl from-neutral-50 to-blue-100 '>
                 <div>
                     <div className='-mx-5 mb-5'>
@@ -68,11 +75,11 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                         />
                         <p className='text-justify mt-5 text-gray-600 mb-4 lg:w-[800px]'>
                             {t(
-                                'Apakah Anda sedang mencari solusi praktis dan aman untuk membuka valve injektor pada kendaraan Anda?',
+                                'Apakah Anda sedang mencari solusi praktis dan aman untuk membuka valve injektor pada kendaraan Anda?'
                             )}{' '}
                             <strong>{t('Itech Tool Injector Ford 2.2')}</strong>{' '}
                             {t(
-                                'adalah jawabannya! Dengan desain yang presisi dan material berkualitas tinggi, alat ini dirancang untuk mempermudah pekerjaan Anda tanpa mengorbankan kualitas hasil.',
+                                'adalah jawabannya! Dengan desain yang presisi dan material berkualitas tinggi, alat ini dirancang untuk mempermudah pekerjaan Anda tanpa mengorbankan kualitas hasil.'
                             )}
                         </p>
                     </div>
@@ -98,7 +105,7 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                                 <div>
                                     <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                         {t(
-                                            'Tool Injector ini terbuat dari bahan premium yang dirancang untuk bertahan di kondisi kerja berat. Kualitas materialnya memastikan alat ini tetap kokoh dan awet digunakan dalam jangka panjang.',
+                                            'Tool Injector ini terbuat dari bahan premium yang dirancang untuk bertahan di kondisi kerja berat. Kualitas materialnya memastikan alat ini tetap kokoh dan awet digunakan dalam jangka panjang.'
                                         )}
                                     </p>
                                 </div>
@@ -118,7 +125,7 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                                 <div>
                                     <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                         {t(
-                                            'Dengan segala keunggulan yang ditawarkan, Tool Injector ini hadir dengan harga yang sangat ekonomis. Anda tidak perlu merogoh kocek dalam-dalam untuk mendapatkan alat berkualitas tinggi.',
+                                            'Dengan segala keunggulan yang ditawarkan, Tool Injector ini hadir dengan harga yang sangat ekonomis. Anda tidak perlu merogoh kocek dalam-dalam untuk mendapatkan alat berkualitas tinggi.'
                                         )}
                                     </p>
                                 </div>
@@ -138,7 +145,7 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                                 <div>
                                     <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                         {t(
-                                            'Dirancang dengan teknologi canggih, Tool Injector Ford 2.2 memastikan pekerjaan lebih cepat dan efisien. Selain itu, alat ini membantu mengurangi risiko kerusakan pada komponen injector, menjadikannya pilihan yang ideal untuk para profesional maupun pengguna rumahan.',
+                                            'Dirancang dengan teknologi canggih, Tool Injector Ford 2.2 memastikan pekerjaan lebih cepat dan efisien. Selain itu, alat ini membantu mengurangi risiko kerusakan pada komponen injector, menjadikannya pilihan yang ideal untuk para profesional maupun pengguna rumahan.'
                                         )}
                                     </p>
                                 </div>
@@ -165,19 +172,19 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                                     {t('Efisien')}:
                                 </span>{' '}
                                 {t(
-                                    'Mempermudah proses perawatan dan perbaikan injektor.',
+                                    'Mempermudah proses perawatan dan perbaikan injektor.'
                                 )}
                             </li>
                             <li>
                                 <span className='font-bold'>{t('Kuat')}:</span>{' '}
                                 {t(
-                                    'Dibuat untuk tahan terhadap tekanan dan penggunaan berat.',
+                                    'Dibuat untuk tahan terhadap tekanan dan penggunaan berat.'
                                 )}
                             </li>
                             <li>
                                 <span className='font-bold'>{t('Aman')}:</span>{' '}
                                 {t(
-                                    'Mengurangi risiko kerusakan komponen selama proses kerja.',
+                                    'Mengurangi risiko kerusakan komponen selama proses kerja.'
                                 )}
                             </li>
                         </ul>
@@ -197,13 +204,14 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                             >
                                 {t('Itech Tool Injector Ford 2.2')}
                             </Link>{' '}
-                            {t('ini.')} {t('Dapatkan produk berkualitas ini hanya di')}{' '}
+                            {t('ini.')}{' '}
+                            {t('Dapatkan produk berkualitas ini hanya di')}{' '}
                             <strong>{t('INDO TEKNIK!')}</strong>
                         </p>
                         <p className='text-gray-600 mb-4'>
                             <strong>{t('Tool Injector Ford 2.2')}</strong>{' '}
                             {t(
-                                '– Solusi cerdas untuk pekerjaan yang lebih mudah, aman, dan efisien.',
+                                '– Solusi cerdas untuk pekerjaan yang lebih mudah, aman, dan efisien.'
                             )}
                         </p>
                         <p className='text-gray-600 mb-4'>
@@ -216,7 +224,7 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                     <div className='gap-6 text-justify mt-4'>
                         <p className='text-gray-600 mb-4'>
                             {t(
-                                'Tingkatkan produktivitas Anda dengan alat yang tepat. Kunjungi',
+                                'Tingkatkan produktivitas Anda dengan alat yang tepat. Kunjungi'
                             )}{' '}
                             <strong>{t('INDO TEKNIK')}</strong>{' '}
                             {t('sekarang juga di alamat')}{' '}
@@ -225,7 +233,7 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                                 href='https://maps.app.goo.gl/4xGp2xYfn98Uo5437'
                             >
                                 {t(
-                                    'Jl. Riau Ujung, Kel. Tampan, Kec. Payung Sekaki, Pekanbaru - Riau, 28292',
+                                    'Jl. Riau Ujung, Kel. Tampan, Kec. Payung Sekaki, Pekanbaru - Riau, 28292'
                                 )}
                             </Link>{' '}
                             {t('atau')}{' '}
@@ -235,13 +243,19 @@ const OpenValvesFasterAndSaferWithOurProfessionalTool = () => {
                             >
                                 {t('hubungi kami')}
                             </Link>{' '}
-                            {t('untuk pemesanan online dan dapatkan penawaran terbaik!')}
+                            {t(
+                                'untuk pemesanan online dan dapatkan penawaran terbaik!'
+                            )}
                         </p>
                     </div>
                 </div>
 
                 <SharePost currentPostTitle={currentPostTitle} />
             </div>
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <SidebarPost latestPosts={latestPosts} />
         </div>
     );

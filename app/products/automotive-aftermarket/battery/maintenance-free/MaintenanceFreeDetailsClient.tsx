@@ -6,12 +6,12 @@ import RelatedCategories from '../../../../components/related-categories/page';
 import categories from '../../../../data/batteryCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import { useTranslation } from 'react-i18next';
-import Head from 'next/head';
 import Image from 'next/image';
 
 const categoryDetails = {
     name: 'Maintenance Free',
-    description: descriptionDetailCategory,   imageUrl:
+    description: descriptionDetailCategory,
+    imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/c_scale,w_600/v1721270390/cp-indoteknik-v3/productsBattery/solite_solite-n200-mf-aki-mobil_full02-removebg-preview_sbnakn.png', // Replace with actual image URL
 };
 
@@ -26,24 +26,24 @@ const shuffleArray = (array) => {
 
 const MaintenanceFreeDetails = () => {
     const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
+        (category) => category.name !== categoryDetails.name
     );
 
     const shuffledCategories = shuffleArray([...filteredCategories]);
 
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
-        // Dynamically generated meta description and keywords
-        const metaDescription = `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`;
-        const metaKeywords = `${categoryDetails.name}, komponen otomotif, part diesel, Indo Teknik, Automotive Aftermarket`;
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
 
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
-            <Head>
-                <title>{categoryDetails.name} | Indo Teknik</title>
-                <meta name='description' content={metaDescription} />
-                <meta name='keywords' content={metaKeywords} />
-            </Head>
+
             <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
                 <GoBack />
                 <div className='flex flex-col md:flex-row rounded-xl'>
@@ -69,6 +69,11 @@ const MaintenanceFreeDetails = () => {
                     </div>
                 </div>
             </div>
+
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             {/* Use the RelatedCategories component */}
             <RelatedCategories categories={shuffledCategories} />

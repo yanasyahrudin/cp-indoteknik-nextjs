@@ -17,6 +17,14 @@ const AboutUs = () => {
         });
     }, []); // Empty dependency array to run only once on mount
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": t('about.seo.title'),
+        "description": t('about.seo.description'),
+        "url": "https://www.indoteknik.com/about",
+    };
+
     return (
         <>
             <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
@@ -136,6 +144,11 @@ const AboutUs = () => {
                         <div className='absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent rounded-xl'></div>
                     </figure>
                 </div>
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
             </AnimatedSection>
         </>
     );

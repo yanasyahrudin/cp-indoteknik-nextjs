@@ -31,7 +31,13 @@ const CoverInjectorLDetails = () => {
     const shuffledCategories = shuffleArray([...filteredCategories]);
 
     const { t } = useTranslation();
-
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
 
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
@@ -61,6 +67,11 @@ const CoverInjectorLDetails = () => {
                     </div>
                 </div>
             </div>
+
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             {/* Use the RelatedCategories component */}
             <RelatedCategories categories={shuffledCategories} />

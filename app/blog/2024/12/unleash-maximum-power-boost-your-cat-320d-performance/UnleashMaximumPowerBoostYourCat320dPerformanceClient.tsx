@@ -37,6 +37,14 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
 
         const { t } = useTranslation('dec2024Blog');
 
+            const jsonLd = {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: t(currentPostTitle),
+            datePublished: currentPost ? currentPost.date : '',
+            image: currentPost ? currentPost.image : '',
+        };
+
         return (
             <div className='my-10 lg:flex max-w-[1200px] lg:mx-auto gap-8 rounded-xl md:mx-4 mx-4'>
 
@@ -223,6 +231,10 @@ const UnleashMaximumPower_BoostYourCAT320DPerformanceWithThisGame_ChangingInject
                     </div>
                     <SharePost currentPostTitle={currentPostTitle} />
                 </div>
+                <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
                 <SidebarPost latestPosts={latestPosts} />
             </div>
         );

@@ -10,7 +10,8 @@ import Image from 'next/image';
 
 const categoryDetails = {
     name: 'Dry Charged (Motorcycle)',
-    description: descriptionDetailCategory,imageUrl:
+    description: descriptionDetailCategory,
+    imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724396613/cp-indoteknik-v3/productsBattery/battery_motorcycle_dc_309932af143dab374319fb928946b398-removebg-preview_nysovr.png', // Replace with actual image URL
 };
 
@@ -25,12 +26,20 @@ const shuffleArray = (array) => {
 
 const DryChargedMotorcycleDetails = () => {
     const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
+        (category) => category.name !== categoryDetails.name
     );
 
     const shuffledCategories = shuffleArray([...filteredCategories]);
 
-    const {t} = useTranslation()
+    const { t } = useTranslation();
+
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
 
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
@@ -58,6 +67,11 @@ const DryChargedMotorcycleDetails = () => {
                     </div>
                 </div>
             </div>
+
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             {/* Use the RelatedCategories component */}
             <RelatedCategories categories={shuffledCategories} />

@@ -61,6 +61,11 @@ const IridiumSparkPlugDetails = () => {
                 </div>
             </div>
 
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
             {/* Use the RelatedCategories component */}
             <RelatedCategories categories={shuffledCategories} />
         </div>

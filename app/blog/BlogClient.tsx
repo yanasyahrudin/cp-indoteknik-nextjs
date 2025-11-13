@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import blogPosts from '../data/blogPostsData';
-import Head from 'next/head';
 import AnimatedSection from '../components/animated-section/page';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
@@ -13,6 +12,8 @@ function BlogPost({ post }) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
     const { t } = useTranslation('blog');
+
+
 
     return (
         <AnimatedSection zoomType='zoomIn'>
@@ -176,17 +177,7 @@ export default function BlogPage() {
     return (
         <AnimatedSection zoomType='zoomIn'>
             <div className='lg:w-[1200px] mx-4 lg:mx-auto py-8 lg:py-10 bg-gradient-to-bl from-neutral-50 to-blue-100 px-4 sm:px-8 mt-10 mb-10 rounded-xl '>
-                <Head>
-                    <title>Blog | Indo Teknik</title>
-                    <meta
-                        name='description'
-                        content='Ini adalah halaman blog dari indo teknik'
-                    />
-                    <meta
-                        name='keywords'
-                        content='servis diesel pekanbaru, servis injector pekanbaru, servis injection pump pekanbaru, servis fabrikasi pekanbaru'
-                    />
-                </Head>
+
 
                 <header className='text-center mb-6 sm:mb-10'>
                     <h1 className='text-3xl sm:text-4xl font-bold text-blue-900 animate-bounceIn'>

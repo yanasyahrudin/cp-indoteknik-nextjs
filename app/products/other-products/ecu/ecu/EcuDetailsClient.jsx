@@ -5,7 +5,6 @@ import GoBack from '../../../../components/go-back/page';
 import RelatedCategories from '../../../../components/related-categories/page';
 import categories from '../../../../data/ecuCategory'; // Update to the appropriate category data if needed
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
-import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
@@ -33,17 +32,16 @@ const EngineControlUnitDetails = () => {
 
     const { t } = useTranslation();
 
-    // Dynamically generated meta description and keywords
-    const metaDescription = `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`;
-    const metaKeywords = `${categoryDetails.name}, komponen otomotif, part diesel, Indo Teknik`;
-
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
-            <Head>
-                <title>{categoryDetails.name} | Indo Teknik</title>
-                <meta name='description' content={metaDescription} />
-                <meta name='keywords' content={metaKeywords} />
-            </Head>
+  
             <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
                 <GoBack />
                 <div className='flex flex-col md:flex-row rounded-xl'>
@@ -69,6 +67,11 @@ const EngineControlUnitDetails = () => {
                     </div>
                 </div>
             </div>
+
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             {/* Use the RelatedCategories component */}
             <RelatedCategories categories={shuffledCategories} />

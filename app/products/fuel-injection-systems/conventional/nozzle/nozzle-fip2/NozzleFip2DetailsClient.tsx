@@ -5,8 +5,9 @@ import GoBack from './../../../../../components/go-back/page';
 import RelatedCategories from './../../../../../components/related-categories/page';
 import categories from './../../../../../data/nozzleCategory';
 import { descriptionDetailCategory } from './../../../../../data/descriptionDetailCategory';
-import Head from 'next/head';
+
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 const categoryDetails = {
     name: 'Nozzle FIP',
@@ -31,26 +32,27 @@ const NozzleFIP2Details = () => {
 
     const { t } = useTranslation();
 
-        // Dynamically generated meta description and keywords
-        const metaDescription = `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`;
-        const metaKeywords = `${categoryDetails.name}, komponen otomotif, part diesel, Indo Teknik, Fuel Injection Pump`;
-        
-
+  
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
-            <Head>
-                <title>{categoryDetails.name} | Indo Teknik</title>
-                <meta name='description' content={metaDescription} />
-                <meta name='keywords' content={metaKeywords} />
-            </Head>
+          
             <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
                 <GoBack />
                 <div className='flex flex-col md:flex-row rounded-xl'>
                     <div className='md:w-1/2 lg:ml-8 md:ml-8 xs:m-6 mb-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl'>
-                        <img
+                        <Image
                             src={categoryDetails.imageUrl}
                             alt={categoryDetails.name}
                             className='h-full w-full object-contain'
+                            width={900}
+                            height={600}
                         />
                     </div>
                     <div className='md:w-1/2 py-6 lg:pr-8 md:pr-8 xs:pr-6 xs:pl-6 md:pl-0 lg:pl-0 flex flex-col justify-start pb-10'>
@@ -65,6 +67,11 @@ const NozzleFIP2Details = () => {
                     </div>
                 </div>
             </div>
+
+            <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             {/* Use the RelatedCategories component */}
             <RelatedCategories categories={shuffledCategories} />

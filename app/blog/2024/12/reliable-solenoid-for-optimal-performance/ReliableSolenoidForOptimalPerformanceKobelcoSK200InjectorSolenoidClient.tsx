@@ -15,7 +15,7 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
         // Find the current post in blogPosts using the title
 
         const currentPost = blogPosts.find(
-            (post) => post.title === currentPostTitle,
+            (post) => post.title === currentPostTitle
         );
 
         // Extract the publication date from the current post
@@ -25,7 +25,7 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
 
         // Sort blog posts by date (latest first)
         const latestPosts = [...blogPosts].sort(
-            (a, b) => new Date(b.date) - new Date(a.date),
+            (a, b) => new Date(b.date) - new Date(a.date)
         );
 
         useEffect(() => {
@@ -38,10 +38,16 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
 
         const { t } = useTranslation('dec2024Blog');
 
+        const jsonLd = {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: t(currentPostTitle),
+            datePublished: currentPost ? currentPost.date : '',
+            image: currentPost ? currentPost.image : '',
+        };
+
         return (
             <div className='my-16 lg:flex max-w-[1200px] lg:mx-auto gap-8 rounded-xl md:mx-4 mx-4'>
-
-
                 <div className='max-w-4xl px-8 pb-10 rounded-lg bg-gradient-to-bl from-neutral-50 to-blue-100'>
                     <div>
                         <div className='-mx-5 mb-5'>
@@ -72,7 +78,7 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
                             />
                             <p className='text-justify mt-5 text-gray-600 mb-4 lg:w-[800px]'>
                                 {t(
-                                    'Apakah Anda sedang mencari solenoid injektor berkualitas tinggi untuk mesin Kobelco SK200 Anda? Kami punya solusi terbaik untuk Anda!',
+                                    'Apakah Anda sedang mencari solenoid injektor berkualitas tinggi untuk mesin Kobelco SK200 Anda? Kami punya solusi terbaik untuk Anda!'
                                 )}
                             </p>
                         </div>
@@ -100,7 +106,7 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
                                         <div>
                                             <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                                 {t(
-                                                    'Solenoid kami dirancang dengan',
+                                                    'Solenoid kami dirancang dengan'
                                                 )}{' '}
                                                 <strong>
                                                     {t('material unggul')}
@@ -110,7 +116,7 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
                                                     {t('desain efisien,')}
                                                 </strong>{' '}
                                                 {t(
-                                                    'memastikan daya tahan tinggi untuk berbagai kebutuhan teknis Anda. Dengan performa maksimal, solenoid ini adalah pilihan tepat untuk mendukung kelancaran operasional mesin Anda.',
+                                                    'memastikan daya tahan tinggi untuk berbagai kebutuhan teknis Anda. Dengan performa maksimal, solenoid ini adalah pilihan tepat untuk mendukung kelancaran operasional mesin Anda.'
                                                 )}
                                             </p>
                                         </div>
@@ -120,7 +126,7 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
                                 <div className='ml-4'>
                                     <h3 className='text-lg font-semibold text-gray-800 mt-4 mb-2'>
                                         {t(
-                                            '2. Harga Terjangkau, Kualitas Premium',
+                                            '2. Harga Terjangkau, Kualitas Premium'
                                         )}
                                     </h3>
                                     <div className='lg:flex gap-4'>
@@ -134,7 +140,7 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
                                         <div>
                                             <p className='text-gray-600 mb-4 mt-2 lg:mt-0'>
                                                 {t(
-                                                    'Siapa bilang kualitas premium harus mahal? Dengan harga yang',
+                                                    'Siapa bilang kualitas premium harus mahal? Dengan harga yang'
                                                 )}{' '}
                                                 <strong>
                                                     {t('ekonomis,')}
@@ -144,10 +150,10 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
                                                     {t('keunggulan luar biasa')}
                                                 </strong>{' '}
                                                 {t(
-                                                    'tanpa mengorbankan kualitas.',
+                                                    'tanpa mengorbankan kualitas.'
                                                 )}{' '}
                                                 {t(
-                                                    'Pilihan ideal untuk kebutuhan Anda yang mengutamakan efisiensi dan anggaran.',
+                                                    'Pilihan ideal untuk kebutuhan Anda yang mengutamakan efisiensi dan anggaran.'
                                                 )}
                                             </p>
                                         </div>
@@ -173,13 +179,13 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
                                                     {t('teknologi canggih')}
                                                 </strong>
                                                 {t(
-                                                    ', solenoid ini siap meningkatkan',
+                                                    ', solenoid ini siap meningkatkan'
                                                 )}{' '}
                                                 <strong>
                                                     {t('efisiensi operasional')}
                                                 </strong>{' '}
                                                 {t(
-                                                    'dan mendukung kinerja optimal mesin Kobelco SK200 Anda.',
+                                                    'dan mendukung kinerja optimal mesin Kobelco SK200 Anda.'
                                                 )}
                                             </p>
                                         </div>
@@ -220,13 +226,13 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
                                     href='https://maps.app.goo.gl/4xGp2xYfn98Uo5437'
                                 >
                                     {t(
-                                        'Jl. Riau Ujung, Kel. Tampan, Kec. Payung Sekaki, Pekanbaru - Riau, 2829.',
+                                        'Jl. Riau Ujung, Kel. Tampan, Kec. Payung Sekaki, Pekanbaru - Riau, 2829.'
                                     )}
                                 </Link>
                             </p>
                             <p className='text-gray-600 mb-4'>
                                 {t(
-                                    'Optimalkan kinerja mesin Anda dengan produk berkualitas dari',
+                                    'Optimalkan kinerja mesin Anda dengan produk berkualitas dari'
                                 )}{' '}
                                 <strong>{t('INDO TEKNIK!')}</strong>
                             </p>
@@ -235,6 +241,10 @@ const ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoid =
 
                     <SharePost currentPostTitle={currentPostTitle} />
                 </div>
+                <script
+                    type='application/ld+json'
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <SidebarPost latestPosts={latestPosts} />
             </div>
         );

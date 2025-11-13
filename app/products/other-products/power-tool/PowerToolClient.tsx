@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import categories from './../../../data/powerToolCategory';
-import Head from 'next/head';
+
 import Image from 'next/image';
 import AnimatedSection from '@/app/components/animated-section/page';
 
@@ -25,19 +25,7 @@ const PowerToolCategories = () => {
     
     return (
         <div className='mt-10 mb-20 max-w-6xl mx-auto'>
-            <Head>
-                <title>{t('Power Tool Category')} | Indo Teknik</title>
-                <meta
-                    name='description'
-                    content={t(
-                        'Providing original and complete aftermarket diesel and automotive spare parts with a wide selection of brands from Europe, Japan and China. And only sell original spare parts and quality replacement parts that we have tested and used in repairs in our workshop.',
-                    )}
-                />
-                <meta
-                    name='keywords'
-                    content={`${t('Power Tool Category')}, ${t('Power Tool Category')} Indo Teknik, Bosch`}
-                />
-            </Head>
+           
 
             <h1 className='text-center font-bold text-3xl text-blue-900 animate-bounceIn'>
                 {t('Power Tool Category')}

@@ -5,7 +5,7 @@ import { IoIosSettings } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
 import ContactUsService from './../../../components/contact-us-service/page';
 import AnimatedSection from './../../../components/animated-section/page';
-import Head from 'next/head';
+
 import GoogleReviewWidget from './../../../components/google-review-widget/page';
 import Image from 'next/image';
 
@@ -19,24 +19,16 @@ const Fabrication = () => {
             behavior: 'smooth',
         });
     }, []); // Empty dependency array to run only once on mount
+     const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: t('services.injector.title'),
+        description: t('services.injector.description'),
+    };
 
     return (
         <div className='mx-auto mt-10 mb-10'>
-            <Head>
-                <title>{t('services.fabrication.title')} | Indo Teknik</title>
-                <meta
-                    name='description'
-                    content={t('services.fabrication.imageDescription')}
-                />
-                <meta
-                    name='keywords'
-                    content={`${t('services.fabrication.title')}, ${t(
-                        'header.services'
-                    )} ${t('services.fabrication.title')}, ${t(
-                        'header.services'
-                    )} Indo Teknik`}
-                />
-            </Head>
+  
 
             <div>
                 <h1 className='text-5xl text-blue-900 font-bold text-center animate-bounceIn'>
@@ -104,6 +96,11 @@ const Fabrication = () => {
                     </div>
                 </div>
             </AnimatedSection>
+
+              <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             <GoogleReviewWidget />
 

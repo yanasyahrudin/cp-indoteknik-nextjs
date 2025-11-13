@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Head from 'next/head';
+
 import Image from 'next/image';
 import AnimatedSection from './../../../components/animated-section/page';
 

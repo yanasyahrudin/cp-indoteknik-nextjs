@@ -4,7 +4,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Head from 'next/head';
+
 import Image from 'next/image';
 import AnimatedSection from './../../../../components/animated-section/page';
 
@@ -39,19 +39,7 @@ const EUICategories = () => {
 
     return (
         <div className='mt-10 mb-20 max-w-6xl mx-auto'>
-            <Head>
-                <title>{t('EUI Category')} | Indo Teknik</title>
-                <meta
-                    name='description'
-                    content={t(
-                        'Providing original and complete aftermarket diesel and automotive spare parts with a wide selection of brands from Europe, Japan and China. And only sell original spare parts and quality replacement parts that we have tested and used in repairs in our workshop.',
-                    )}
-                />
-                <meta
-                    name='keywords'
-                    content={`${t('EUI Category')}, ${t('EUI Category')} Indo Teknik, Delphi`}
-                />
-            </Head>
+          
             <h1 className='text-center font-bold text-3xl text-blue-900 animate-bounceIn'>
                 {t('EUI Category')}
             </h1>
