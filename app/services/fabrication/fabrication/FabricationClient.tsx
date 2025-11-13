@@ -5,11 +5,10 @@ import { IoIosSettings } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
 import ContactUsService from './../../../components/contact-us-service/page';
 import AnimatedSection from './../../../components/animated-section/page';
-
 import GoogleReviewWidget from './../../../components/google-review-widget/page';
 import Image from 'next/image';
 
-const Fabrication = () => {
+const Fabrication = ({ jsonLd }) => {
     const { t } = useTranslation('global');
 
     useEffect(() => {
@@ -19,17 +18,10 @@ const Fabrication = () => {
             behavior: 'smooth',
         });
     }, []); // Empty dependency array to run only once on mount
-     const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: t('services.injector.title'),
-        description: t('services.injector.description'),
-    };
+
 
     return (
         <div className='mx-auto mt-10 mb-10'>
-  
-
             <div>
                 <h1 className='text-5xl text-blue-900 font-bold text-center animate-bounceIn'>
                     {t('services.fabrication.title')}

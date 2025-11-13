@@ -46,5 +46,11 @@ export const metadata = {
 };
 
 export default function EUIPage() {
-    return <EUIClient />;
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Layanan EUI (Electronic Unit Injector)',
+        description: 'EUI atau Electronic Unit Injector adalah sistem injeksi bahan bakar canggih yang mengatur jumlah bahan bakar yang disemprotkan ke dalam ruang bakar dengan presisi tinggi. Kami menawarkan layanan profesional untuk perbaikan dan pemeliharaan EUI, meliputi diagnosis, pemeliharaan, pengujian, dan pembersihan oleh teknisi berpengalaman dengan alat modern.',
+    };
+    return <EUIClient jsonLd={jsonLd} />;
 }

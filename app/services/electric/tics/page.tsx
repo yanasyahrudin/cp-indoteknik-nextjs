@@ -23,5 +23,12 @@ export const metadata = {
 };
 
 export default function TICSPage() {
-  return <TICSClient />;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Layanan TICS',
+    description: 'TICS (Timing & Injection Control Systems) adalah komponen penting dalam sistem injeksi bahan bakar diesel yang berfungsi mengatur waktu dan jumlah bahan bakar yang diinjeksikan ke dalam mesin. Kami menyediakan layanan perbaikan, kalibrasi, dan penggantian spare part TICS untuk memastikan mesin Anda beroperasi dengan efisiensi maksimal.',
+  };
+
+  return <TICSClient jsonLd={jsonLd} />;
 }

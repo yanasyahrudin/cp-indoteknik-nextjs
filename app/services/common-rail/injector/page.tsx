@@ -47,5 +47,11 @@ export const metadata = {
 };
 
 export default function InjectorPage() {
-    return <InjectorClient />;
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Layanan Injector',
+        description: 'Injector adalah bagian penting dari sistem bahan bakar yang menyemprotkan bahan bakar ke ruang bakar mesin dengan presisi tinggi. Kami menawarkan berbagai layanan untuk memastikan injector Anda berfungsi secara optimal, termasuk diagnosis, pemeliharaan, pengujian, dan pembersihan.',
+    };
+    return <InjectorClient jsonLd={jsonLd} />;
 }

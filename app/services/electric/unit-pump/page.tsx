@@ -22,5 +22,12 @@ export const metadata = {
 };
 
 export default function UnitPumpPage() {
-  return <UnitPumpClient />;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Layanan Unit Pump',
+    description: 'Unit Pump adalah komponen penting dalam sistem bahan bakar yang memastikan pengiriman bahan bakar yang tepat ke mesin. Kami menawarkan layanan perbaikan dan pemeliharaan Unit Pump untuk berbagai jenis kendaraan dan peralatan industri. Layanan kami meliputi identifikasi masalah, perbaikan, penggantian komponen, dan memastikan Unit Pump berfungsi dengan efisiensi dan akurasi yang diperlukan.',
+  };
+    
+  return <UnitPumpClient jsonLd={jsonLd} />;
 }

@@ -47,5 +47,12 @@ export const metadata = {
 };
 
 export default function WeldingPage() {
-    return <WeldingClient />;
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Layanan Pengelasan',
+        description:
+            'Kami menawarkan layanan pengelasan profesional untuk berbagai keperluan industri dan komersial. Tim ahli kami berpengalaman dalam berbagai teknik pengelasan, termasuk MIG, TIG, dan pengelasan busur manual. Kami menggunakan peralatan modern dan teknik terbaru untuk memastikan hasil yang maksimal dan kepuasan pelanggan.',
+    };
+    return <WeldingClient jsonLd={jsonLd} />;
 }

@@ -46,5 +46,14 @@ export const metadata = {
 };
 
 export default function SupplyPumpPage() {
-    return <SupplyPumpClient />;
+
+    const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Layanan Supply Pump',
+    description:
+        'Supply pump adalah komponen penting dalam sistem bahan bakar yang bertugas untuk memompa bahan bakar dari tangki ke mesin. Kami menawarkan layanan perbaikan, pemeliharaan, dan penggantian supply pump dengan fokus pada kualitas dan kepuasan pelanggan. Layanan kami meliputi identifikasi masalah, servis berkala, penggantian part rusak, dan kalibrasi untuk efisiensi optimal.',
+};
+
+    return <SupplyPumpClient jsonLd={jsonLd} />;
 }

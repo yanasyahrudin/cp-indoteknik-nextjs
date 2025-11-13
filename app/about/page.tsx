@@ -44,5 +44,12 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-    return <AboutUsClient />;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Tentang Indo Teknik",
+        "description": "Kenali Indo Teknik Pekanbaru, distributor dan bengkel resmi spare part diesel terpercaya sejak 1997. Temukan sejarah, visi, misi, keunggulan, dan komitmen kami dalam menyediakan produk serta layanan terbaik untuk kebutuhan industri dan otomotif Anda.",
+        "url": "https://indoteknik.co/about"
+    };
+    return <AboutUsClient jsonLd={jsonLd} />;
 }

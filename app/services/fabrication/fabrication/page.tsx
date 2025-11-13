@@ -46,5 +46,12 @@ export const metadata = {
 };
 
 export default function FabricationPage() {
-    return <FabricationClient />;
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Layanan Fabrikasi',
+        description:
+            'Kami menawarkan layanan fabrikasi profesional untuk berbagai keperluan industri dan komersial. Tim ahli kami berpengalaman dalam berbagai teknik fabrikasi, termasuk pengelasan dan perbaikan mesin diesel. Didukung oleh teknisi berpengalaman dan peralatan modern untuk kebutuhan industri dan otomotif Anda.',
+    };
+    return <FabricationClient jsonLd={jsonLd} />;
 }

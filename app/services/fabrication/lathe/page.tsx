@@ -47,5 +47,11 @@ export const metadata = {
 };
 
 export default function LathePage() {
-    return <LatheClient />;
+     const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Layanan Bubut',
+        description: 'Kami menawarkan layanan bubut kualitas terbaik untuk berbagai kebutuhan industri dan komersial. Tim ahli kami berpengalaman dalam menangani berbagai jenis pekerjaan bubut, mulai dari komponen kecil hingga proyek besar. Layanan kami meliputi pembuatan komponen presisi, perbaikan, pembuatan prototipe, dan produksi massal dengan hasil presisi dan berkualitas tinggi.',
+    };
+    return <LatheClient jsonLd={jsonLd} />;
 }

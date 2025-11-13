@@ -9,7 +9,7 @@ import AnimatedSection from '../../../components/animated-section/page';
 import GoogleReviewWidget from '../../../components/google-review-widget/page';
 import Image from 'next/image';
 
-const TICS = () => {
+const TICS = ({ jsonLd }) => {
     const { t } = useTranslation('global');
 
     useEffect(() => {
@@ -19,12 +19,6 @@ const TICS = () => {
             behavior: 'smooth',
         });
     }, []); // Empty dependency array to run only once on mount
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: t('services.injector.title'),
-        description: t('services.injector.description'),
-    };
 
     return (
         <div className='mx-auto mt-10 mb-10'>

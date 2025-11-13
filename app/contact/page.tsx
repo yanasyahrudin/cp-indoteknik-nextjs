@@ -43,5 +43,42 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-    return <ContactClient />;
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: 'Kontak Indo Teknik',
+        description:
+            'Hubungi Indo Teknik Pekanbaru untuk konsultasi, pemesanan spare part diesel, servis mesin, dan informasi alamat serta jam operasional.',
+        url: 'https://indo-teknik.com/contact',
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Jl. Riau Ujung, Kel. Tampan, Kec. Payung Sekaki',
+            addressLocality: 'Pekanbaru',
+            addressRegion: 'Riau',
+            postalCode: '28292',
+            addressCountry: 'ID',
+        },
+        openingHoursSpecification: [
+            {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: [
+                    'Monday',
+                    'Tuesday',
+                    'Wednesday',
+                    'Thursday',
+                    'Friday',
+                ],
+                opens: '08:00',
+                closes: '17:00',
+            },
+        ],
+        contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'customer service',
+            telephone: '+62-812-7688-8888',
+            email: 'info@indo-teknik.com',
+            areaServed: 'ID',
+        },
+    };
+    return <ContactClient jsonLd={jsonLd} />;
 }

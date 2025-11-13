@@ -46,5 +46,11 @@ export const metadata = {
 };
 
 export default function NozzlePage() {
-    return <NozzleClient />;
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Layanan Nozzle',
+        description: 'Nozzle adalah komponen penting dalam sistem injeksi bahan bakar yang berfungsi untuk menyemprotkan bahan bakar ke dalam ruang bakar mesin. Kami menyediakan layanan perbaikan, pembersihan, dan penggantian nozzle untuk memastikan performa mesin Anda optimal. Layanan kami meliputi pembersihan, perbaikan, penggantian, dan pengujian nozzle dengan standar kualitas tinggi.',
+    };
+    return <NozzleClient jsonLd={jsonLd} />;
 }

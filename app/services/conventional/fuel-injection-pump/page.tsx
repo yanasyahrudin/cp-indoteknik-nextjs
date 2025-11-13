@@ -48,5 +48,11 @@ export const metadata = {
 };
 
 export default function FuelInjectionPumpPage() {
-    return <FuelInjectionPumpClient />;
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Layanan Fuel Injection Pump',
+        description: 'Kami menyediakan layanan perbaikan dan perawatan untuk berbagai jenis Fuel Injection Pump. Layanan kami mencakup perbaikan untuk pompa injeksi bahan bakar tipe in-line dan rotary, menggunakan mesin terbaru, tools dan spare part yang lengkap, serta teknisi handal dan berpengalaman.',
+    };
+    return <FuelInjectionPumpClient jsonLd={jsonLd} />;
 }

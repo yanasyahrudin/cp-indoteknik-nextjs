@@ -8,7 +8,7 @@ import { RiContactsBook2Fill } from 'react-icons/ri';
 
 import AnimatedSection from '../components/animated-section/page'; // Tambahkan import ini
 
-const ContactUs = () => {
+const ContactUs = ({ jsonLd }) => {
     const { t } = useTranslation('global');
 
     useEffect(() => {
@@ -19,26 +19,6 @@ const ContactUs = () => {
         });
     }, []); // Empty dependency array to run only once on mount
 
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'ContactPage',
-        name: t('contact.title'),
-        address: {
-            '@type': 'PostalAddress',
-            streetAddress: t('contact.ourAddress.content'),
-            addressLocality: t('contact.ourAddress.content2'),
-        },
-        openingHours: [
-            t('contact.hours.available'),
-            t('contact.hours.closed'),
-        ],
-        contactPoint: {
-            '@type': 'ContactPoint',
-            contactType: 'customer service',
-            telephone: t('contact.phone'),
-            email: t('contact.email'),
-        },
-    };
 
     return (
         <>

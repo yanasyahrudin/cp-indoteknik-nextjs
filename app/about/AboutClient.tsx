@@ -6,7 +6,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 import AnimatedSection from '../components/animated-section/page';
 import Image from 'next/image';
 
-const AboutUs = () => {
+const AboutUs = ({ jsonLd }) => {
     const { t } = useTranslation('global');
 
     useEffect(() => {
@@ -17,13 +17,7 @@ const AboutUs = () => {
         });
     }, []); // Empty dependency array to run only once on mount
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "name": t('about.seo.title'),
-        "description": t('about.seo.description'),
-        "url": "https://www.indoteknik.com/about",
-    };
+
 
     return (
         <>

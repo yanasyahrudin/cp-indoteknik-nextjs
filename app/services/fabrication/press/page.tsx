@@ -47,5 +47,11 @@ export const metadata = {
 };
 
 export default function PressPage() {
-    return <PressClient />;
+        const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Layanan Press',
+        description: 'Kami menyediakan layanan press berkualitas tinggi untuk berbagai kebutuhan industri dan komersial. Tim ahli kami berpengalaman dalam menangani berbagai jenis pekerjaan press, mulai dari komponen kecil hingga proyek besar. Layanan kami meliputi pembuatan komponen presisi, perbaikan, pembuatan prototipe, dan produksi massal dengan hasil presisi dan berkualitas tinggi.',
+    };
+    return <PressClient jsonLd={jsonLd} />;
 }
