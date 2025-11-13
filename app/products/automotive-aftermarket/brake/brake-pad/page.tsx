@@ -3,7 +3,8 @@ import { descriptionDetailCategory } from '../../../../data/descriptionDetailCat
 
 const categoryDetails = {
     name: 'Brake Pad',
-    description: descriptionDetailCategory,  imageUrl:
+    description: descriptionDetailCategory,
+    imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1723104828/cp-indoteknik-v3/productsBrake/Screenshot_2024-08-08_142640-removebg-preview_quskyn.png', // Replace with actual image URL
 };
 
@@ -18,7 +19,8 @@ export const metadata = {
         'Automotive Aftermarket',
     ],
     alternates: {
-        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/brake/brake-pad',
+        canonical:
+            'https://indo-teknik.com/products/automotive-aftermarket/brake/brake-pad',
     },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
@@ -32,8 +34,14 @@ export const metadata = {
             },
         ],
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
+        images: [categoryDetails.imageUrl],
+    },
 };
 
-export default function BrakePadDetailsPage() {
+export default function BrakePadPage() {
     return <BrakePadDetailsClient />;
 }

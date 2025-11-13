@@ -33,6 +33,14 @@ export const metadata = {
             },
         ],
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
+        images: [
+            categoryDetails.imageUrl,
+        ],
+    },
 };
 
 export default function ClearAdvantageWiperDetailsPage() {

@@ -3,7 +3,8 @@ import OilFilterDetails from './OilFilterDetailsClient';
 
 const categoryDetails = {
     name: 'Oil Filter',
-    description: descriptionDetailCategory,  imageUrl:
+    description: descriptionDetailCategory,
+    imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/c_scale,w_600/cp-indoteknik-v3/productsFilter/DSC_0637_copy_lvgn31.png', // Replace with actual image URL
 };
 
@@ -18,7 +19,8 @@ export const metadata = {
         'Automotive Aftermarket',
     ],
     alternates: {
-        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/filter/oil-filter',
+        canonical:
+            'https://indo-teknik.com/products/automotive-aftermarket/filter/oil-filter',
     },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
@@ -31,6 +33,12 @@ export const metadata = {
                 alt: categoryDetails.name,
             },
         ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
+        images: [categoryDetails.imageUrl],
     },
 };
 

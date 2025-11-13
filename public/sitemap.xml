@@ -3,89 +3,164 @@
   <!-- Home Page -->
   <url>
     <loc>https://indo-teknik.com/</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1</priority>
   </url>
 
   <!-- Static Pages -->
   <url>
     <loc>https://indo-teknik.com/about</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/contact</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/test-bench-and-fabrication-machines</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/blog</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- Product Pages -->
   <url>
     <loc>https://indo-teknik.com/products/fuel-injection-systems/vp44/distributor-pump/distributor-pump-vp44</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/products/fuel-injection-systems/electric/eui/eui</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/products/fuel-injection-systems/electric/unit-pump/unit-pump</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Dynamic Service Routes -->
   <url>
     <loc>https://indo-teknik.com/services/conventional/nozzle</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/conventional/fuel-injection-pump</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/common-rail/supply-pump</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/common-rail/injector</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/electric/eui</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/electric/tics</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/electric/unit-pump</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/fabrication/welding</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/fabrication/lathe</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/fabrication/press'</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/services/fabrication/fabrication'</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- Dynamic Product Category Routes -->
   <url>
     <loc>https://indo-teknik.com/products/fuel-injection-systems/vp44/distributor-pump/distributor-pump-vp44</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Dynamic Conventional, Common Rail, Automotive Aftermarket, and Other Products Details -->
   <url>
     <loc>https://indo-teknik.com/products/fuel-injection-systems/conventional/fuel-injection-pump</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/products/fuel-injection-systems/conventional/nozzle</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/products/fuel-injection-systems/common-rail/supply-pump</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://indo-teknik.com/products/fuel-injection-systems/common-rail/injector</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- 404 Fallback -->
   <url>
     <loc>https://indo-teknik.com/404</loc>
+    <lastmod>2025-11-13T00:00:00.000Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
 </urlset>

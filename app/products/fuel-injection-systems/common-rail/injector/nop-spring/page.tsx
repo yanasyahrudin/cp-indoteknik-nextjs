@@ -1,6 +1,5 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
-
-import NopShimDetailsClient from './NopSpringDetailsClient';
+import NopSpringDetailsClient from './NopSpringDetailsClient';
 
 const categoryDetails = {
     name: 'Nop Shim',
@@ -40,8 +39,16 @@ export const metadata = {
             },
         ],
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,
+        images: [
+            categoryDetails.imageUrl,
+        ],
+    },
 };
 
-export default function NopShimDetailsPage() {
-    return <NopShimDetailsClient />;
+export default function NopSpringDetailsPage() {
+    return <NopSpringDetailsClient />;
 }

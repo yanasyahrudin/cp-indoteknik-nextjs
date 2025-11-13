@@ -27,6 +27,30 @@ export const metadata = {
         'keselamatan berkendara',
         'aksesoris kendaraan',
     ],
+    openGraph: {
+        title: 'Klakson | Indo Teknik',
+        description:
+            'Jual berbagai jenis klakson aftermarket untuk mobil dan motor seperti disc compact, megatone, fanfare, dan piccolo. Produk klakson berkualitas untuk keselamatan dan kenyamanan berkendara hanya di Indo Teknik.',
+        url: 'https://indo-teknik.com/products/automotive-aftermarket/horn',
+        type: 'website',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/dcbryptkx/image/upload/c_scale,w_1200/v1717044591/companyProfile/home/roundLogo.png',
+                width: 1200,
+                height: 630,
+                alt: 'Indo Teknik - Spare Part Diesel & Servis',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Klakson | Indo Teknik',
+        description:
+            'Jual berbagai jenis klakson aftermarket untuk mobil dan motor seperti disc compact, megatone, fanfare, dan piccolo. Produk klakson berkualitas untuk keselamatan dan kenyamanan berkendara hanya di Indo Teknik.',
+        images: [
+            'https://res.cloudinary.com/dcbryptkx/image/upload/c_scale,w_1200/v1717044591/companyProfile/home/roundLogo.png',
+        ],
+    },
 };
 
 export default function HornPage() {

@@ -3,7 +3,8 @@ import { descriptionDetailCategory } from '../../../../data/descriptionDetailCat
 
 const categoryDetails = {
     name: 'Fusion Bright Bulb',
-    description: descriptionDetailCategory,  imageUrl:
+    description: descriptionDetailCategory,
+    imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1723111450/cp-indoteknik-v3/productsBulbLighting/fusion_bright-removebg-preview_zkz36n.png', // Replace with actual image URL
 };
 export const metadata = {
@@ -17,7 +18,8 @@ export const metadata = {
         'Automotive Aftermarket',
     ],
     alternates: {
-        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/bulb-lighting/fusion-bright',
+        canonical:
+            'https://indo-teknik.com/products/automotive-aftermarket/bulb-lighting/fusion-bright',
     },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
@@ -31,8 +33,14 @@ export const metadata = {
             },
         ],
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
+        images: [categoryDetails.imageUrl],
+    },
 };
 
-export default function FusionBrightDetailsPage() {
+export default function FusionBrightPage() {
     return <FusionBrightBulbDetails />;
 }

@@ -3,8 +3,9 @@ import FanfareCompactHornDetails from './FanfareCompactDetailsClient';
 
 const categoryDetails = {
     name: 'Fanfare Compact',
-    description: descriptionDetailCategory,   imageUrl:
-        'https://res.cloudinary.com/dcbryptkx/image/upload/v1723107502/cp-indoteknik-v3/productsHorn/fanfare_compact-removebg-preview_rulysx.png', // Replace with actual image URL
+    description: descriptionDetailCategory,
+    imageUrl:
+        'https://res.cloudinary.com/dcbryptkx/image/upload/v1723107502/cp-indoteknik-v3/productsHorn/fanfare_compact-removebg-preview_rulysx.png',
 };
 
 export const metadata = {
@@ -23,6 +24,8 @@ export const metadata = {
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
         description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
+        url: 'https://indo-teknik.com/products/automotive-aftermarket/horn/fanfare-compact',
+        type: 'website',
         images: [
             {
                 url: categoryDetails.imageUrl,
@@ -30,6 +33,14 @@ export const metadata = {
                 height: 400,
                 alt: categoryDetails.name,
             },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
+        images: [
+            categoryDetails.imageUrl,
         ],
     },
 };

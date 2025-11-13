@@ -39,6 +39,14 @@ export const metadata = {
             },
         ],
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas untuk sistem injeksi bahan bakar diesel di Indo Teknik.`,
+        images: [
+            categoryDetails.imageUrl,
+        ],
+    },
 };
 
 export default function CommandPistonDetailsPage() {

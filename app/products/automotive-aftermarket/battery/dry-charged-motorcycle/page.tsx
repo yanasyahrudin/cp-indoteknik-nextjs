@@ -3,7 +3,8 @@ import { descriptionDetailCategory } from '../../../../data/descriptionDetailCat
 
 const categoryDetails = {
     name: 'Dry Charged (Motorcycle)',
-    description: descriptionDetailCategory,imageUrl:
+    description: descriptionDetailCategory,
+    imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724396613/cp-indoteknik-v3/productsBattery/battery_motorcycle_dc_309932af143dab374319fb928946b398-removebg-preview_nysovr.png', // Replace with actual image URL
 };
 
@@ -18,7 +19,8 @@ export const metadata = {
         'Automotive Aftermarket',
     ],
     alternates: {
-        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/battery/dry-charged-motorcycle',
+        canonical:
+            'https://indo-teknik.com/products/automotive-aftermarket/battery/dry-charged-motorcycle',
     },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
@@ -32,8 +34,14 @@ export const metadata = {
             },
         ],
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
+        images: [categoryDetails.imageUrl],
+    },
 };
 
-export default function DryChargedPage() {
+export default function DryChargedMotorcyclePage() {
     return <DryChargedMotorcycleDetailsClient />;
 }
