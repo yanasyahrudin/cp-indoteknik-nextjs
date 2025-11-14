@@ -7,7 +7,7 @@ const categoryDetails = {
     description: descriptionDetailCategory,  imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721960151/cp-indoteknik-v3/productsTools/nozzle_tester_pnbez2.png', // Replace with the actual image URL
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Nozzle Tester | Indo Teknik',
     description: 'Nozzle Tester untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

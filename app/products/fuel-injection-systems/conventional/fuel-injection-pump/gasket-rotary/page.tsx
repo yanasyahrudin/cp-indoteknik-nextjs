@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721463885/cp-indoteknik-v3/productsFuelInjectionPump/rotary/gasket%20repair%20kit80-0636-hot-sales-common-rail-repair-kits-80-0636-removebg-preview_gumifm.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

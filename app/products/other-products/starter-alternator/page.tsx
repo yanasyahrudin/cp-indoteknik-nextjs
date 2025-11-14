@@ -1,6 +1,8 @@
 import StarterAlternatorClient from './StarterAlternatorClient';
 import categories from '../../../data/alternatorStarterCategory';
 
+export const revalidate = 60;
+
 export const metadata = {
   title: "Starter dan Alternator | Indo Teknik",
   description:

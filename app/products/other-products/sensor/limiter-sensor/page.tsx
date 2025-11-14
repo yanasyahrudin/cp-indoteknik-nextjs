@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/c_scale,w_600/v1721362938/cp-indoteknik-v3/productsSensor/DSC_0726_copy_p9rz0o.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Limiter Sensor | Indo Teknik',
     description: 'Limiter Sensor untuk sistem sensor mesin diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

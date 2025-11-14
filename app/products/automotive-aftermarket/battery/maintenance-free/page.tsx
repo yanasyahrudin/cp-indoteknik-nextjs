@@ -1,7 +1,7 @@
 import MaintenanceFreeDetailsClient from './MaintenanceFreeDetailsClient';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import categories from '../../../../data/batteryCategory';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Maintenance Free',
     description: descriptionDetailCategory,

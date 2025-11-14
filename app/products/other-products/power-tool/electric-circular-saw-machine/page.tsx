@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1723780532/cp-indoteknik-v3/productsPowerTool/br-m036969-00486_bosch-circular-saw-gergaji-sirkel-listrik-184mm-1300watt-gks-130_full01-645ce84b-removebg-preview_toihfg.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Electric Circular Saw Machine | Indo Teknik',
     description: 'Electric Circular Saw Machine untuk kebutuhan pemotongan material secara presisi. Temukan spesifikasi, informasi, dan alat berkualitas hanya di Indo Teknik.',

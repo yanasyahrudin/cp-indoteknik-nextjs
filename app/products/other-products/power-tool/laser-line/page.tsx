@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724036386/cp-indoteknik-v3/productsPowerTool/sg-11134201-22100-mg1oolluusiv27-removebg-preview_wpnfs5.png', // Replace with actual image URL
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Cover Injector L | Indo Teknik',
     description:

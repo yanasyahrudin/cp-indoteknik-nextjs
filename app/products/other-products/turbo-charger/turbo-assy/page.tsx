@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721361016/cp-indoteknik-v3/productsTurboCharger/CIMG4320-removebg-preview_hbsviw.png', // Replace with actual image URL
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Turbo Assy | Indo Teknik',
     description: 'Turbo Assy untuk turbocharger diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

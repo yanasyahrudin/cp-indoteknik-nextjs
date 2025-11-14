@@ -1,7 +1,7 @@
 import StandardBulbDetails from './StandardDetailsClient';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import categories from '@/app/data/toolsCategory';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Standard Bulb',
     description: descriptionDetailCategory,

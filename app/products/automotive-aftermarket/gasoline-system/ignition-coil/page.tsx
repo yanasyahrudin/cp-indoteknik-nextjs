@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import IgnitionCoilDetails from './IgnitionCoilDetailsClient';
 import categories from '../../../../data/gasolineSystem'; // Update to appropriate data source if needed
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Ignition Coil',
     description: descriptionDetailCategory,

@@ -1,5 +1,7 @@
 import SupplyPumpClient from './SupplyPumpClient';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Layanan Supply Pump | Indo Teknik',
     description:

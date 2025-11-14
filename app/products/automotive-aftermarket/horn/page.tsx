@@ -1,5 +1,7 @@
 import HornClient from './HornClient';
 import categories from '../../../data/hornCategory';
+
+export const revalidate = 60;
 export const metadata = {
     title: 'Klakson | Indo Teknik',
     description:

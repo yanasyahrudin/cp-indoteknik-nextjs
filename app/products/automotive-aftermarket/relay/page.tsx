@@ -1,5 +1,7 @@
 import RelayClient from './RelayClient';
 import categories from '../../../data/relayCategory';
+
+export const revalidate = 60;
 export const metadata = {
     title: 'Relay | Indo Teknik',
     description:

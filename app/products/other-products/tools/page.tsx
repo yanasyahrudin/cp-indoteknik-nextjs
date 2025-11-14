@@ -1,5 +1,7 @@
 import ToolsClient from './ToolsClient';
 import categories from '../../../data/toolsCategory';
+
+export const revalidate = 60;
 export const metadata = {
   title: "Tools | Indo Teknik",
   description:

@@ -1,5 +1,5 @@
 import LatheClient from './LatheClient';
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Layanan Bubut | Indo Teknik',
     description:

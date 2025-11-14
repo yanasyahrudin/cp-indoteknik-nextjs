@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import AnimatedSection from '@/app/components/animated-section/page';
 
+export const revalidate = 60;
+
 const EcuCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
     const { t } = useTranslation();

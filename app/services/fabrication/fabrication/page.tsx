@@ -1,5 +1,6 @@
 import FabricationClient from './FabricationClient';
 
+export const revalidate = 60;
 export const metadata = {
     title: 'Layanan Fabrikasi | Indo Teknik',
     description:

@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721459141/cp-indoteknik-v3/productsFuelInjectionPump/in-line/plate%20coupling%20H54f1686a4d2e4216ac8b8a854eb05115.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

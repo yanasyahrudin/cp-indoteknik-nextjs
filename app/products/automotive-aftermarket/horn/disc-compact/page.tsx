@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import DiscCompactHornDetails from './DiscCompactDetailsClient';
 import categories from '../../../../data/hornCategory'; // Update to appropriate data source if needed
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Disc Compact',
     description: descriptionDetailCategory,

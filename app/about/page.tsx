@@ -1,5 +1,7 @@
 import AboutUsClient from './AboutClient';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Tentang Kami | Indo Teknik',
     description:

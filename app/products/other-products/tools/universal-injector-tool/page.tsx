@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721965348/cp-indoteknik-v3/productsTools/universal_injector_tool_azxyuz.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Universal Injector Tool | Indo Teknik',
     description: 'Universal Injector Tool untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

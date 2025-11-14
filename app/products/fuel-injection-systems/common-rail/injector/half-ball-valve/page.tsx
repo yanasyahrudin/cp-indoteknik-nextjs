@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import HalfBallValveClient from './HalfBallValveDetailsClient'; // Pastikan file dan komponen ini ada
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Half Ball Valve',
     description: descriptionDetailCategory,

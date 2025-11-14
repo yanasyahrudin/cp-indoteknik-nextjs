@@ -1,7 +1,7 @@
 import DryChargedMotorcycleDetailsClient from './DryChargedMotorcycleDetailsClient';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import categories from '../../../../data/batteryCategory';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Dry Charged (Motorcycle)',
     description: descriptionDetailCategory,

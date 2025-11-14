@@ -1,5 +1,7 @@
 import VP44Client from './VP44Client';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'VP44 Distributor Pump | Indo Teknik',
     description:

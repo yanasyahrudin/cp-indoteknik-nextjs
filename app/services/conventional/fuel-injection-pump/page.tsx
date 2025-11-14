@@ -1,5 +1,7 @@
 import FuelInjectionPumpClient from './FuelInjectionPumpClient';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Layanan Fuel Injection Pump | Indo Teknik',
     description:

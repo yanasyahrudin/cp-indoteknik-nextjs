@@ -1,6 +1,6 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 import NopSpringDetailsClient from './NopSpringDetailsClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Nop Shim',
     description: descriptionDetailCategory,

@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721363673/cp-indoteknik-v3/productsSensor/DSC_0747-removebg-preview_nbltym.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'MAP Sensor | Indo Teknik',
     description: 'MAP (Manifold Absolute Pressure) Sensor untuk sistem sensor tekanan udara pada mesin diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

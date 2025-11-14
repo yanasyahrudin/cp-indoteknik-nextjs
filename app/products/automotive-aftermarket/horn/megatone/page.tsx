@@ -1,7 +1,7 @@
 import categories from '@/app/data/coverInjectorCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import MegatoneHornDetails from './MegatoneDetailsClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Megatone',
     description: descriptionDetailCategory,

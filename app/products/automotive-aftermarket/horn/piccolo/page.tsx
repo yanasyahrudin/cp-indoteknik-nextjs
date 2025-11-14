@@ -1,7 +1,7 @@
 import categories from '@/app/data/nozzleCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import PiccoloHornDetails from './PiccoloDetailsClient';
-
+export const revalidate = 60;
 
 const categoryDetails = {
     name: 'Piccolo',

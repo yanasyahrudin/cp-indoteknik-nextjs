@@ -7,7 +7,7 @@ const categoryDetails = {
     description: descriptionDetailCategory,  imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/c_scale,w_600/v1721963220/cp-indoteknik-v3/productsTools/DSC_0524_copy_jyrnyo.png', // Replace with actual image URL
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Injector Bracket | Indo Teknik',
     description: 'Injector Bracket untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

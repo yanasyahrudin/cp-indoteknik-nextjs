@@ -1,5 +1,7 @@
 import FilterClient from './GasolineSystemClient';
 import categories from './../../../data/gasolineSystem';
+
+export const revalidate = 60;
 export const metadata = {
     title: 'Gasoline System | Indo Teknik',
     description:

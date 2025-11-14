@@ -1,5 +1,8 @@
 import BlogClient from './BlogClient';
 import blogPosts from '../data/blogPostsData';
+
+export const revalidate = 60;
+
 export const metadata = {
   title: "Blog | Indo Teknik",
   description: "Temukan artikel terbaru seputar mesin diesel, tips perawatan, berita industri, dan informasi produk dari Indo Teknik Pekanbaru. Dapatkan wawasan dan solusi terbaik untuk kebutuhan otomotif dan industri Anda.",

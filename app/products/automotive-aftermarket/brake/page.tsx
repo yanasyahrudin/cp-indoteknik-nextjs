@@ -1,5 +1,7 @@
 import BrakeClient from './BrakeClient';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Rem | Indo Teknik',
     description:

@@ -1,7 +1,7 @@
 import categories from '@/app/data/socketCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import OilFilterDetails from './OilFilterDetailsClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Oil Filter',
     description: descriptionDetailCategory,

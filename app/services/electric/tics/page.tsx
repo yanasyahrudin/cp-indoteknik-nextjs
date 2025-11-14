@@ -1,5 +1,7 @@
 import TICSClient from './TICSClient';
 
+export const revalidate = 60;
+
 export const metadata = {
   title: "Layanan TICS | Indo Teknik",
   description: "Layanan perbaikan dan servis TICS (Timing & Injection Control System) diesel di Indo Teknik Pekanbaru. Teknisi berpengalaman, alat modern, dan jaminan kualitas untuk kebutuhan industri dan otomotif Anda.",

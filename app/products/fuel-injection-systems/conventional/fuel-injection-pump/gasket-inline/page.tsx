@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721465059/cp-indoteknik-v3/productsFuelInjectionPump/in-line/pc33240617-kit_perbaikan_pompa_injeksi_bahan_bakar_mobil_diesel_801671_190440_0390-removebg-preview_ckq0oy.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

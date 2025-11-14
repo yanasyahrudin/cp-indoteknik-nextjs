@@ -1,5 +1,8 @@
 import BulbLightingClient from './BulbLightingClient';
 import categories from '../../../data/bulbCategory';
+
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Lampu Bohlam | Indo Teknik',
     description:

@@ -1,7 +1,7 @@
 import categories from '@/app/data/sensorCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import ElectricFuelPumpDetails from './ElectricFuelDetailsClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Electric Fuel Pump',
     description: descriptionDetailCategory,

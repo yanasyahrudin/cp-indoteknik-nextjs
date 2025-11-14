@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import OrificeValveClient from './OrificeValveDetailsClient'; // Pastikan file dan komponen ini ada
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Orifice Valve',
     description: descriptionDetailCategory,

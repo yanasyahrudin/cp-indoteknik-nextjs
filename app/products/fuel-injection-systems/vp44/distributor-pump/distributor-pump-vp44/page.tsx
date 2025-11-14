@@ -1,6 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
-
 import DistributorPumpVP44DetailsClient from './DistributorPumpVP44DetailsClient';
+
+export const revalidate = 60;
 
 const categoryDetails = {
     name: 'Distributor Pump VP44',
@@ -17,6 +18,7 @@ const categories = [
         imgSrc: 'https://res.cloudinary.com/dcbryptkx/image/upload/v1721888185/cp-indoteknik-v3/productsDistributorPump/CIMG4447-removebg-preview_pzeimm.png',
     },
 ];
+export const revalidate = 60;
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `Distributor Pump VP44: Informasi, spesifikasi, dan suku cadang berkualitas untuk sistem injeksi bahan bakar diesel di Indo Teknik.`,

@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724812873/cp-indoteknik-v3/productsSocket/Soket_SCV_Denso_Injector_Denso_Dmax-removebg-preview_amwgjr.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'SCV Injector Socket | Indo Teknik',
     description: 'SCV Injector Socket untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

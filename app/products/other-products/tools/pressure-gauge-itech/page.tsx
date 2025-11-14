@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724839442/cp-indoteknik-v3/productsTools/Pressure_Gauge_Itech_DSC_0574b_copy_ttwser_moncb2_ckf4b4.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Pressure Gauge Itech | Indo Teknik',
     description: 'Pressure Gauge Itech untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

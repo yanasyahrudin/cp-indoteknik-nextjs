@@ -1,5 +1,6 @@
 import TurboChargerClient from './TurboChargerClient';
 import categories from '../../../data/turboChargerCategory';
+export const revalidate = 60;
 export const metadata = {
     title: 'Turbo Charger | Indo Teknik',
     description:

@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import MicroFilterInjectorDetailsClient from './MicroFilterInjectorDetailsClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Micro Filter Injector',
     description: descriptionDetailCategory,

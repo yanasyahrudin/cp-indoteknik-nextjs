@@ -1,6 +1,8 @@
 import CoverInjectorClient from './CoverInjectorClient';
 import categories from '../../../data/coverInjectorCategory';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Cover Injector | Indo Teknik',
     description:

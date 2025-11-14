@@ -1,5 +1,7 @@
 import SensorClient from './SensorClient';
 import categories from '../../../data/sensorCategory';
+
+export const revalidate = 60;
 export const metadata = {
   title: "Sensor | Indo Teknik",
   description:

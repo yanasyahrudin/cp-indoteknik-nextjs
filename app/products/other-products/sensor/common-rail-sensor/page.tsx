@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721363366/cp-indoteknik-v3/productsSensor/DSC_0596-removebg-preview_qmjwme.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Common Rail Sensor | Indo Teknik',
     description: 'Common Rail Sensor untuk sistem sensor injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

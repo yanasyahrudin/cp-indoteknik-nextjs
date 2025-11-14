@@ -1,5 +1,7 @@
 import WiperClient from './WiperClient';
 import categories from '../../../data/wiperCategory';
+
+export const revalidate = 60;
 export const metadata = {
     title: 'Wiper | Indo Teknik',
     description:

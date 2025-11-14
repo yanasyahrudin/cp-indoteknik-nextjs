@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import RepairKitInjectorClient from './RepairKitInjectorDetailsClient'; // Pastikan file dan komponen ini ada
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Repair Kit Injector',
     description: descriptionDetailCategory,

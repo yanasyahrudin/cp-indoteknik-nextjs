@@ -1,7 +1,7 @@
 import categories from '@/app/data/wiperCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import AerotwinWiperDetails from './AerotwinWiperClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Aerotwin Wiper',
     description: descriptionDetailCategory, imageUrl:

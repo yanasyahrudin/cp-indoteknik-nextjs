@@ -1,5 +1,7 @@
 import NozzleClient from './NozzleClient';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Layanan Nozzle | Indo Teknik',
     description:

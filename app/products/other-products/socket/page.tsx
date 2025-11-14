@@ -1,5 +1,7 @@
 import SocketClient from './SocketClient';
 import categories from '../../../data/socketCategory';
+
+export const revalidate = 60;
 export const metadata = {
     title: 'Socket | Indo Teknik',
     description:

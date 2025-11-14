@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724812872/cp-indoteknik-v3/productsSocket/Soket_Oil_Temperature_Sensor_Denso-removebg-preview_udhaxg.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Oil Temperature Sensor Socket | Indo Teknik',
     description: 'Oil Temperature Sensor Socket untuk sensor suhu oli mesin diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

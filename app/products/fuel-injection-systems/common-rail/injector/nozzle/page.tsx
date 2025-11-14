@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import NozzleDetailsClient from './NozzleDetailsClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Nozzle',
     description: descriptionDetailCategory,

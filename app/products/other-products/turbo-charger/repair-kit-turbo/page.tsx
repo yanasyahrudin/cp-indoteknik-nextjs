@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721360636/cp-indoteknik-v3/productsTurboCharger/DSC_0331-removebg-preview_kjdaw2.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Turbo Repair Kit | Indo Teknik',
     description: 'Turbo Repair Kit untuk turbocharger diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

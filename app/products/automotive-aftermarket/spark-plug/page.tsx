@@ -1,5 +1,7 @@
 import SparkPlugClient from './SparkPlugClient';
 import categories from '../../../data/sparkSplugCategory';
+
+export const revalidate = 60;
 export const metadata = {
     title: 'Busi | Indo Teknik',
     description:

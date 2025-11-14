@@ -2,7 +2,7 @@ import categories from '@/app/data/injectorCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import DoublePlatinumSparkPlugDetails from './DoublePlatinumSparkPlugCient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Double Platinum',
     description: descriptionDetailCategory,

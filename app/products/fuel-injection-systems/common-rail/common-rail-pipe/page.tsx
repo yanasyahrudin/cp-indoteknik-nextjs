@@ -1,5 +1,6 @@
 import CommonRailPipeClient from './CommonRailPipeClient';
 import categories from '../../../../data/commonRailPipeCategory';
+export const revalidate = 60;
 export const metadata = {
     title: 'Common Rail Pipe | Indo Teknik',
     description:

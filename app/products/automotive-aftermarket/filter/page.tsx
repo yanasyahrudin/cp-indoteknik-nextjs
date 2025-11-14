@@ -1,5 +1,8 @@
 import FilterClient from './FIlterClient';
 import categories from './../../../data/FilterCategory';
+
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Filter | Indo Teknik',
     description:

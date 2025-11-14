@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724839447/cp-indoteknik-v3/productsTools/TOOLS_CAT_DSC_0510_copy_np60qw_t7aroq_w3xvjc.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Tool Injector Caterpillar | Indo Teknik',
     description: 'Tool Injector Caterpillar untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

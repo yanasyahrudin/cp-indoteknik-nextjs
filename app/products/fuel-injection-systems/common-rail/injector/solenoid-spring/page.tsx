@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import SolenoidSpringClient from './SelenoidSpringDetailsClient'; // Pastikan file dan komponen ini ada
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Solenoid Spring',
     description: descriptionDetailCategory,

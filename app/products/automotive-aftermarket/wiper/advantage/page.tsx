@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import AdvantageWiperDetails from './AdvantageWiperClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Advantage Wiper',
     description: descriptionDetailCategory,

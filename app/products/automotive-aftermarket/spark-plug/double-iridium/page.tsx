@@ -2,7 +2,7 @@ import categories from '@/app/data/supplyPumpCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import DoubleIridiumSparkPlugClient from './DoubleIridiumSparkPlugClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Double Iridium',
     description: descriptionDetailCategory,

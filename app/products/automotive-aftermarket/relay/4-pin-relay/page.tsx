@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import categories from '../../../../data/relayCategory'; // Update to appropriate data source if needed
 import FourPinRelayDetailsClient from './4PinRelayDetailsClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: '4 Pin Relay',
     description: descriptionDetailCategory,

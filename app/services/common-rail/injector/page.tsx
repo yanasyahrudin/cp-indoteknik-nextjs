@@ -1,5 +1,7 @@
 import InjectorClient from './InjectorClient';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Layanan Injector | Indo Teknik',
     description:

@@ -1,5 +1,5 @@
 import PressClient from './PressClient';
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Layanan Press | Indo Teknik',
     description:

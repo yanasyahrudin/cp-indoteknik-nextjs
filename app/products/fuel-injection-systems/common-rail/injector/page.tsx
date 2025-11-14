@@ -1,5 +1,7 @@
 import InjectorClient from './InjectorClient';
 import categories from '../../../../data/injectorCategory';
+
+export const revalidate = 60;
 export const metadata = {
     title: 'Injector | Indo Teknik',
     description:

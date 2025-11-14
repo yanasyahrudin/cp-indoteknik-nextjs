@@ -1,5 +1,6 @@
 'use client';
 
+export const revalidate = 60;
 import React, { useEffect } from 'react';
 import { IoIosSettings } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';

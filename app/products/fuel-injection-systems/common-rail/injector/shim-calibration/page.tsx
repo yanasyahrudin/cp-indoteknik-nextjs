@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import ShimCalibrationClient from './ShimCalibrationDetailsClient'; // Pastikan file dan komponen ini ada
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Shim Calibration',
     description: descriptionDetailCategory,

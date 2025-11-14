@@ -2,7 +2,7 @@ import categories from '@/app/data/wiperCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import PlatinumSparkPlugDetails from './PlatinumSparkPlugClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Platinum',
     description: descriptionDetailCategory,  imageUrl:

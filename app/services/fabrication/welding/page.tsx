@@ -1,5 +1,5 @@
 import WeldingClient from './WeldingClient';
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Layanan Pengelasan | Indo Teknik',
     description:

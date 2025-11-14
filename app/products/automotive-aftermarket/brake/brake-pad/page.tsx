@@ -1,7 +1,7 @@
 import BrakePadDetailsClient from './BrakePadDetailsClient';
 import categories from '../../../../data/brakeCatgeory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Brake Pad',
     description: descriptionDetailCategory,

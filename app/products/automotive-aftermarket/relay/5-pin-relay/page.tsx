@@ -2,7 +2,7 @@ import categories from '@/app/data/fipCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import FivePinRelayDetails from './5PinRelayDetailsClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: '5 Pin Relay',
     description: descriptionDetailCategory,

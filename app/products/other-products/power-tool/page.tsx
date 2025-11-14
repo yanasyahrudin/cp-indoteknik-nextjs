@@ -1,5 +1,7 @@
 import PowerToolClient from './PowerToolClient';
 import categories from './../../../data/powerToolCategory';
+
+export const revalidate = 60;
 export const metadata = {
   title: "Power Tool | Indo Teknik",
   description:

@@ -1,7 +1,7 @@
 import categories from '@/app/data/wiperCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import RearWiperClient from './RearWiperClient';
-
+export const revalidate = 60;
 const categoryDetails = {
     name: 'Advantage Wiper',
     description: descriptionDetailCategory,

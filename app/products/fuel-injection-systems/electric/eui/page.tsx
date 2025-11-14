@@ -1,5 +1,7 @@
 import EUIClient from './EUIClient';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'EUI | Indo Teknik',
     description:

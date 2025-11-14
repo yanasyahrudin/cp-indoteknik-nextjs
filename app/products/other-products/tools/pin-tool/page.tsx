@@ -8,6 +8,7 @@ const categoryDetails = {
     description: descriptionDetailCategory,  imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721963680/cp-indoteknik-v3/productsTools/pin_tool_DSC_1437-removebg-preview_uw8rc6.png', // Replace with actual image URL
 };
+export const revalidate = 60;
 export const metadata = {
     title: 'Pin Tool | Indo Teknik',
     description: 'Pin Tool untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

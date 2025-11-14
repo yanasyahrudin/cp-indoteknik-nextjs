@@ -1,5 +1,8 @@
 import BaterryClient from './BatteryClient';
 import categories from './../../../data/batteryCategory';
+
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Battery | Indo Teknik',
     description:

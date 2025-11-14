@@ -1,5 +1,7 @@
 import ContactClient from './ContactClient';
 
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Kontak | Indo Teknik',
     description:

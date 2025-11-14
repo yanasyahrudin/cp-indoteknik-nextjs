@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724033018/cp-indoteknik-v3/productsPowerTool/measuring_tools_GLM_30-23-removebg-preview_jz6cyw.png',
 };
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Distance Measuring Tool | Indo Teknik',
     description:

@@ -1,7 +1,9 @@
 import FuelInjectionClient from './FuelInjectionPumpClient';
 
 import categories from './../../../../data/fipCategory';
-import categories from './../../../../data/alternatorStarterCategory';
+
+export const revalidate = 60;
+
 export const metadata = {
     title: 'Fuel Injection Pump | Indo Teknik',
     description:
