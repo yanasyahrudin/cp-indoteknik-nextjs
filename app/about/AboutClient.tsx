@@ -6,7 +6,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 import AnimatedSection from '../components/animated-section/page';
 import Image from 'next/image';
 
-const AboutUs = ({ jsonLd }) => {
+const AboutUs = ({ jsonLd }: { jsonLd: Record<string, unknown> }) => {
     const { t } = useTranslation('global');
 
     useEffect(() => {
@@ -16,8 +16,6 @@ const AboutUs = ({ jsonLd }) => {
             behavior: 'smooth',
         });
     }, []); // Empty dependency array to run only once on mount
-
-
 
     return (
         <>
@@ -140,7 +138,7 @@ const AboutUs = ({ jsonLd }) => {
                 </div>
 
                 <script
-                    type="application/ld+json"
+                    type='application/ld+json'
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </AnimatedSection>

@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 import DistributorPumpVP44DetailsClient from './DistributorPumpVP44DetailsClient';
 
-export const revalidate = 60;
+
 
 const categoryDetails = {
     name: 'Distributor Pump VP44',

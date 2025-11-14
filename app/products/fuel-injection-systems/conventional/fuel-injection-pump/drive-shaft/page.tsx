@@ -1,4 +1,4 @@
-iimport categories from '@/app/data/fipCategory';
+import categories from '@/app/data/fipCategory';
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import DriveShaftDetailsClient from './DriveShaftDetailsClient';
