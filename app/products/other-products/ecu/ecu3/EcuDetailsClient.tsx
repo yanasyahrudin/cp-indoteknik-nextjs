@@ -3,44 +3,19 @@ import React from 'react';
 import FindMarketplace from '../../../../components/find-market-place/page';
 import GoBack from '../../../../components/go-back/page';
 import RelatedCategories from '../../../../components/related-categories/page';
-import categories from '../../../../data/ecuCategory'; // Update to the appropriate category data if needed
-import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const categoryDetails = {
-    name: 'Engine Control Unit (ECU)',
-    description: descriptionDetailCategory,  imageUrl:
-        'https://res.cloudinary.com/dcbryptkx/image/upload/v1721378469/cp-indoteknik-v3/productsEcu/High-Quality-D04FR-Engine-Controller-ECU-D04FR-004559-0281020220-for-Kobelco-SK130-8-SK140-8-SK135SR-removebg-preview_fmdog4.png', // Replace with actual image URL
-};
 
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-};
 
-const EngineControlUnit2Details = () => {
-    const filteredCategories = categories.filter(
-        (category) => category.imgSrc !== categoryDetails.imageUrl,
-    );
 
-    const shuffledCategories = shuffleArray([...filteredCategories]);
+const EngineControlUnit2Details = ({ shuffledCategories, categoryDetails, jsonLd }) => {
+
 
     const { t } = useTranslation();
 
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: categoryDetails.name,
-        image: categoryDetails.imageUrl,
-        description: categoryDetails.description,
-    };
-    
+ 
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
             

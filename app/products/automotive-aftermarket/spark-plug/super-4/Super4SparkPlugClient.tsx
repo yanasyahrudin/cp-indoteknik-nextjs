@@ -3,45 +3,18 @@ import React from 'react';
 import FindMarketplace from '../../../../components/find-market-place/page';
 import GoBack from '../../../../components/go-back/page';
 import RelatedCategories from '../../../../components/related-categories/page';
-import categories from '../../../../data/sparkSplugCategory'; // Update to appropriate data source if needed
-import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
+
 import { useTranslation } from 'react-i18next';
 
 import Image from 'next/image';
 
 
-const categoryDetails = {
-    name: 'Super 4',
-    description: descriptionDetailCategory,
-    imageUrl:
-        'https://res.cloudinary.com/dcbryptkx/image/upload/v1723104394/cp-indoteknik-v3/productsSparkPlug/super_4-removebg-preview_rlvdqo.png', // Replace with actual image URL
-};
-
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-};
-
-const Super4SparkPlugDetails = () => {
-    const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
-    );
-
-    const shuffledCategories = shuffleArray([...filteredCategories]);
+const Super4SparkPlugDetails = ({ categoryDetails, shuffledCategories, jsonLd }) => {
+ 
 
     const { t } = useTranslation();
 
-      const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: categoryDetails.name,
-        image: categoryDetails.imageUrl,
-        description: categoryDetails.description,
-    };
+   
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
        

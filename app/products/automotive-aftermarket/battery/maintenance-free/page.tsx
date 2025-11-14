@@ -1,5 +1,6 @@
 import MaintenanceFreeDetailsClient from './MaintenanceFreeDetailsClient';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
+import categories from '../../../../data/batteryCategory';
 
 const categoryDetails = {
     name: 'Maintenance Free',
@@ -43,5 +44,24 @@ export const metadata = {
 };
 
 export default function MaintenanceFreePage() {
-    return <MaintenanceFreeDetailsClient />;
+    // Function to shuffle array
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
+
+    const filteredCategories = categories.filter(
+        (category) => category.name !== categoryDetails.name
+    );
+
+    const shuffledCategories = shuffleArray([...filteredCategories]);
+
+    return <MaintenanceFreeDetailsClient 
+        categoryDetails={categoryDetails}
+        shuffledCategories={shuffledCategories}
+        jsonLd={jsonLd}
+    />;
 }

@@ -3,45 +3,15 @@ import React from 'react';
 import FindMarketplace from './../../../../../components/find-market-place/page';
 import GoBack from './../../../../../components/go-back/page';
 import RelatedCategories from './../../../../../components/related-categories/page';
-import categories from './../../../../../data/fipCategory';
-import { descriptionDetailCategory } from './../../../../../data/descriptionDetailCategory';
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const categoryDetails = {
-    name: 'Governor',
-    description: descriptionDetailCategory,
-    imageUrl:
-        'https://res.cloudinary.com/dcbryptkx/image/upload/c_scale,w_600/v1721457340/cp-indoteknik-v3/productsFuelInjectionPump/in-line/governor_sg-11134201-23010-6evcxkrrqbmvd0-removebg.png',
-};
-
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-};
-
-const GovernorDetails = () => {
-    const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
-    );
-    const shuffledCategories = shuffleArray([...filteredCategories]);
+const GovernorDetails = ({ shuffledCategories, jsonLd, categoryDetails }) => {
     const { t } = useTranslation();
 
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: categoryDetails.name,
-        image: categoryDetails.imageUrl,
-        description: categoryDetails.description,
-    };
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
-           
             <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
                 <GoBack />
                 <div className='flex flex-col md:flex-row rounded-xl'>
@@ -59,7 +29,7 @@ const GovernorDetails = () => {
                             {categoryDetails.name}
                         </h3>
                         <p className='text-lg text-gray-600 mb-6 text-justify'>
-                        {t(categoryDetails.description)}
+                            {t(categoryDetails.description)}
                         </p>
 
                         <FindMarketplace />

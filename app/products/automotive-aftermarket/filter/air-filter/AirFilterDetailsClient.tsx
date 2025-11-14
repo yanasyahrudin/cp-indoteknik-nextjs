@@ -9,36 +9,15 @@ import { useTranslation } from 'react-i18next';
 
 import Image from 'next/image';
 
-const categoryDetails = {
-    name: 'Air Filter',
-    description: descriptionDetailCategory, imageUrl:
-        'https://res.cloudinary.com/dcbryptkx/image/upload/v1721618593/cp-indoteknik-v3/productsFilter/air_filter-removebg-preview_wvyv8p.png', // Replace with actual image URL
-};
 
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-};
 
-const AirFilterDetails = () => {
-    const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
-    );
 
-    const shuffledCategories = shuffleArray([...filteredCategories]);
+
+const AirFilterDetails = ({ categoryDetails, shuffledCategories, jsonLd }) => {
+
     const {t} = useTranslation()
 
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: categoryDetails.name,
-        image: categoryDetails.imageUrl,
-        description: categoryDetails.description,
-    };
+
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
             

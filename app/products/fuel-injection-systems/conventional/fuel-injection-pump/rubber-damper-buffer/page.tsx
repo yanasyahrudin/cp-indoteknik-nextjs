@@ -1,5 +1,5 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
-
+import categories from '@/app/data/fipCategory';
 import RubberDamperBufferDetailsClient from './RubberDamperBufferDetailsClient';
 
 const categoryDetails = {
@@ -48,5 +48,28 @@ export const metadata = {
 };
 
 export default function RubberDamperBufferDetailsPage() {
-    return <RubberDamperBufferDetailsClient />;
+    // Function to shuffle array
+const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+};
+
+    const filteredCategories = categories.filter(
+        (category) => category.name !== categoryDetails.name,
+    );
+    const shuffledCategories = shuffleArray([...filteredCategories]);
+
+       const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+
+
+    return <RubberDamperBufferDetailsClient shuffledCategories={shuffledCategories} categoryDetails={categoryDetails} jsonLd={jsonLd} />;
 }

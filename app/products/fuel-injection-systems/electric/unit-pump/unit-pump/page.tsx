@@ -1,12 +1,6 @@
-'use client';
-import React from 'react';
-import FindMarketplace from './../../../../../components/find-market-place/page';
-import GoBack from './../../../../../components/go-back/page';
-import RelatedCategories from './../../../../../components/related-categories/page';
-import { descriptionDetailCategory } from './../../../../../data/descriptionDetailCategory';
+import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
-import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
+import UnitPumpDetailsClient from './UnitPumpDetailsClient';
 
 const categoryDetails = {
     name: 'Unit Pump Assy',
@@ -23,25 +17,52 @@ const categories = [
         link: '/products/fuel-injection-systems/electric/unit-pump/unit-pump-assy'
     },
 ];
-
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+export const metadata = {
+    title: `${categoryDetails.name} | Indo Teknik`,
+    description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,
+    keywords: [
+        'EUI Assy',
+        'EUI injector',
+        'electronic unit injector',
+        'diesel',
+        'spare part diesel',
+        'otomotif',
+        'Indo Teknik',
+        'aftermarket',
+        'komponen mesin',
+        'fuel injection',
+        'electric injector',
+    ],
+    openGraph: {
+        title: `${categoryDetails.name} | Indo Teknik`,
+        description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,
+        images: [
+            {
+                url: categoryDetails.imageUrl,
+                width: 600,
+                height: 400,
+                alt: categoryDetails.name,
+            },
+        ],
+    },
 };
 
-const UnitPumpDetails = () => {
+export default function EuiAssyDetailsPage() {
+    // Function to shuffle array
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
+
     const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
+        (category) => category.name !== categoryDetails.name
     );
     const shuffledCategories = shuffleArray([...filteredCategories]);
 
-    const { t } = useTranslation();
-
-     const jsonLd = {
+    const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Product',
         name: categoryDetails.name,
@@ -49,42 +70,10 @@ const UnitPumpDetails = () => {
         description: categoryDetails.description,
     };
     return (
-        <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
-
-            <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
-                <GoBack />
-                <div className='flex flex-col md:flex-row rounded-xl'>
-                    <div className='md:w-1/2 lg:ml-8 md:ml-8 xs:m-6 mb-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl'>
-                        <Image
-                            src={categoryDetails.imageUrl}
-                            alt={categoryDetails.name}
-                            className='h-full w-full object-contain'
-                            width={900}
-                            height={600}
-                        />
-                    </div>
-                    <div className='md:w-1/2 py-6 lg:pr-8 md:pr-8 xs:pr-6 xs:pl-6 md:pl-0 lg:pl-0 flex flex-col justify-start pb-10'>
-                        <h3 className='text-4xl font-bold text-gray-800 mb-4'>
-                            {categoryDetails.name}
-                        </h3>
-                        <p className='text-lg text-gray-600 mb-6 text-justify'>
-                        {t(categoryDetails.description)}
-                        </p>
-
-                        <FindMarketplace />
-                    </div>
-                </div>
-            </div>
-
-            <script
-                type='application/ld+json'
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-
-            {/* Use the RelatedCategories component */}
-            <RelatedCategories categories={shuffledCategories} />
-        </div>
+        <UnitPumpDetailsClient
+            shuffledCategories={shuffledCategories}
+            categoryDetails={categoryDetails}
+            jsonLd={jsonLd}
+        />
     );
-};
-
-export default UnitPumpDetails;
+}

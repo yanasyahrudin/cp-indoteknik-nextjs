@@ -1,24 +1,20 @@
 'use client';
 import React from 'react';
-import FindMarketplace from '../../../../components/find-market-place/page';
-import GoBack from '../../../../components/go-back/page';
-import RelatedCategories from '../../../../components/related-categories/page';
+import FindMarketplace from '../../../../../components/find-market-place/page';
+import GoBack from '../../../../../components/go-back/page';
+import RelatedCategories from '../../../../../components/related-categories/page';
 
 import { useTranslation } from 'react-i18next';
-
 import Image from 'next/image';
 
 
+const UnitPumpDetails = ({ shuffledCategories, categoryDetails, jsonLd }) => {
 
-const Plus120BulbDetails = ({ categoryDetails, shuffledCategories, jsonLd }) => {
+    const { t } = useTranslation();
 
-
-
-    const {t} = useTranslation()
- 
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
-           
+
             <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
                 <GoBack />
                 <div className='flex flex-col md:flex-row rounded-xl'>
@@ -29,7 +25,6 @@ const Plus120BulbDetails = ({ categoryDetails, shuffledCategories, jsonLd }) => 
                             className='h-full w-full object-contain'
                             width={900}
                             height={600}
-                            priority
                         />
                     </div>
                     <div className='md:w-1/2 py-6 lg:pr-8 md:pr-8 xs:pr-6 xs:pl-6 md:pl-0 lg:pl-0 flex flex-col justify-start pb-10'>
@@ -37,7 +32,7 @@ const Plus120BulbDetails = ({ categoryDetails, shuffledCategories, jsonLd }) => 
                             {categoryDetails.name}
                         </h3>
                         <p className='text-lg text-gray-600 mb-6 text-justify'>
-                            {categoryDetails.description}
+                        {t(categoryDetails.description)}
                         </p>
 
                         <FindMarketplace />
@@ -56,4 +51,4 @@ const Plus120BulbDetails = ({ categoryDetails, shuffledCategories, jsonLd }) => 
     );
 };
 
-export default Plus120BulbDetails;
+export default UnitPumpDetails;

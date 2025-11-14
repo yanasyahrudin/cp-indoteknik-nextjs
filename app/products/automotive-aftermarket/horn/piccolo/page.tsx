@@ -1,6 +1,7 @@
+import categories from '@/app/data/nozzleCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
-
 import PiccoloHornDetails from './PiccoloDetailsClient';
+
 
 const categoryDetails = {
     name: 'Piccolo',
@@ -20,7 +21,8 @@ export const metadata = {
         'Automotive Aftermarket',
     ],
     alternates: {
-        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/horn/piccolo',
+        canonical:
+            'https://indo-teknik.com/products/automotive-aftermarket/horn/piccolo',
     },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
@@ -40,12 +42,37 @@ export const metadata = {
         card: 'summary_large_image',
         title: `${categoryDetails.name} | Indo Teknik`,
         description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
-        images: [
-            categoryDetails.imageUrl,
-        ],
+        images: [categoryDetails.imageUrl],
     },
 };
 
 export default function PiccoloHornDetailsPage() {
-    return <PiccoloHornDetails />;
+    // Function to shuffle array
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
+    const filteredCategories = categories.filter(
+        (category) => category.name !== categoryDetails.name
+    );
+
+    const shuffledCategories = shuffleArray([...filteredCategories]);
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+
+    return (
+        <PiccoloHornDetails
+            categoryDetails={categoryDetails}
+            shuffledCategories={shuffledCategories}
+            jsonLd={jsonLd}
+        />
+    );
 }

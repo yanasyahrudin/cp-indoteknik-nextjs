@@ -1,5 +1,6 @@
 import DryChargedMotorcycleDetailsClient from './DryChargedMotorcycleDetailsClient';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
+import categories from '../../../../data/batteryCategory';
 
 const categoryDetails = {
     name: 'Dry Charged (Motorcycle)',
@@ -43,5 +44,34 @@ export const metadata = {
 };
 
 export default function DryChargedMotorcyclePage() {
-    return <DryChargedMotorcycleDetailsClient />;
+    // Function to shuffle array
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
+
+    const filteredCategories = categories.filter(
+        (category) => category.name !== categoryDetails.name
+    );
+
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+
+    const shuffledCategories = shuffleArray([...filteredCategories]);
+
+    return (
+        <DryChargedMotorcycleDetailsClient
+            categoryDetails={categoryDetails}
+            shuffledCategories={shuffledCategories}
+            jsonLd={jsonLd}
+        />
+    );
 }

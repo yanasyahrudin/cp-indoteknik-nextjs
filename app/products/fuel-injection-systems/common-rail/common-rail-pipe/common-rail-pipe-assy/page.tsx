@@ -1,5 +1,5 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
-
+import categories from '@/app/data/commonRailPipeCategory';
 import CommonRailPipeClient from './CommonRailPipeClient';
 
 const categoryDetails = {
@@ -25,7 +25,8 @@ export const metadata = {
         'fuel injection',
     ],
     alternates: {
-        canonical: 'https://indo-teknik.com/products/fuel-injection-systems/common-rail/common-rail-pipe/common-rail-pipe-assy',
+        canonical:
+            'https://indo-teknik.com/products/fuel-injection-systems/common-rail/common-rail-pipe/common-rail-pipe-assy',
     },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
@@ -43,12 +44,36 @@ export const metadata = {
         card: 'summary_large_image',
         title: `${categoryDetails.name} | Indo Teknik`,
         description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,
-        images: [
-            categoryDetails.imageUrl,
-        ],
+        images: [categoryDetails.imageUrl],
     },
 };
 
 export default function CommonRailPipeDetailsPage() {
-    return <CommonRailPipeClient />;
+    // Function to shuffle array
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
+    const filteredCategories = categories.filter(
+        (category) => category.name !== categoryDetails.name
+    );
+
+    const shuffledCategories = shuffleArray([...filteredCategories]);
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+    return (
+        <CommonRailPipeClient
+            shuffledCategories={shuffledCategories}
+            jsonLd={jsonLd}
+            categoryDetails={categoryDetails}
+        />
+    );
 }

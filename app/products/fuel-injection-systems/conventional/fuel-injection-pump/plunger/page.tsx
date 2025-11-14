@@ -1,5 +1,5 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
-
+import categories from '@/app/data/fipCategory';
 import PlungerDetailsClient from './PlungerDetailsClient';
 
 const categoryDetails = {
@@ -41,12 +41,29 @@ export const metadata = {
         card: 'summary_large_image',
         title: `${categoryDetails.name} | Indo Teknik`,
         description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,
-        images: [
-            categoryDetails.imageUrl,
-        ],
+        images: [categoryDetails.imageUrl],
     },
 };
 
 export default function PlungerDetailsPage() {
-    return <PlungerDetailsClient />;
+    const filteredCategories = categories.filter(
+        (category) => category.name !== categoryDetails.name
+    );
+    const shuffledCategories = shuffleArray([...filteredCategories]);
+
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+    
+    return (
+        <PlungerDetailsClient
+            shuffledCategories={shuffledCategories}
+            categoryDetails={categoryDetails}
+            jsonLd={jsonLd}
+        />
+    );
 }

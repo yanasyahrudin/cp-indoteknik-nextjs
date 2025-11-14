@@ -48,5 +48,17 @@ export const metadata = {
 };
 
 export default function RollerInlineDetailsPage() {
-    return <RollerInlineDetailsClient />;
+      const filteredCategories = categories.filter(
+            (category) => category.name !== categoryDetails.name,
+        );
+        const shuffledCategories = shuffleArray([...filteredCategories]);
+
+             const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+    return <RollerInlineDetailsClient shuffledCategories={shuffledCategories} categoryDetails={categoryDetails} jsonLd={jsonLd} />;
 }
