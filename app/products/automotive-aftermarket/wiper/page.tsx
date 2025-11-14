@@ -1,5 +1,5 @@
 import WiperClient from './WiperClient';
-
+import categories from '../../../data/wiperCategory';
 export const metadata = {
     title: 'Wiper | Indo Teknik',
     description:
@@ -54,5 +54,5 @@ export const metadata = {
 };
 
 export default function WiperPage() {
-    return <WiperClient />;
+    return <WiperClient categories={categories} />;
 }

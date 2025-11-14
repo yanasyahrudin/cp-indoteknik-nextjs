@@ -1,5 +1,5 @@
 import PowerToolClient from './PowerToolClient';
-
+import categories from './../../../data/powerToolCategory';
 export const metadata = {
   title: "Power Tool | Indo Teknik",
   description:
@@ -54,5 +54,5 @@ export const metadata = {
 };
 
 export default function PowerToolPage() {
-  return <PowerToolClient />;
+  return <PowerToolClient categories={categories} />;
 }

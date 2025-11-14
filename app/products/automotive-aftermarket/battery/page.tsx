@@ -1,5 +1,5 @@
 import BaterryClient from './BatteryClient';
-
+import categories from './../../../data/batteryCategory';
 export const metadata = {
     title: 'Battery | Indo Teknik',
     description:
@@ -50,5 +50,5 @@ export const metadata = {
 };
 
 export default function BatteryPage() {
-    return <BaterryClient />;
+    return <BaterryClient categories={categories} />;
 }

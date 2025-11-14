@@ -1,12 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import categories from '../../../../data/supplyPumpCategory';
-
 import Image from 'next/image';
 import AnimatedSection from '@/app/components/animated-section/page';
 
-const SupplyPumpCategories = () => {
+const SupplyPumpCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 8;
@@ -41,8 +39,6 @@ const SupplyPumpCategories = () => {
 
     return (
         <div className='mt-10 mb-20 max-w-6xl mx-auto'>
-            
-
             <h1 className='text-center font-bold text-3xl text-blue-900 animate-bounceIn'>
                 {t('Supply Pump Category')}
             </h1>

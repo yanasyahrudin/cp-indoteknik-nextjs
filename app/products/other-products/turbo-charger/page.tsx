@@ -1,5 +1,5 @@
 import TurboChargerClient from './TurboChargerClient';
-
+import categories from '../../../data/turboChargerCategory';
 export const metadata = {
     title: 'Turbo Charger | Indo Teknik',
     description:
@@ -48,5 +48,5 @@ export const metadata = {
 };
 
 export default function TurboChargerPage() {
-    return <TurboChargerClient />;
+    return <TurboChargerClient categories={categories} />;
 }

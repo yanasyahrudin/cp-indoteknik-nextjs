@@ -1,5 +1,5 @@
 import ClientNozzle from './ClientNozzle';
-
+import categories from '../../../../data/nozzleCategory';
 export const metadata = {
   title: "Nozzle | Indo Teknik",
   description: "Temukan berbagai pilihan nozzle fuel injection diesel original dan berkualitas dari Bosch, Itech, Zexel, dan merek ternama lainnya di Indo Teknik Pekanbaru. Produk bergaransi, harga kompetitif, dan dukungan teknisi profesional untuk kebutuhan industri dan otomotif Anda.",
@@ -48,5 +48,5 @@ export const metadata = {
 };
 
 export default function NozzlePage() {
-  return <ClientNozzle />;
+  return <ClientNozzle categories={categories} />;
 }

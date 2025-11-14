@@ -1,11 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import categories from './../../../../data/fipCategory';
 import Image from 'next/image';
 import AnimatedSection from './../../../../components/animated-section/page';
 
-const FuelInjectionPumpCategories = () => {
+const FuelInjectionPumpCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 8;

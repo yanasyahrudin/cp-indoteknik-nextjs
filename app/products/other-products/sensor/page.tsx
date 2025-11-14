@@ -1,5 +1,5 @@
 import SensorClient from './SensorClient';
-
+import categories from '../../../data/sensorCategory';
 export const metadata = {
   title: "Sensor | Indo Teknik",
   description:
@@ -50,5 +50,6 @@ export const metadata = {
 };
 
 export default function SensorPage() {
-  return <SensorClient />;
+  
+  return <SensorClient categories={categories} />;
 }

@@ -1,12 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import categories from '../../../data/turboChargerCategory';
-
 import Image from 'next/image';
 import AnimatedSection from '@/app/components/animated-section/page';
 
-const TurboChargerCategories = () => {
+const TurboChargerCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
     const { t } = useTranslation();
 

@@ -1,5 +1,5 @@
 import SparkPlugClient from './SparkPlugClient';
-
+import categories from '../../../data/sparkSplugCategory';
 export const metadata = {
     title: 'Busi | Indo Teknik',
     description:
@@ -56,5 +56,5 @@ export const metadata = {
 };
 
 export default function SparkPlugPage() {
-    return <SparkPlugClient />;
+    return <SparkPlugClient categories={categories} />;
 }

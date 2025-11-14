@@ -41,5 +41,18 @@ export const metadata = {
 };
 
 export default function UnitPumpPage() {
-  return <UnitPumpClient />;
+
+  
+      const categories = [
+          {
+              id: 1,
+              name: 'Unit Pump',
+              type: 'Unit Pump',
+              description:
+                  'High-performance unit pump for efficient fuel delivery.',
+              imgSrc: 'https://res.cloudinary.com/dcbryptkx/image/upload/v1721702361/cp-indoteknik-v3/productsEUI/unit_pump_njzr3b.png', // Replace with actual image URL
+              link: '/products/fuel-injection-systems/electric/unit-pump/unit-pump',
+          },
+      ];
+  return <UnitPumpClient categories={categories} />;
 }

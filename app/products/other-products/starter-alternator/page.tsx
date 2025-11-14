@@ -1,4 +1,5 @@
 import StarterAlternatorClient from './StarterAlternatorClient';
+import categories from '../../../data/alternatorStarterCategory';
 
 export const metadata = {
   title: "Starter dan Alternator | Indo Teknik",
@@ -46,5 +47,5 @@ export const metadata = {
 };
 
 export default function StarterAlternatorPage() {
-  return <StarterAlternatorClient />;
+  return <StarterAlternatorClient categories={categories} />;
 }

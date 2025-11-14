@@ -1,12 +1,12 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import categories from './../../../data/powerToolCategory';
+
 
 import Image from 'next/image';
 import AnimatedSection from '@/app/components/animated-section/page';
 
-const PowerToolCategories = () => {
+const PowerToolCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
     const { t } = useTranslation();
 

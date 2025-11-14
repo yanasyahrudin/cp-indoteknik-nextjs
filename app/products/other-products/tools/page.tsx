@@ -1,5 +1,5 @@
 import ToolsClient from './ToolsClient';
-
+import categories from '../../../data/toolsCategory';
 export const metadata = {
   title: "Tools | Indo Teknik",
   description:
@@ -50,5 +50,5 @@ export const metadata = {
 };
 
 export default function ToolsPage() {
-  return <ToolsClient />;
+  return <ToolsClient categories={categories} />;
 }

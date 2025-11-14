@@ -1,5 +1,5 @@
 import SocketClient from './SocketClient';
-
+import categories from '../../../data/socketCategory';
 export const metadata = {
     title: 'Socket | Indo Teknik',
     description:
@@ -48,5 +48,5 @@ export const metadata = {
 };
 
 export default function SocketPage() {
-    return <SocketClient />;
+    return <SocketClient categories={categories} />;
 }

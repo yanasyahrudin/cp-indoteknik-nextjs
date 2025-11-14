@@ -5,21 +5,10 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import AnimatedSection from '@/app/components/animated-section/page';
 
-const DistributorPumpCategories = () => {
+const DistributorPumpCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
     const { t } = useTranslation();
 
-    const categories = [
-        {
-            id: 1,
-            name: 'Distributor Pump VP44',
-            type: 'VP44',
-            description:
-                'Reliable distributor pump for efficient fuel injection in diesel engines.',
-            imgSrc: 'https://res.cloudinary.com/dcbryptkx/image/upload/v1721888185/cp-indoteknik-v3/productsDistributorPump/CIMG4447-removebg-preview_pzeimm.png',
-            link: '/products/fuel-injection-systems/vp44/distributor-pump/distributor-pump-vp44',
-        },
-    ];
 
     useEffect(() => {
         // Scroll to the top when the component is mounted

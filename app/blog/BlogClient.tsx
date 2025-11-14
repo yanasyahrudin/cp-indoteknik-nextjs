@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import blogPosts from '../data/blogPostsData';
 import AnimatedSection from '../components/animated-section/page';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
@@ -12,8 +11,6 @@ function BlogPost({ post }) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
     const { t } = useTranslation('blog');
-
-
 
     return (
         <AnimatedSection zoomType='zoomIn'>
@@ -124,7 +121,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
     );
 }
 
-export default function BlogPage() {
+export default function BlogPage({ blogPosts }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [currentPage, setCurrentPage] = useState(1);

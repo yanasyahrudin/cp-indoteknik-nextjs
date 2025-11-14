@@ -1,11 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import categories from '../../../data/toolsCategory';
 import Image from 'next/image';
 import AnimatedSection from '@/app/components/animated-section/page';
 
-const ToolCategories = () => {
+const ToolCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
     const [currentPage, setCurrentPage] = useState(1);
     const categoriesPerPage = 8;

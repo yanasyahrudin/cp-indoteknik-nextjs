@@ -1,5 +1,5 @@
 import FilterClient from './GasolineSystemClient';
-
+import categories from './../../../data/gasolineSystem';
 export const metadata = {
     title: 'Gasoline System | Indo Teknik',
     description:
@@ -51,5 +51,5 @@ export const metadata = {
 };
 
 export default function FilterPage() {
-    return <FilterClient />;
+    return <FilterClient categories={categories} />;
 }

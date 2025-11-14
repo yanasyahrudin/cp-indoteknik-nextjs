@@ -1,5 +1,5 @@
 import FilterClient from './FIlterClient';
-
+import categories from './../../../data/FilterCategory';
 export const metadata = {
     title: 'Filter | Indo Teknik',
     description:
@@ -52,5 +52,5 @@ export const metadata = {
 };
 
 export default function FilterPage() {
-    return <FilterClient />;
+    return <FilterClient categories={categories} />;
 }

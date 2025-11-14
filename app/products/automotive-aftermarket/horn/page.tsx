@@ -1,5 +1,5 @@
 import HornClient from './HornClient';
-
+import categories from '../../../data/hornCategory';
 export const metadata = {
     title: 'Klakson | Indo Teknik',
     description:
@@ -54,5 +54,5 @@ export const metadata = {
 };
 
 export default function HornPage() {
-    return <HornClient />;
+    return <HornClient categories={categories} />;
 }

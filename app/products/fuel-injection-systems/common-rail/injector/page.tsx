@@ -1,5 +1,5 @@
 import InjectorClient from './InjectorClient';
-
+import categories from '../../../../data/injectorCategory';
 export const metadata = {
     title: 'Injector | Indo Teknik',
     description:
@@ -56,5 +56,5 @@ export const metadata = {
 };
 
 export default function InjectorPage() {
-    return <InjectorClient />;
+    return <InjectorClient categories={categories} />;
 }

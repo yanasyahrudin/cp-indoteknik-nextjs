@@ -49,5 +49,16 @@ export const metadata = {
 };
 
 export default function EUIPage() {
-    return <EUIClient />;
+    const categories = [
+        {
+            id: 1,
+            name: 'EUI (Electronic Unit Injector)',
+            type: 'EUI',
+            description:
+                'Advanced fuel injection system for precise and efficient engine performance.',
+            imgSrc: 'https://res.cloudinary.com/dcbryptkx/image/upload/v1721701783/cp-indoteknik-v3/productsEUI/eui_zy8io5.png',
+            link: '/products/fuel-injection-systems/electric/eui/eui',
+        },
+    ];
+    return <EUIClient categories={categories} />;
 }

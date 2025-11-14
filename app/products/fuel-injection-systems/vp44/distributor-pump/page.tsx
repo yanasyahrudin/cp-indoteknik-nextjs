@@ -47,5 +47,16 @@ export const metadata = {
 };
 
 export default function VP44Page() {
-    return <VP44Client />;
+     const categories = [
+            {
+                id: 1,
+                name: 'Distributor Pump VP44',
+                type: 'VP44',
+                description:
+                    'Reliable distributor pump for efficient fuel injection in diesel engines.',
+                imgSrc: 'https://res.cloudinary.com/dcbryptkx/image/upload/v1721888185/cp-indoteknik-v3/productsDistributorPump/CIMG4447-removebg-preview_pzeimm.png',
+                link: '/products/fuel-injection-systems/vp44/distributor-pump/distributor-pump-vp44',
+            },
+        ];
+    return <VP44Client categories={categories} />;
 }

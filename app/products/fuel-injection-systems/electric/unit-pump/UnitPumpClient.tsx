@@ -4,21 +4,10 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import AnimatedSection from './../../../../components/animated-section/page';
 
-const UnitPumpCategories = () => {
+const UnitPumpCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
     const { t } = useTranslation();
 
-    const categories = [
-        {
-            id: 1,
-            name: 'Unit Pump',
-            type: 'Unit Pump',
-            description:
-                'High-performance unit pump for efficient fuel delivery.',
-            imgSrc: 'https://res.cloudinary.com/dcbryptkx/image/upload/v1721702361/cp-indoteknik-v3/productsEUI/unit_pump_njzr3b.png', // Replace with actual image URL
-            link: '/products/fuel-injection-systems/electric/unit-pump/unit-pump',
-        },
-    ];
 
     useEffect(() => {
         // Scroll to the top when the component is mounted

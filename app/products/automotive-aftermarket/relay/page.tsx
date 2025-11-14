@@ -1,5 +1,5 @@
 import RelayClient from './RelayClient';
-
+import categories from '../../../data/relayCategory';
 export const metadata = {
     title: 'Relay | Indo Teknik',
     description:
@@ -55,5 +55,5 @@ export const metadata = {
 };
 
 export default function RelayPage() {
-    return <RelayClient />;
+    return <RelayClient categories={categories} />;
 }

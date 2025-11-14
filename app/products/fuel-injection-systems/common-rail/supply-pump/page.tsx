@@ -1,5 +1,5 @@
 import SupplyPumpClient from './SupplyPumpClient';
-
+import categories from '../../../../data/supplyPumpCategory';
 export const metadata = {
     title: 'Supply Pump | Indo Teknik',
     description:
@@ -55,5 +55,5 @@ export const metadata = {
 };
 
 export default function SupplyPumpPage() {
-    return <SupplyPumpClient />;
+    return <SupplyPumpClient categories={categories}/>;
 }

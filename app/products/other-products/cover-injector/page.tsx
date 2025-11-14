@@ -1,4 +1,5 @@
 import CoverInjectorClient from './CoverInjectorClient';
+import categories from '../../../data/coverInjectorCategory';
 
 export const metadata = {
     title: 'Cover Injector | Indo Teknik',
@@ -48,5 +49,5 @@ export const metadata = {
 };
 
 export default function CoverInjectorPage() {
-    return <CoverInjectorClient />;
+    return <CoverInjectorClient categories={categories} />;
 }
