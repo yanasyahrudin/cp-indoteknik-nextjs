@@ -1,6 +1,6 @@
 import blogPosts from '@/app/data/blogPostsData.js';
 import TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4Hilux2GDITechClient from './TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4Hilux2GDITechClient.tsx';
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Rahasia Mesin Diesel Awet & Optimal | Pipa Common Rail Kobelco SK130 - Indo Teknik',
     description:

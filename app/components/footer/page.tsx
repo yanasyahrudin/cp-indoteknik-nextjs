@@ -23,7 +23,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className='text-center bg-blue-900 pt-5 pb-5 rounded-xl lg:w-[1200px] lg:mx-auto mt-4 ml-4 mr-4 '>
+        <footer className='text-center mb-8 bg-blue-900 pt-5 pb-5 rounded-xl lg:w-[1200px] lg:mx-auto mt-4 ml-4 mr-4 '>
             <div className='container mx-auto px-4'>
                 <div className='flex flex-wrap text-left lg:text-left'>
                     <div className='w-full lg:w-6/12 px-4'>

@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/blog/2024/11/the-importance-of-proper-repair-of-the-pc130-bucket-cylinder"  ],
   "exclude": ["node_modules"]
 }

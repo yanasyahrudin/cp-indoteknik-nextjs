@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 const SidebarPost = ({ latestPosts }) => {
     const postsToDisplay = latestPosts.slice(0, 4);
@@ -15,10 +16,12 @@ const SidebarPost = ({ latestPosts }) => {
                     <ul>
                         {postsToDisplay.map((post) => (
                             <li key={post.id} className='my-3 md:my-4'>
-                                <img
+                                <Image
                                     className='rounded-xl w-full md:w-3/4 lg:w-full object-cover'
                                     src={post.image}
                                     alt={post.title}
+                                    width={600}
+                                    height={400}
                                 />
                                 <a
                                     href={post.link}
@@ -27,7 +30,7 @@ const SidebarPost = ({ latestPosts }) => {
                                     {t(post.title)}
                                 </a>
                                 <p className='text-xs md:text-sm text-gray-500'>
-                                    {new Date(post.date).toLocaleDateString()}
+                                    {new Date(post.date).toLocaleDateString('id-ID')}
                                 </p>
                             </li>
                         ))}

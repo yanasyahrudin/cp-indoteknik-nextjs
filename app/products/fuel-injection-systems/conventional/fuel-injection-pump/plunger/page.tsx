@@ -46,6 +46,15 @@ export const metadata = {
 };
 
 export default function PlungerDetailsPage() {
+    // Function to shuffle array
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
+
     const filteredCategories = categories.filter(
         (category) => category.name !== categoryDetails.name
     );
@@ -58,7 +67,7 @@ export default function PlungerDetailsPage() {
         image: categoryDetails.imageUrl,
         description: categoryDetails.description,
     };
-    
+
     return (
         <PlungerDetailsClient
             shuffledCategories={shuffledCategories}

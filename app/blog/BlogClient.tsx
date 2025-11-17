@@ -23,7 +23,6 @@ function BlogPost({ post }) {
                             alt={post.title}
                             width={900} 
                             height={600}
-                            priority
                         />
                     </Link>
                 </div>

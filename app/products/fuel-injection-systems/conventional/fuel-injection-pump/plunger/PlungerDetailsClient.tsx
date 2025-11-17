@@ -3,7 +3,6 @@ import React from 'react';
 import FindMarketplace from './../../../../../components/find-market-place/page';
 import GoBack from './../../../../../components/go-back/page';
 import RelatedCategories from './../../../../../components/related-categories/page';
-import { descriptionDetailCategory } from './../../../../../data/descriptionDetailCategory';
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';

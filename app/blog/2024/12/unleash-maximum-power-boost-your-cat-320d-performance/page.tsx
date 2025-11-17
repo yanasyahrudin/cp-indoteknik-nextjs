@@ -1,6 +1,6 @@
 import blogPosts from '@/app/data/blogPostsData';
 import UnleashMaximumPowerBoostYourCat320dPerformanceClient from './UnleashMaximumPowerBoostYourCat320dPerformanceClient';
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Unleash Maximum Power: Boost Your CAT 320D Performance | Indo Teknik',
     description:

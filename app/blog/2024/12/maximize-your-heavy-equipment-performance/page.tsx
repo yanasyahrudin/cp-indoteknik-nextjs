@@ -1,6 +1,6 @@
 import MaximizeYourHeavyEquipmentPerformanceClient from './MaximizeYourHeavyEquipmentPerformanceWithTheCAT320DInjectionPumpClient';
 import blogPosts from '../../../../data/blogPostsData';
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Maksimalkan Performa Alat Berat Anda dengan Injection Pump CAT 320D | Indo Teknik',
     description:

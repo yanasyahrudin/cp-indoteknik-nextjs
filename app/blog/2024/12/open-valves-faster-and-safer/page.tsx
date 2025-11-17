@@ -1,5 +1,6 @@
 import OpenValvesFasterAndSaferClient from './OpenValvesFasterAndSaferWithOurProfessionalTool';
 import blogPosts from '../../../../data/blogPostsData';
+export const revalidate = 60;
 export const metadata = {
     title: 'Buka Valve Lebih Cepat & Aman dengan Alat Profesional | Indo Teknik Pekanbaru',
     description:

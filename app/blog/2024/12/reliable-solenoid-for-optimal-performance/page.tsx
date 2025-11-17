@@ -1,6 +1,6 @@
 import ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoidClient from './ReliableSolenoidForOptimalPerformanceKobelcoSK200InjectorSolenoidClient';
 import blogPosts from '../../../../data/blogPostsData';
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Solenoid Injector Kobelco SK200: Performa Optimal & Tahan Lama | Indo Teknik Pekanbaru',
     description:

@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { MdArrowDropDown } from 'react-icons/md';
+import Image from 'next/image';
 
 const Menu = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -51,11 +52,12 @@ const Menu = () => {
             <nav className='sticky top-4 z-50 flex items-center justify-between p-3 bg-white bg-opacity-90 backdrop-blur shadow-md rounded-xl lg:w-[1000px] lg:mx-auto ml-4 mr-4 mb-4'>
                 {/* Logo */}
                 <Link href='/' onClick={handleLogoClick} className='lg:mb-0'>
-                    <img
+                    <Image
                         src='https://res.cloudinary.com/dcbryptkx/image/upload/w_500/v1729242284/cp-indoteknik-v3/logo/Logoss_ifnfyn_whkos3.png'
                         className='h-[30px] w-auto'
                         alt='Indo Teknik Logo'
-                        width='120'
+                        width={150}
+                        height={50}
                     />
                 </Link>
 

@@ -1,7 +1,7 @@
 
 import KeepYourDieselEngineInTopConditionClient from './KeepYourDieselEngineInTopConditionClient';
 import blogPosts from '../../../../data/blogPostsData';
-
+export const revalidate = 60;
 export const metadata = {
     title: 'Jaga Mesin Diesel Anda Tetap Prima dengan Pipa Common Rail Kobelco SK130 | Indo Teknik',
     description:
