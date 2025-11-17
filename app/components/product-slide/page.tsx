@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { BiSolidSkipNextCircle } from "react-icons/bi";
 import { BiSolidSkipPreviousCircle } from "react-icons/bi";
 import Link from "next/link";
+import Image from "next/image";
 
 const fuelInjectionPump =
   "https://res.cloudinary.com/dcbryptkx/image/upload/v1720234576/cp-indoteknik-v3/products/fuelInjectionPump_psuhsw.png";
@@ -62,11 +63,13 @@ const ProductSlide = ({ product }) => {
     <div className="p-2 sm:p-4 ">
       <Link href={`${product.link}`}>
         <div className="relative bg-gradient-to-bl lg:h-[330px] from-neutral-50 to-blue-100 p-4 sm:p-6 rounded-xl shadow-md text-center transform transition-transform duration-300 hover:scale-105  ">
-          <img
+          <Image
             className="w-full object-cover rounded-md mb-2 sm:mb-4 "
             src={product.imageUrl}
             alt={t(product.name)}
             loading="lazy"
+            width={300}
+            height={200}
           />
           <h1 className="text-lg sm:text-2xl font-semibold text-gray-800 ">
             {t(product.name)}

@@ -1,22 +1,16 @@
+
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
+import { IoIosCloseCircle } from 'react-icons/io';
 import {
     BiSolidSkipNextCircle,
     BiSolidSkipPreviousCircle,
 } from 'react-icons/bi';
-import { IoIosCloseCircle } from 'react-icons/io';
+import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const FacilitiesModal = ({
-    isVisible,
-    onClose,
-    image,
-    title,
-    onNext,
-    onPrevious,
-    isTenthFacility,
-}) => {
-    if (!isVisible) return null;
+const GalleryModal = ({ isOpen, image, onClose, onPrev, onNext }) => {
+    if (!isOpen) return null;
 
     const { t } = useTranslation();
 
@@ -29,45 +23,33 @@ const FacilitiesModal = ({
 
     return (
         <div
-            onClick={handleBackgroundClick} // Close modal when background is clicked
+            onClick={handleBackgroundClick}
             className='fixed inset-0 bg-black/50 flex justify-center items-center z-[2147483647]'
         >
             <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 p-5 rounded-xl relative max-w-full w-[90%] sm:w-[600px] md:w-[800px] lg:w-[900px]'>
                 <button
-                    onClick={onClose}
                     className='absolute top-2 right-2 text-gray-600 hover:text-gray-900'
+                    onClick={onClose}
                 >
                     <IoIosCloseCircle size={24} />
                 </button>
-                <h2 className='text-lg md:text-xl font-semibold text-start mb-3'>
-                    {title}
+                <h2 className='text-lg md:text-xl font-semibold text-center mb-3'>
+                    {image.name}
                 </h2>
-                <div className='flex justify-center items-center  w-full'>
-                    {isTenthFacility ? (
-                        <div className='flex justify-center items-center md:h-[515px] w-full'>
-                            <a
-                                href='/test-bench-and-fabrication-machines'
-                                className='bg-gradient-to-bl from-neutral-50 to-blue-100 inline-flex shadow-lg items-center border px-5 py-2.5 rounded-xl text-blue-900 text-lg'
-                            >
-                                <span className='font-bold text-lg'>
-                                    Go to Gallery
-                                </span>
-                            </a>
-                        </div>
-                    ) : (
-                        <Image
-                            src={image}
-                            alt={title}
-                            className='w-full h-full object-cover rounded-xl'
-                            width={600}
-                            height={400}
-                        />
-                    )}
+                <div className='rounded-xl flex justify-center items-center h-[250px] sm:h-[400px] md:h-[500px] w-full'>
+                    <Image
+                        src={image.src.trimEnd()}
+                        alt={image.name}
+                        className='w-full h-full object-contain '
+                        width={600}
+                        height={400}
+                    />
                 </div>
+
                 <div className='flex justify-center gap-5 mt-4'>
                     <button
-                        onClick={onPrevious}
                         className='hover:scale-105 bg-gradient-to-bl from-neutral-50 to-blue-100 inline-flex shadow-lg items-center border px-3 py-1.5 rounded-xl text-blue-900'
+                        onClick={onPrev}
                     >
                         <BiSolidSkipPreviousCircle size={24} />
                         <span className='ml-1 font-bold text-md md:text-lg'>
@@ -75,8 +57,8 @@ const FacilitiesModal = ({
                         </span>
                     </button>
                     <button
-                        onClick={onNext}
                         className='hover:scale-105 bg-gradient-to-bl from-neutral-50 to-blue-100 inline-flex shadow-lg items-center border px-3 py-1.5 rounded-xl text-blue-900'
+                        onClick={onNext}
                     >
                         <span className='mr-1 font-bold text-md md:text-lg'>
                             {t('Next')}
@@ -89,4 +71,15 @@ const FacilitiesModal = ({
     );
 };
 
-export default FacilitiesModal;
+GalleryModal.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    image: PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+    }).isRequired,
+    onClose: PropTypes.func.isRequired,
+    onPrev: PropTypes.func.isRequired,
+    onNext: PropTypes.func.isRequired,
+};
+
+export default GalleryModal;
