@@ -8,6 +8,7 @@ import {
     BiSolidSkipPreviousCircle,
 } from 'react-icons/bi';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 const RelatedCategories = ({ categories }) => {
     const sliderRef = useRef(null);
@@ -79,10 +80,12 @@ const RelatedCategories = ({ categories }) => {
                             <div key={category.id} className='p-4 '>
                                 <a href={category.link}>
                                     <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 shadow-md rounded-lg '>
-                                        <img
+                                        <Image
                                             src={category.imgSrc}
                                             alt={category.name}
                                             className='h-40 w-full object-contain p-2'
+                                            width={400}
+                                            height={160}
                                         />
                                         <div className='p-4'>
                                             <h3 className='text-xl font-semibold text-gray-800 text-center'>
