@@ -1,4 +1,5 @@
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
+import categories from '../../../../data/ecuCategory'; // Update to the appropriate category data if needed
 
 import EcuDetailsClient from './EcuDetailsClient'
 

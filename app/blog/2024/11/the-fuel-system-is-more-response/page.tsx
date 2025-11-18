@@ -36,9 +36,9 @@ export default async function TheFuelSystemIsMoreResponsePage() {
         ? new Date(currentPost.date).toLocaleDateString()
         : 'Unknown Date';
 
-    const latestPosts = [...blogPosts].sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
+const latestPosts = [...blogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
 
     const jsonLd = {
         '@context': 'https://schema.org',

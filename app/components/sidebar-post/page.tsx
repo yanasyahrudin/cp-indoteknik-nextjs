@@ -1,8 +1,21 @@
+'use client';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const SidebarPost = ({ latestPosts }) => {
+type Post = {
+    id: string | number;
+    title: string;
+    image: string;
+    link: string;
+    date: string;
+}
+
+interface SidebarPostProps {
+    latestPosts?: Post[];
+}
+
+const SidebarPost = ({ latestPosts = [] }: SidebarPostProps) => {
     const postsToDisplay = latestPosts.slice(0, 4);
     const { t } = useTranslation('blog');
 
@@ -30,7 +43,9 @@ const SidebarPost = ({ latestPosts }) => {
                                     {t(post.title)}
                                 </a>
                                 <p className='text-xs md:text-sm text-gray-500'>
-                                    {new Date(post.date).toLocaleDateString('id-ID')}
+                                    {new Date(post.date).toLocaleDateString(
+                                        'id-ID'
+                                    )}
                                 </p>
                             </li>
                         ))}

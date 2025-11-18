@@ -37,7 +37,7 @@ export default function UnleashMaximumPowerBoostYourCat320dPerformancePage() {
 
     // Sort blog posts by date (latest first)
     const latestPosts = [...blogPosts].sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
 
     const jsonLd = {

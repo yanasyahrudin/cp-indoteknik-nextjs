@@ -38,8 +38,16 @@ export default function TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4H
 
     // Sort blog posts by date (latest first)
     const latestPosts = [...blogPosts].sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
+
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: currentPostTitle,
+        datePublished: currentPost?.date || '',
+        image: currentPost?.image || '',
+    };
     return (
         <TheSecretToLongerLastingAndOptimalDieselEngines_ValveG4Hilux2GDITechClient
             currentPost={currentPost}

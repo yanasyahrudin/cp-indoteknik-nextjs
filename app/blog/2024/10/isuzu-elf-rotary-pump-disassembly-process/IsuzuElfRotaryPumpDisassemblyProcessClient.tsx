@@ -13,6 +13,7 @@ const IsuzuElfPekanbaruRotaryPumpDismantlingProcessSafeAndDetailedTips = ({
         latestPosts,
         currentPostTitle,
         jsonLd,
+        blogPosts,
 }) => {
 
     useEffect(() => {

@@ -8,13 +8,13 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import PublishedDateCategory from '../../../../components/published-date-category-post/page';
 
+
 const DidYouKnow_TheImportanceOfTCoverForYourDieselCar = ({
     currentPost,
     publicationDate,
     latestPosts,
     jsonLd,
     currentPostTitle,
-}: {
 }) => {
     useEffect(() => {
         // Scroll to the top when the component is mounted

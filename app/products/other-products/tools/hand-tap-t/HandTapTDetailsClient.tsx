@@ -9,37 +9,13 @@ import { descriptionDetailCategory } from '../../../../data/descriptionDetailCat
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const categoryDetails = {
-    name: 'Hand Tap T',
-    description: descriptionDetailCategory,   imageUrl:
-        'https://res.cloudinary.com/dcbryptkx/image/upload/v1721963551/cp-indoteknik-v3/productsTools/hand%20tap%20t%20DSC_0485b-removebg-preview_ozpcgp.png', // Replace with actual image URL
-};
 
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-};
 
-const HandTapTDetails = () => {
-    const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
-    );
+const HandTapTDetails = ({ shuffledCategories, categoryDetails, jsonLd }) => {
 
-    const shuffledCategories = shuffleArray([...filteredCategories]);
 
     const { t } = useTranslation();
 
- const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: categoryDetails.name,
-        image: categoryDetails.imageUrl,
-        description: categoryDetails.description,
-    };
     return (
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
           

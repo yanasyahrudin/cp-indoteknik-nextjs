@@ -1,5 +1,6 @@
 import React from 'react';
 import brandLogos from './../../data/brandLogos';
+import Image from 'next/image';
 
 const BrandLogos = () => {
     return (
@@ -9,10 +10,12 @@ const BrandLogos = () => {
                     <div className='flex flex-wrap items-center gap-5 md:justify-around justify-center p-5 '>
                         {brandLogos.map((logo, index) => (
                             <div key={index} className='text-gray-100'>
-                                <img
+                                <Image
                                     className='h-auto w-[100px]'
                                     src={logo}
                                     alt={`Brand Logo ${index}`}
+                                    width={100}
+                                    height={100}
                                 />
                             </div>
                         ))}

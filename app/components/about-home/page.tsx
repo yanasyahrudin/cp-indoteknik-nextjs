@@ -9,7 +9,7 @@ const AboutHome = () => {
   const [showMore, setShowMore] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
 
-  const contentRef = useRef(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (contentRef.current) {

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { createContext, useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
     BiSolidSkipNextCircle,

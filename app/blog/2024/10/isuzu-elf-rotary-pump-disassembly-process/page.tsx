@@ -58,6 +58,7 @@ export default async function IsuzuElfRotaryPumpDisassemblyProcessPage() {
             latestPosts={latestPosts}
             jsonLd={jsonLd}
             currentPostTitle={currentPostTitle}
+            blogPosts={blogPosts}
         />
     );
 }

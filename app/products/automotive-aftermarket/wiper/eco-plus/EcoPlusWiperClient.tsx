@@ -3,14 +3,17 @@ import React from 'react';
 import FindMarketplace from '../../../../components/find-market-place/page';
 import GoBack from '../../../../components/go-back/page';
 import RelatedCategories from '../../../../components/related-categories/page';
-import categories from '../../../../data/wiperCategory'; // Update to appropriate data source if needed
-import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
+
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
 
 
-const EcoPlusWiperDetails = () => {
+const EcoPlusWiperDetails = ({
+    categoryDetails,
+    shuffledCategories,
+    jsonLd,
+}) => {
 
     const {t} = useTranslation()
 

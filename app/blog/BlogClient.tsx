@@ -56,7 +56,7 @@ function BlogPost({ post }) {
 }
 
 function Pagination({ currentPage, totalPages, onPageChange }) {
-    const pageNumbers = [];
+    const pageNumbers: number[] = [];
     const maxPageNumbersToShow = 3;
 
     // Generate visible page numbers
@@ -161,7 +161,7 @@ export default function BlogPage({ blogPosts }) {
                 .includes(searchTerm.toLowerCase());
             return matchesCategory && matchesSearch;
         })
-        .sort((a, b) => new Date(b.date) - new Date(a.date));
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;

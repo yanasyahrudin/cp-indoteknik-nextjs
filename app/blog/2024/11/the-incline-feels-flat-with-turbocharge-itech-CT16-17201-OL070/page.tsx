@@ -23,8 +23,8 @@ export const metadata = {
 };
 
 export default async function DieselEngineFansMustKnowThisPencilNozzleAssyPage() {
-        const currentPostTitle =
-            'Tanjakan Serasa Datar dengan Turbocharger Itech CT16 17201-OL070 untuk Kijang Innova 2KD';
+    const currentPostTitle =
+        'Tanjakan Serasa Datar dengan Turbocharger Itech CT16 17201-OL070 untuk Kijang Innova 2KD';
     const currentPost = blogPosts.find(
         (post) => post.title === currentPostTitle
     );
@@ -34,7 +34,7 @@ export default async function DieselEngineFansMustKnowThisPencilNozzleAssyPage()
         : 'Unknown Date';
 
     const latestPosts = [...blogPosts].sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
 
     const jsonLd = {

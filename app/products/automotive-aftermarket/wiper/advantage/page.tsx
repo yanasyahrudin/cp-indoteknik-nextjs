@@ -1,5 +1,5 @@
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
-
+import categories from '@/app/data/wiperCategory';
 import AdvantageWiperDetails from './AdvantageWiperClient';
 export const revalidate = 60;
 const categoryDetails = {

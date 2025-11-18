@@ -11,7 +11,11 @@ import Image from 'next/image';
 
 
 
-const CamshaftDetails = () => {
+const CamshaftDetails = ({
+    shuffledCategories,
+    jsonLd,
+    categoryDetails,
+}) => {
     
 
     const { t } = useTranslation();

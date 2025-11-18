@@ -193,12 +193,12 @@ const KomatsuPC_200_StayPrimeWithoutWorryingAboutBreakdowns_ITechPressureLimitin
                             <p className='text-gray-600 mb-4 text-justify'>
                                 <strong>TUNGGU APA LAGI?</strong>
                                 <br />
-                                <strong
+                                <Link
                                     className='font-bold underline text-blue-900'
                                     href='https://indo-teknik.com/contact'
                                 >
                                     Hubungi kami sekarang
-                                </strong>{' '}
+                                </Link>{' '}
                                 dan pastikan Komatsu PC-200 anda tetap tangguh
                                 dalam menghadapi tantangan di lapangan! Atau
                                 kunjungi INDO TEKNIK di{' '}

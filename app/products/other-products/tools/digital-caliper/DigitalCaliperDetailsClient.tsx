@@ -3,33 +3,13 @@ import React from 'react';
 import FindMarketplace from '../../../../components/find-market-place/page';
 import GoBack from '../../../../components/go-back/page';
 import RelatedCategories from '../../../../components/related-categories/page';
-import categories from '../../../../data/toolsCategory'; 
-import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const categoryDetails = {
-    name: 'Digital Caliper',
-    description: descriptionDetailCategory,   imageUrl:
-        'https://res.cloudinary.com/dcbryptkx/image/upload/v1721963452/cp-indoteknik-v3/productsTools/digital_caliper_DSC_0013-removebg-preview_dlbjco.png', // Replace with actual image URL
-};
 
-// Function to shuffle array
-const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-};
+const DigitalCaliperDetails = ({ shuffledCategories, categoryDetails, jsonLd }) => {
 
-const DigitalCaliperDetails = () => {
-    const filteredCategories = categories.filter(
-        (category) => category.name !== categoryDetails.name,
-    );
-
-    const shuffledCategories = shuffleArray([...filteredCategories]);
 
     const { t } = useTranslation();
 

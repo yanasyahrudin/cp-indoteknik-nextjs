@@ -33,7 +33,7 @@ export default async function DieselEngineFansMustKnowThisPencilNozzleAssyPage()
         : 'Unknown Date';
 
     const latestPosts = [...blogPosts].sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
 
     const jsonLd = {

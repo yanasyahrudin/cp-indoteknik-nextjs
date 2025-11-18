@@ -63,7 +63,14 @@ export default function EuiAssyDetailsPage() {
     );
     const shuffledCategories = shuffleArray([...filteredCategories]);
 
-  
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+    
     return (
         <EuiAssyDetailsClient
             shuffledCategories={shuffledCategories}

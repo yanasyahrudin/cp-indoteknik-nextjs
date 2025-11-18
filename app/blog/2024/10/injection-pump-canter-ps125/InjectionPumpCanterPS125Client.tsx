@@ -203,6 +203,10 @@ const InjectionPumpCanterPS125TheSecretOfPowerOnAllTerrains = ({
 
                 <SharePost currentPostTitle={currentPostTitle} />
             </div>
+             <script
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <SidebarPost latestPosts={latestPosts} />
         </div>
     );

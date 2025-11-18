@@ -1,4 +1,4 @@
-import IsuzuElfRotaryPumpDisassemblyProcessClient from './InjectionPumpCanterPS125Client';
+import InjectionPumpCanterPS125Client from './InjectionPumpCanterPS125Client';
 import blogPosts from '../../../../data/blogPostsData';
 
 export const revalidate = 60;
@@ -51,12 +51,13 @@ export default async function InjectionPumpCanterPS125Page() {
     };
 
     return (
-        <IsuzuElfRotaryPumpDisassemblyProcessClient
+        <InjectionPumpCanterPS125Client
             currentPost={currentPost}
             publicationDate={publicationDate}
             latestPosts={latestPosts}
             jsonLd={jsonLd}
             currentPostTitle={currentPostTitle}
+            blogPosts={blogPosts} 
         />
     );
 }

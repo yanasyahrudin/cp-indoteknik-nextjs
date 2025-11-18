@@ -1,6 +1,8 @@
 'use client';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
+import type { Swiper as SwiperClass } from 'swiper';
 import 'swiper/css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -89,7 +91,9 @@ const ProductSlide = ({ product }) => {
 
 const ProductCarousel = ({ products }) => {
     const { t } = useTranslation();
-    const [swiperInstance, setSwiperInstance] = useState(null);
+    const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
+            null
+        );
     return (
         <div className='mx-auto p-2 sm:p-4 w-full max-w-6xl '>
             <Swiper
@@ -106,7 +110,7 @@ const ProductCarousel = ({ products }) => {
                     slidesPerView: 4,
                   }
                 }}
-                onSwiper={setSwiperInstance}
+                onSwiper={(swiper) => setSwiperInstance(swiper)}
             >
                 {products.map((product) => (
                     <SwiperSlide key={product.id}>

@@ -1,19 +1,33 @@
 'use client';
 import React, { useRef, useState } from 'react';
 
-
 import {
     BiSolidSkipNextCircle,
     BiSolidSkipPreviousCircle,
 } from 'react-icons/bi';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
+import type { Swiper as SwiperClass } from 'swiper';
 import 'swiper/css';
 
-const RelatedCategories = ({ categories }) => {
+type Category = {
+    id: string| number;
+    name: string;
+    imgSrc: string;
+    link: string;
+}
+
+interface RelatedCategoriesProps {
+    categories?: Category[];
+}
+
+const RelatedCategories = ({ categories = [] }: RelatedCategoriesProps) => {
     const { t } = useTranslation('');
-    const [swiperInstance, setSwiperInstance] = useState(null);
+    const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
+        null
+    );
     return (
         <div className='py-8 lg:py-8 sm:py-8 xs:py-6 px-8 lg:px-6 sm:px-6 xs:px-0 mt-10 rounded-xl p-6 lg:p-6 sm:p-0 xs:p-0 bg-gradient-to-bl from-neutral-50 to-blue-200'>
             <h2 className='text-3xl font-bold mb-4 text-center text-blue-900'>
@@ -33,7 +47,7 @@ const RelatedCategories = ({ categories }) => {
                             },
                             1024: { slidesPerView: 4 },
                         }}
-                        onSwiper={setSwiperInstance}
+                        onSwiper={(swiper) => setSwiperInstance(swiper)}
                     >
                         {categories.map((category) => (
                             <SwiperSlide key={category.id} className='p-4 '>
@@ -69,7 +83,7 @@ const RelatedCategories = ({ categories }) => {
                             },
                             1024: { slidesPerView: 4 },
                         }}
-                        onSwiper={setSwiperInstance}
+                        onSwiper={(swiper) => setSwiperInstance(swiper)}
                         className='flex flex-wrap justify-center gap-4'
                     >
                         {categories.map((category) => (
