@@ -59,6 +59,14 @@ export default function MaintenanceFreePage() {
 
     const shuffledCategories = shuffleArray([...filteredCategories]);
 
+        const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: categoryDetails.name,
+        image: categoryDetails.imageUrl,
+        description: categoryDetails.description,
+    };
+
     return <MaintenanceFreeDetailsClient 
         categoryDetails={categoryDetails}
         shuffledCategories={shuffledCategories}

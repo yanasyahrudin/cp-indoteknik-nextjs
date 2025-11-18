@@ -15,7 +15,7 @@ const MotorcycleMiniHornDetails = ({ categoryDetails, shuffledCategories, jsonLd
         <div className='mx-auto py-10 lg:w-[1200px] px-4 lg:px-0'>
             <div className='bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl'>
                 <GoBack />
-                <div className='flex flex-col md:flex-row rounded-xl'>
+                <div className='flex flex-col md:flex-row rounded-xl gap-8 p-8'>
                     <div className='md:w-1/2 lg:ml-8 md:ml-8 xs:m-6 mb-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl'>
                         <Image
                             src={categoryDetails.imageUrl}
