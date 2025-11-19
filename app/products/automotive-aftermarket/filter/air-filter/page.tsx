@@ -1,7 +1,7 @@
 import categories from '@/app/data/alternatorStarterCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import AirFilterDetails from './AirFilterDetailsClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Air Filter',
     description: descriptionDetailCategory,

@@ -1,13 +1,12 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 import FilterSupplyPumpDetailsClient from './FilterSupplyPumpDetailsClient';
-
 const categoryDetails = {
     name: 'Filter Supply Pump',
     description: descriptionDetailCategory,  imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724838119/cp-indoteknik-v3/productsSupplyPump/Filter_Supply_Pump_Denso_DSC_0897b-removebg-preview_lxync4.png', // Replace with actual image URL
 };
 
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

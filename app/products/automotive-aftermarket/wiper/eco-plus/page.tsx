@@ -2,7 +2,7 @@ import categories from '@/app/data/wiperCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import EcoPlusWiperDetails from './EcoPlusWiperClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Eco Plus Wiper',
     description: descriptionDetailCategory, imageUrl:

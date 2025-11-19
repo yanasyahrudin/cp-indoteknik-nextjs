@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721964088/cp-indoteknik-v3/productsTools/tools_set_injector_DSC_0378_copy-removebg-preview_wtdx2p.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Injector Tool Set | Indo Teknik',
     description: 'Injector Tool Set untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

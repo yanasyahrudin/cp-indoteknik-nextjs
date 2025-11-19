@@ -2,7 +2,7 @@ import categories from '@/app/data/wiperCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import AerofitWiperClient from './AerofitWiperClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Aerofit Wiper',
     description: descriptionDetailCategory,

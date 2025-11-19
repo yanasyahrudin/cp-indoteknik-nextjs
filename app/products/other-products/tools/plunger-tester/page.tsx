@@ -7,7 +7,7 @@ const categoryDetails = {
     description: descriptionDetailCategory,  imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724839439/cp-indoteknik-v3/productsTools/PLUNGER_TESTER_NOZZLE_DSC_0136b-removebg-preview_tefzwb_hqdcnr_do4v52.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Plunger Tester | Indo Teknik',
     description: 'Plunger Tester untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

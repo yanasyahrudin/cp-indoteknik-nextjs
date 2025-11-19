@@ -1,7 +1,7 @@
 import SportecBulbDetails from './SportecBrightDetailsClient';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import categories from '@/app/data/turboChargerCategory';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Sportec Bulb',
     description: descriptionDetailCategory,

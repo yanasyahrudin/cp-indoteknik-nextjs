@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721465690/cp-indoteknik-v3/productsFuelInjectionPump/in-line/spring%205cd75be1-e316-4d27-82c4-a7c85c1917f4-removebg-preview_lbvmlu.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

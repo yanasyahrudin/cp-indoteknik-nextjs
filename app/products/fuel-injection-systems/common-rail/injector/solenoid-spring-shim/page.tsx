@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import SolenoidSpringShimClient from './SolenoidSpringShimDetailsClient'; // Pastikan file dan komponen ini ada
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Solenoid Spring Shim',
     description: descriptionDetailCategory,

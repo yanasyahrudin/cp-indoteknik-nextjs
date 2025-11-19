@@ -7,7 +7,7 @@ const categoryDetails = {
     description: descriptionDetailCategory,  imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721378469/cp-indoteknik-v3/productsEcu/High-Quality-D04FR-Engine-Controller-ECU-D04FR-004559-0281020220-for-Kobelco-SK130-8-SK140-8-SK135SR-removebg-preview_fmdog4.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Engine Control Unit (ECU) | Indo Teknik',
     description: 'ECU (Engine Control Unit) untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

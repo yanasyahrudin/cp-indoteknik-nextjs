@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721460643/cp-indoteknik-v3/productsFuelInjectionPump/rotary/solenoid%20DSC_0689_copy-removebg-preview_lhcqmf.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

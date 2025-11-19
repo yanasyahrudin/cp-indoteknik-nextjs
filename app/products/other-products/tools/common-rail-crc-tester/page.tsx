@@ -8,7 +8,7 @@ const categoryDetails = {
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721963153/cp-indoteknik-v3/productsTools/crc_common_rail_DSC_0544_copy_rfncgv.png', // Replace with actual image URL
 };
 
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Common Rail CRC Tester | Indo Teknik',
     description: 'Common Rail CRC Tester untuk pengujian sistem common rail pada mesin diesel. Temukan spesifikasi, informasi, dan alat berkualitas hanya di Indo Teknik.',

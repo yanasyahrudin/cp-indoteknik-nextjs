@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724839441/cp-indoteknik-v3/productsTools/Stand_Sketmad_And_Sketmad_DSC_0116_copy_f6uzxj_z8qjow_arvps0.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Stand Sketmat & Sketmat | Indo Teknik',
     description: 'Stand Sketmat & Sketmat untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

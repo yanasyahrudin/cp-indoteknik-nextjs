@@ -1,7 +1,7 @@
 import BrakeDiscDetailsClient from './BrakeDiscDetailsClient';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import categories from '../../../../data/brakeCatgeory';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Brake Disc',
     description: descriptionDetailCategory,

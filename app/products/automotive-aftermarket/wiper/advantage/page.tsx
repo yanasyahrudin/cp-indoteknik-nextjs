@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import categories from '@/app/data/wiperCategory';
 import AdvantageWiperDetails from './AdvantageWiperClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Advantage Wiper',
     description: descriptionDetailCategory,

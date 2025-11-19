@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721363834/cp-indoteknik-v3/productsSensor/DSC_0160b-removebg-preview_d27pkp.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'CKP Sensor | Indo Teknik',
     description: 'CKP (Crankshaft Position Sensor) untuk sistem sensor mesin diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

@@ -1,6 +1,6 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 import NopSpringDetailsClient from './NopSpringDetailsClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Nop Shim',
     description: descriptionDetailCategory,

@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import NopShimClient from './NopShimDetailsClient'; // Pastikan file dan komponen ini ada
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Nop Shim',
     description: descriptionDetailCategory,

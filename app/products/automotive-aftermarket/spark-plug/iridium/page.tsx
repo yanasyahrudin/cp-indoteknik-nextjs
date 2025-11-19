@@ -2,7 +2,7 @@ import categories from '@/app/data/commonRailPipeCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 
 import IridiumSparkPlugDetails from './IridiumSparkPlugClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Iridium',
     description: descriptionDetailCategory,

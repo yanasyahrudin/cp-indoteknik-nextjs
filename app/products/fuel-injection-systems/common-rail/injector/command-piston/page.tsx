@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import CommandPistonDetailsClient from './CommanPistonDetailsClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Command Piston',
     description: descriptionDetailCategory,

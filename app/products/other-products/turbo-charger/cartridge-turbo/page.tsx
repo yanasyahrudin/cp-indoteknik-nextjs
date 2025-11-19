@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724659560/cp-indoteknik-v3/productsTurboCharger/Cartidge_Turbo_HX35_xjxzxy.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Cartridge Turbo | Indo Teknik',
     description: 'Cartridge Turbo untuk turbocharger diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

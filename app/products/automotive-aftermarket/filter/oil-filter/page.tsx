@@ -1,7 +1,7 @@
 import categories from '@/app/data/socketCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import OilFilterDetails from './OilFilterDetailsClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Oil Filter',
     description: descriptionDetailCategory,

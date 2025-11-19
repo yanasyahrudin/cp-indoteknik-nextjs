@@ -7,7 +7,7 @@ const categoryDetails = {
     description: descriptionDetailCategory, imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724839438/cp-indoteknik-v3/productsTools/PIPA_TESTER_NOZZLE_DSC_0068b-removebg-preview_ynnybg_hipxtj_vusiqq.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Nozzle Tester Pipe | Indo Teknik',
     description: 'Nozzle Tester Pipe untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

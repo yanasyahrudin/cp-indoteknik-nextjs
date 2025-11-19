@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724812872/cp-indoteknik-v3/productsStarterAlternator/Alternator_Example.png', // Ganti dengan URL gambar alternator yang benar
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Alternator | Indo Teknik',
     description: 'Alternator untuk sistem starter dan pengisian daya mesin diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

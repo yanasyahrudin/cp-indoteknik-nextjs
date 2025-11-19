@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721458492/cp-indoteknik-v3/productsFuelInjectionPump/in-line/arm%20assy154200_7020_92021_2_d540003d333c71858e11ffdbb4a877da-removebg-preview_jgicdt.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

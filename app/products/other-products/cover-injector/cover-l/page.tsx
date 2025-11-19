@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724912557/cp-indoteknik-v3/productsCoverInjector/cover_injector_L_s2b6ot.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Cover Injector L | Indo Teknik',
     description:

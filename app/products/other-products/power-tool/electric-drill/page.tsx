@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1723780076/cp-indoteknik-v3/productsPowerTool/GBM_400_Bor_Bosch_-removebg-preview_x9luvj.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Electric Drill | Indo Teknik',
     description:

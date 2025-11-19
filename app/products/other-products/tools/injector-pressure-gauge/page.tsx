@@ -7,7 +7,7 @@ const categoryDetails = {
     description: descriptionDetailCategory,  imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724839440/cp-indoteknik-v3/productsTools/Pengukur_Tekanan_Injector_DSC_0008-removebg-preview_crjboj_bkqpie_tczhjn.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Injector Pressure Gauge | Indo Teknik',
     description: 'Injector Pressure Gauge untuk mengukur tekanan injektor pada sistem bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

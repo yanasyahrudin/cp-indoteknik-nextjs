@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724839447/cp-indoteknik-v3/productsTools/KUNCI_HEX_KEY_no.0512_3.5MM_DSC_0562-removebg-preview_dlsple_smbaj0.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Hex Key No. 0512 (3.5MM) | Indo Teknik',
     description: 'Kunci Hex No. 0512 ukuran 3.5MM untuk kebutuhan otomotif dan industri. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

@@ -9,7 +9,7 @@ import Image from 'next/image';
 const ContactModal = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [homePopupVisible, setHomePopupVisible] = useState(false);
-    const modalRef = useRef(null); // Create a reference for the modal
+    const modalRef = useRef<HTMLDivElement | null>(null); // Create a reference for the modal
 
     const handleToggleModal = () => {
         setIsOpen(!isOpen);

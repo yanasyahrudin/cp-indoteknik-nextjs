@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 
 import ControlValveClient from './ControlValveDetailsClient'; // Pastikan nama file dan komponen sesuai
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Control Valve',
     description: descriptionDetailCategory,

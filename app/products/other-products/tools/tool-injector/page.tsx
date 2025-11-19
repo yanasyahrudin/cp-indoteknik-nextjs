@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724839443/cp-indoteknik-v3/productsTools/TOOL_INJECTOR_DENSO_3_PINS_DSC_0815_maqcxw_u89aeb_wgksp5.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Tool Injector | Indo Teknik',
     description: 'Tool Injector untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

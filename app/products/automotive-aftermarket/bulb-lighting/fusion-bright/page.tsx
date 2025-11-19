@@ -1,7 +1,7 @@
 import FusionBrightBulbDetails from './FusionBrightDetailsClient';
 import categories from '../../../../data/bulbCategory'; // Update to appropriate data source if needed
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Fusion Bright Bulb',
     description: descriptionDetailCategory,

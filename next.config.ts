@@ -2,9 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-    images: {
-      domains: ['servisdieselpekanbaru.wordpress.com'],
+  output: "export",  
+  images: {
+        unoptimized: true,
         remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'servisdieselpekanbaru.wordpress.com',
+        pathname: '/**',
+      },
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',

@@ -7,7 +7,7 @@ const categoryDetails = {
     description: descriptionDetailCategory, imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724912617/cp-indoteknik-v3/productsCoverInjector/cover_injector_T_adzzg4.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Cover Injector T | Indo Teknik',
     description: 'Cover Injector T untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

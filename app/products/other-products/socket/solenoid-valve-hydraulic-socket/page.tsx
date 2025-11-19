@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724812872/cp-indoteknik-v3/productsSocket/Soket_Selenoid_valve_hidrolik-removebg-preview_p5d0xb.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Solenoid Valve Hydraulic Socket | Indo Teknik',
     description: 'Solenoid Valve Hydraulic Socket untuk sistem hidrolik dan kontrol valve. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

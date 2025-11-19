@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import EuropaHornDetails from './EuropaDetailsClient';
 import categories from '@/app/data/powerToolCategory';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Europa',
     description: descriptionDetailCategory,

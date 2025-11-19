@@ -1,6 +1,5 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
-import CamshaftSupplyPumpDetailsClient from './CamshaftSupplyPumpDetailsClient'; // Pastikan file dan komponen ini ada
-
+import CamshaftSupplyPumpDetailsClient from './CamshaftSupplyPumpDetailsClient';
 
 const categoryDetails = {
     name: 'Camshaft Supply Pump',
@@ -10,7 +9,7 @@ const categoryDetails = {
 };
 
 
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

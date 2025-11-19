@@ -7,7 +7,7 @@ const categoryDetails = {
     description: descriptionDetailCategory,  imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724039576/cp-indoteknik-v3/productsPowerTool/bosch_mesin-cuci-mobil-easyaquatak-100-jet-cleaner-bosch-aqt-100-aqt100_full05-removebg-preview_y4hyui.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Cover Injector L | Indo Teknik',
     description: 'Cover Injector L untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

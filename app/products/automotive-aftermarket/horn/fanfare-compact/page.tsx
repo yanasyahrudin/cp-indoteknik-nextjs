@@ -1,7 +1,7 @@
 import categories from '@/app/data/ecuCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import FanfareCompactHornDetails from './FanfareCompactDetailsClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Fanfare Compact',
     description: descriptionDetailCategory,

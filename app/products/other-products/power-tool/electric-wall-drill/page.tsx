@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1723780077/cp-indoteknik-v3/productsPowerTool/BOSCH_BOR_TEMBOK_LISTRIK_GSB-removebg-preview_xeygas.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Electric Wall Drill | Indo Teknik',
     description:

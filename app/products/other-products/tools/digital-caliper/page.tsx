@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721963452/cp-indoteknik-v3/productsTools/digital_caliper_DSC_0013-removebg-preview_dlbjco.png', // Replace with actual image URL
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Digital Caliper | Indo Teknik',
     description: 'Digital Caliper untuk pengukuran presisi pada berbagai material. Temukan spesifikasi, informasi, dan alat berkualitas hanya di Indo Teknik.',

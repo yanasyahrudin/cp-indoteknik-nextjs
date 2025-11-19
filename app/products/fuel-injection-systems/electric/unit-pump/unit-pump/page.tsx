@@ -17,7 +17,7 @@ const categories = [
         link: '/products/fuel-injection-systems/electric/unit-pump/unit-pump-assy'
     },
 ];
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: `${categoryDetails.name} | Indo Teknik`,
     description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,

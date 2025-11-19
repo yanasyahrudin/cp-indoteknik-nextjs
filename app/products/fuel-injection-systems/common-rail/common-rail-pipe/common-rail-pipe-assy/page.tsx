@@ -1,7 +1,7 @@
 import { descriptionDetailCategory } from '../../../../../data/descriptionDetailCategory';
 import categories from '@/app/data/commonRailPipeCategory';
 import CommonRailPipeClient from './CommonRailPipeClient';
-
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Common Rail Pipe Assy',
     description: descriptionDetailCategory,

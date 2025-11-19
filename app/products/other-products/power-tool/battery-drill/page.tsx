@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724049756/cp-indoteknik-v3/productsPowerTool/Bosch_-_Bor_Tembok_Baterai_12_V-removebg-preview_bmw7no.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Battery Drill | Indo Teknik',
     description:

@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721963153/cp-indoteknik-v3/productsTools/filter_opening_tool_example.png', // Ganti dengan URL gambar Filter Opening Tool yang benar
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Filter Opening Tool | Indo Teknik',
     description: 'Filter Opening Tool untuk membuka filter oli dan bahan bakar dengan mudah dan aman. Temukan spesifikasi, informasi, dan alat berkualitas hanya di Indo Teknik.',

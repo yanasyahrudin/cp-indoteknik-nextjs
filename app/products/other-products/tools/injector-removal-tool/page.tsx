@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1721964747/cp-indoteknik-v3/productsTools/DSC_1282-removebg-preview_pnjpsn.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Injector Removal Tool | Indo Teknik',
     description: 'Injector Removal Tool untuk melepas injektor pada mesin diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',

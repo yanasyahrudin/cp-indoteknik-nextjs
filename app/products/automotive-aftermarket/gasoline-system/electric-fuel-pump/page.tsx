@@ -1,7 +1,7 @@
 import categories from '@/app/data/sensorCategory';
 import { descriptionDetailCategory } from '../../../../data/descriptionDetailCategory';
 import ElectricFuelPumpDetails from './ElectricFuelDetailsClient';
-export const revalidate = 60;
+export const dynamic = "force-static";
 const categoryDetails = {
     name: 'Electric Fuel Pump',
     description: descriptionDetailCategory,

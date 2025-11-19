@@ -9,7 +9,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1723780076/cp-indoteknik-v3/productsPowerTool/Gerinda_Listrik_GWS-removebg-preview_d69m1d.png',
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Electric Grinder | Indo Teknik',
     description: 'Electric Grinder untuk kebutuhan pemotongan dan penghalusan material. Temukan spesifikasi, informasi, dan alat berkualitas hanya di Indo Teknik.',

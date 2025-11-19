@@ -8,7 +8,7 @@ const categoryDetails = {
     imageUrl:
         'https://res.cloudinary.com/dcbryptkx/image/upload/v1724659560/cp-indoteknik-v3/productsTurboCharger/Solenoid_Turbo_Example.png', // Ganti dengan URL gambar solenoid turbo yang benar
 };
-export const revalidate = 60;
+export const dynamic = "force-static";
 export const metadata = {
     title: 'Solenoid Turbo | Indo Teknik',
     description: 'Solenoid Turbo untuk turbocharger diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',
