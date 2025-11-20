@@ -51,6 +51,7 @@ const ProductCarousel = ({ products }) => {
         <div className='mx-auto p-2 sm:p-4 w-full max-w-6xl '>
             <Swiper
                 spaceBetween={0}
+                loop={true}
                 onSlideChange={() => console.log('slide change')}
                 breakpoints={{
                     640: {
@@ -82,8 +83,7 @@ const ProductCarousel = ({ products }) => {
                 </button>
                 <button
                     onClick={() => swiperInstance && swiperInstance.slideNext()}
-                    className='hover:scale-105 bg-gr
-                    adient-to-bl from-neutral-50 to-blue-100 inline-flex shadow-md  items-center border px-3 py-1.5 rounded-xl text-blue-900 '
+                    className='hover:scale-105 bg-gradient-to-bl from-neutral-50 to-blue-100 inline-flex shadow-md  items-center border px-3 py-1.5 rounded-xl text-blue-900 '
                 >
                     <span className='mr-1 font-bold text-lg'>{t('Next')}</span>
                     <BiSolidSkipNextCircle />

@@ -38,6 +38,7 @@ const RelatedCategories = ({ categories = [] }: RelatedCategoriesProps) => {
                     // Kondisi jika ada 4 atau lebih kategori, gunakan slider
                     <Swiper
                         spaceBetween={0}
+                        loop={true}
                         breakpoints={{
                             640: {
                                 slidesPerView: 1,
