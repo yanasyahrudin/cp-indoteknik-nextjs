@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# upload cpanel
+out.zip
+
 # production
 /build
 

@@ -43,6 +43,15 @@ export const metadata = {
             },
         ],
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Cover Injector L | Indo Teknik',
+        description:
+            'Cover Injector L untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',
+        images: [
+            categoryDetails.imageUrl,
+        ],
+    },
 };
 
 export default function CoverLDetailsPage() {

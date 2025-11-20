@@ -45,6 +45,10 @@ export const metadata = {
             categoryDetails.imageUrl,
         ],
     },
+    alternates: {
+        canonical:
+            'https://indo-teknik.com/products/fuel-injection-systems/conventional/fuel-injection-pump/fuel-hand-pump-assy',
+    },
 };
 
 export default function FuelHandPumpAssyDetailsPage() {

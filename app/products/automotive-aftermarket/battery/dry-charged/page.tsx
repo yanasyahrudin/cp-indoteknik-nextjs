@@ -20,8 +20,7 @@ export const metadata = {
         'Automotive Aftermarket',
     ],
     alternates: {
-        canonical:
-            'https://indo-teknik.com/products/automotive-aftermarket/battery/dry-charged',
+        canonical: 'https://indo-teknik.com/products/automotive-aftermarket/battery/dry-charged',
     },
     openGraph: {
         title: `${categoryDetails.name} | Indo Teknik`,
@@ -40,7 +39,7 @@ export const metadata = {
         title: `${categoryDetails.name} | Indo Teknik`,
         description: `Telusuri kategori ${categoryDetails.name} untuk komponen otomotif dan mesin berkualitas terbaik. Temukan informasi detail tentang ${categoryDetails.name} dan suku cadang terkait di Indo Teknik.`,
         images: [categoryDetails.imageUrl],
-    },
+    }
 };
 
 export default function DryChargedPage() {

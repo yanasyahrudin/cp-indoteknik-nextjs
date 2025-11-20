@@ -44,6 +44,10 @@ export const metadata = {
         description: `${categoryDetails.name} untuk sistem injeksi bahan bakar diesel. Temukan informasi, spesifikasi, dan suku cadang ${categoryDetails.name} berkualitas di Indo Teknik.`,
         images: [categoryDetails.imageUrl],
     },
+    alternates: {
+        canonical:
+            'https://indo-teknik.com/products/fuel-injection-systems/conventional/fuel-injection-pump/liner-feed-pump',
+    },
 };
 
 export default function LinerFeedPumpDetailsPage() {

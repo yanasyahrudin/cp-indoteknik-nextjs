@@ -38,9 +38,17 @@ export const metadata = {
             },
         ],
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Cover Injector T | Indo Teknik',
+        description: 'Cover Injector T untuk sistem injeksi bahan bakar diesel. Temukan spesifikasi, informasi, dan suku cadang berkualitas hanya di Indo Teknik.',
+        images: [
+            categoryDetails.imageUrl,
+        ],
+    }
 };
 
-export default function CoverLDetailsPage() {
+export default function CoverTDetailsPage() {
     // Function to shuffle array
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
