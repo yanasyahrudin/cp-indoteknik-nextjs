@@ -4,6 +4,7 @@ import Footer from './components/footer/page';
 import I18nProvider from './i18nextProvider';
 import WebVitalsReporter from './WebVitalsReporter';
 import ContactModal from './components/contact-modal/page';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({
     children,
@@ -20,6 +21,7 @@ export default function RootLayout({
                     <Footer />
                     <ContactModal />
                 </I18nProvider>
+                <GoogleAnalytics gaId='G-HWTRNMB1SN' />
             </body>
         </html>
     );

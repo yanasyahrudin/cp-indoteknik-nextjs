@@ -98,7 +98,7 @@ const Injector = ({ jsonLd }) => {
                 type='application/ld+json'
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-
+            
             <GoogleReviewWidget />
 
             <AnimatedSection zoomType='zoomOut'>
