@@ -51,7 +51,7 @@ const EcuCategories = ({ categories }) => {
                             filteredCategories.map((category) => (
                                 <div
                                     key={category.id}
-                                    className='relative hover:scale-105 shadow-md animate-bounceIn animate-bounceIn bg-gradient-to-bl from-neutral-50 to-blue-100 border rounded-xl   transform transition duration-500 '
+                                    className='relative hover:scale-105 shadow-md animate-bounceIn animate-bounceIn bg-gradient-to-bl from-neutral-50 to-blue-100 rounded-xl   transform transition duration-500 '
                                 >
                                     <a href={category.link}>
                                         <div className='p-2 flex justify-center'>

@@ -7,12 +7,21 @@ import AnimatedSection from '@/app/components/animated-section/page';
 
 const PowerToolCategories = ({ categories }) => {
     const [activeTab, setActiveTab] = useState('All');
+    const [currentPage, setCurrentPage] = useState(1);
+    const categoriesPerPage = 8;
     const { t } = useTranslation();
 
     const filteredCategories =
         activeTab === 'All'
             ? categories
             : categories.filter((category) => category.type === activeTab);
+
+    const indexOfLastCategory = currentPage * categoriesPerPage;
+    const indexOfFirstCategory = indexOfLastCategory - categoriesPerPage;
+    const currentCategories = filteredCategories.slice(
+        indexOfFirstCategory,
+        indexOfLastCategory
+    );
 
     useEffect(() => {
         // Scroll to the top when the component is mounted
@@ -48,7 +57,7 @@ const PowerToolCategories = ({ categories }) => {
             <AnimatedSection zoomType='zoomIn'>
                 <div className='h-full flex w-full justify-center items-center p-2 mt-8'>
                     <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5'>
-                        {filteredCategories.map((category) => (
+                        {currentCategories.map((category) => (
                             <div
                                 key={category.id}
                                 className='relative hover:scale-105 shadow-md animate-bounceIn animate-bounceIn bg-gradient-to-bl from-neutral-50 to-blue-100  rounded-xl  transform transition duration-500 '
