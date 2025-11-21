@@ -118,7 +118,9 @@ export default function ChatbotClient() {
         }
     };
 
-    const clearChat = () => {};
+    const clearChat = () => {
+        setChatHistory([]);
+    };
 
     return (
         <div className='fixed z-[2147483647] left-8 bottom-24'>
@@ -133,17 +135,17 @@ export default function ChatbotClient() {
 
             <div
                 ref={modalRef}
-                className={`fixed left-8 bottom-24 top-24 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl shadow-lg p-8 lg:w-1/5 space-y-2 transform transition-all duration-300 ease-in-out ${
+                className={`fixed left-8 bottom-24 top-24 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl shadow-lg p-8 lg:w-1/5 flex flex-col justify-between transition-all duration-300 ease-in-out ${
                     isOpen
                         ? 'opacity-100 scale-100'
                         : 'opacity-0 scale-90 pointer-events-none'
                 }`}
             >
+                {/* Header */}
                 <div className='flex justify-between items-center mb-4'>
                     <h3 className='text-xl font-semibold mx-auto text-blue-900'>
                         AI Assistant
                     </h3>
-
                     <button
                         onClick={handleToggleModal}
                         className='absolute top-2 right-2 text-gray-600 hover:text-gray-900'
@@ -152,32 +154,39 @@ export default function ChatbotClient() {
                     </button>
                 </div>
 
-                <div className='my-2 h-[400px] overflow-y-auto gap-2 flex flex-col'>
+                {/* Chat History */}
+                <div className='flex-1 overflow-y-auto flex flex-col gap-2 mb-4'>
                     <ChatHistory chatHistory={chatHistory} />
                     <Loading isLoading={isLoading} />
                 </div>
 
-                <input
-                    value={userInput}
-                    type='text'
-                    placeholder='Tulis pertanyaan...'
-                    className='w-full border border-gray-300 p-2 mt-2 rounded-lg '
-                    onChange={handleUserInput}
-                />
-                <div className='flex gap-4'>
-                    <button
-                        className='w-full bg-red-700 text-white p-2 mt-2 rounded-lg hover:bg-red-300'
-                        onClick={clearChat}
-                    >
-                        Clear Message
-                    </button>
-                    <button
-                        className='w-full bg-blue-900 text-white p-2 mt-2 rounded-lg hover:bg-blue-300'
-                        onClick={sendMessage}
+                {/* Input & Buttons */}
+                <div className='flex flex-col gap-3'>
+                    <input
+                        value={userInput}
+                        type='text'
+                        placeholder='Tulis pertanyaan...'
+                        className='w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition'
+                        onChange={handleUserInput}
+                        onKeyDown={e => e.key === 'Enter' && sendMessage()}
                         disabled={isLoading}
-                    >
-                        Send
-                    </button>
+                    />
+                    <div className='flex gap-3'>
+                        <button
+                            className='flex-1 bg-red-600 text-white p-2 rounded-lg hover:bg-red-700 transition'
+                            onClick={clearChat}
+                            disabled={isLoading || chatHistory.length === 0}
+                        >
+                            Clear Message
+                        </button>
+                        <button
+                            className='flex-1 bg-blue-900 text-white p-2 rounded-lg hover:bg-blue-700 transition'
+                            onClick={sendMessage}
+                            disabled={isLoading || !userInput.trim()}
+                        >
+                            Send
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
