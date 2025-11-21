@@ -66,8 +66,8 @@ const ProductCarousel = ({ products }) => {
                 }}
                 onSwiper={(swiper) => setSwiperInstance(swiper)}
             >
-                {products.map((product) => (
-                    <SwiperSlide key={product.id}>
+                {products.map((product, idx) => (
+                    <SwiperSlide key={`${product.id}-${idx}`}>
                         <ProductSlide product={product} />
                     </SwiperSlide>
                 ))}

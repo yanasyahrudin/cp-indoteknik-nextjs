@@ -5,6 +5,7 @@ import I18nProvider from './i18nextProvider';
 import WebVitalsReporter from './WebVitalsReporter';
 import ContactModal from './components/contact-modal/page';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import ChatbotPage from './components/chatbot/page';
 
 export default function RootLayout({
     children,
@@ -20,6 +21,7 @@ export default function RootLayout({
                     <main>{children}</main>
                     <Footer />
                     <ContactModal />
+                    <ChatbotPage />
                 </I18nProvider>
                 <GoogleAnalytics gaId='G-HWTRNMB1SN' />
             </body>
