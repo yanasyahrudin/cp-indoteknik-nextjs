@@ -7,7 +7,7 @@ import { IoIosCloseCircle, IoLogoWhatsapp } from 'react-icons/io';
 import { IoChatbox } from 'react-icons/io5';
 
 const ai = new GoogleGenAI({
-    apiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY || '',
+    apiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY || 'AIzaSyDsFZfKymzJJEMsdvr0I8JxwjGyoGX4_IE',
 });
 
 // Add type for messages
