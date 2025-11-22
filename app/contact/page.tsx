@@ -77,8 +77,8 @@ export default function ContactPage() {
         contactPoint: {
             '@type': 'ContactPoint',
             contactType: 'customer service',
-            telephone: '+62-812-7688-8888',
-            email: 'info@indo-teknik.com',
+            telephone: '+62 811-7531-881',
+            email: 'customerservice@indo-teknik.com',
             areaServed: 'ID',
         },
     };

@@ -1,28 +1,34 @@
 'use client';
 import { GoogleGenAI } from '@google/genai';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, ChangeEvent, KeyboardEvent } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { IoIosCloseCircle } from 'react-icons/io';
 import { RiRobot2Fill } from 'react-icons/ri';
-import data from '../../translations/id/global.json';
-import allItechProducts from '../../data/allItechProducts/allProducts.json';
 import i18next from 'i18next';
 import { FiDelete } from 'react-icons/fi';
 import { IoSend } from 'react-icons/io5';
 import { FaUser } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
+const AI_ASSISTANT_NAME = 'AI Assistant';
+const MODAL_OFFSET = 60;
+
 const ai = new GoogleGenAI({
     apiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY || '',
 });
 
-// Add type for messages
 type Message = {
-    sender: string;
+    sender: 'user' | 'ai';
     text: string;
+    type: 'user' | 'ai';
+    message?: string;
 };
 
-const ChatHistory = ({ chatHistory }) => {
+type ChatHistoryProps = {
+    chatHistory: Message[];
+};
+
+const ChatHistory = ({ chatHistory }: ChatHistoryProps) => {
     return (
         <>
             {chatHistory.map((message, index) => (
@@ -56,21 +62,20 @@ const ChatHistory = ({ chatHistory }) => {
     );
 };
 
-const Loading = ({ isLoading }) => {
-    return (
-        <div>
-            {isLoading && (
-                <div className='flex items-center justify-center mt-2'>
-                    <div className='spinner-border text-blue-500' role='status'>
-                        <span className='visually-hidden'>Loading...</span>
-                    </div>
-                </div>
-            )}
-        </div>
-    );
+type LoadingProps = {
+    isLoading: boolean;
 };
 
-export default function ChatbotClient() {
+const Loading = ({ isLoading }: LoadingProps) =>
+    isLoading ? (
+        <div className='flex items-center justify-center mt-2'>
+            <div className='spinner-border text-blue-500' role='status'>
+                <span className='visually-hidden'>Loading...</span>
+            </div>
+        </div>
+    ) : null;
+
+export default function ChatbotClient({ data, allItechProducts }) {
     const [userInput, setUserInput] = useState('');
     const [isOpen, setIsOpen] = useState(false);
     const [chatHistory, setChatHistory] = useState<Message[]>([]);
@@ -79,7 +84,8 @@ export default function ChatbotClient() {
     const modalRef = useRef<HTMLDivElement | null>(null);
     const [isMobile, setIsMobile] = useState(false);
     const [mounted, setMounted] = useState(false);
-    const [modalBottom, setModalBottom] = useState(24);
+
+    const { t } = useTranslation('global');
 
     useEffect(() => {
         setMounted(true);
@@ -89,14 +95,13 @@ export default function ChatbotClient() {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    const { t } = useTranslation('global');
+    const handleToggleModal = () => setIsOpen((prev) => !prev);
 
-    const handleToggleModal = () => {
-        setIsOpen(!isOpen);
-    };
-
-    const handleUserInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleUserInput = (e: ChangeEvent<HTMLInputElement>) =>
         setUserInput(e.target.value);
+
+    const handleInputKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') sendMessage();
     };
 
     const knowledgeData = {
@@ -125,29 +130,29 @@ export default function ChatbotClient() {
                 ],
                 config: {
                     systemInstruction: `
-                    You are a customer service agent named AI Assistant. 
-                    Company data: ${JSON.stringify(knowledgeData)}.
+                        You are a customer service agent named ${AI_ASSISTANT_NAME}. 
+                        Company data: ${JSON.stringify(knowledgeData)}.
 
-                    All products from the Itech brand are available at Indo Teknik.
+                        All products from the Itech brand are available at Indo Teknik.
 
-                    Company Contact Information:
-                    - WhatsApp: +62 811-7531-881, +62 8123-6891-888
-                    - Email: customerservice@indo-teknik.com
-                    - Instagram: [@indoteknik](https://www.instagram.com/indoteknik/)
-                    - TikTok: [@indoteknikofficial](https://www.tiktok.com/@indoteknikofficial)
-                    - Marketplace:
-                        - Tokopedia: [Kunjungi => Tokopedia](https://tokopedia.link/qoZIKIkdcNb)
-                        - Shopee: [Kunjungi => Shopee](https://shopee.co.id/indoteknikpekanbaru)
+                        Company Contact Information:
+                        - WhatsApp: +62 811-7531-881, +62 8123-6891-888
+                        - Email: customerservice@indo-teknik.com
+                        - Instagram: [@indoteknik](https://www.instagram.com/indoteknik/)
+                        - TikTok: [@indoteknikofficial](https://www.tiktok.com/@indoteknikofficial)
+                        - Marketplace:
+                            - Tokopedia: [Kunjungi => Tokopedia](https://tokopedia.link/qoZIKIkdcNb)
+                            - Shopee: [Kunjungi => Shopee](https://shopee.co.id/indoteknikpekanbaru)
 
-                    Rules:
-                    - Always respond in Indonesian or English based on the user's input language.
-                    - Answer briefly, clearly, accurately, and politely.
-                    - Only provide answers based on the company data provided.
-                    - If the answer is not found in the data, respond with:
-                    • "Maaf, saya tidak memiliki informasi tersebut saat ini."  
-                    • or "Sorry, I don't have that information at the moment."
-                    - Do NOT create or assume information that is not included in the data.
-                            `,
+                        Rules:
+                        - Always respond in Indonesian or English based on the user's input language.
+                        - Answer briefly, clearly, accurately, and politely.
+                        - Only provide answers based on the company data provided.
+                        - If the answer is not found in the data, respond with:
+                        • "Maaf, saya tidak memiliki informasi tersebut saat ini."  
+                        • or "Sorry, I don't have that information at the moment."
+                        - Do NOT create or assume information that is not included in the data.
+                    `,
                 },
             });
 
@@ -164,7 +169,6 @@ export default function ChatbotClient() {
                     message: responseText,
                 },
             ]);
-            console.log('Ai Response"', userInput);
         } catch (error) {
             console.error('Error communicating with AI:', error);
             setChatHistory((prev) => [
@@ -181,9 +185,7 @@ export default function ChatbotClient() {
         }
     };
 
-    const clearChat = () => {
-        setChatHistory([]);
-    };
+    const clearChat = () => setChatHistory([]);
 
     if (!mounted) return null;
 
@@ -192,7 +194,7 @@ export default function ChatbotClient() {
             className={`fixed z-[2147483647] right-8 ${
                 isMobile ? 'right-0 left-0' : ''
             }`}
-            style={isMobile ? { bottom: 0 } : { bottom: modalBottom + 60 }}
+            style={isMobile ? { bottom: 0 } : { bottom: MODAL_OFFSET + 24 }}
         >
             {!homePopupVisible && (
                 <button
@@ -204,7 +206,7 @@ export default function ChatbotClient() {
                     }`}
                     onClick={handleToggleModal}
                 >
-                    AI Assistant
+                    {AI_ASSISTANT_NAME}
                     <RiRobot2Fill />
                 </button>
             )}
@@ -222,7 +224,7 @@ export default function ChatbotClient() {
                               maxWidth: '100vw',
                               maxHeight: '100vh',
                           }
-                        : { bottom: modalBottom + 60 }
+                        : { bottom: MODAL_OFFSET + 24 }
                 }
                 className={`fixed bg-gradient-to-bl from-neutral-50 to-blue-200 shadow-lg p-4 sm:p-6 md:p-8
                 flex flex-col justify-between overflow-y-auto transition-all duration-300 ease-in-out
@@ -244,11 +246,12 @@ export default function ChatbotClient() {
                 {/* Header */}
                 <div className='flex justify-between items-center mb-4'>
                     <h3 className='text-xl font-semibold mx-auto text-blue-900'>
-                        AI Assistant
+                        {AI_ASSISTANT_NAME}
                     </h3>
                     <button
                         onClick={handleToggleModal}
                         className='absolute top-2 right-2 text-gray-600 hover:text-gray-900'
+                        aria-label='Close'
                     >
                         <IoIosCloseCircle size={24} />
                     </button>
@@ -260,7 +263,7 @@ export default function ChatbotClient() {
                     <Loading isLoading={isLoading} />
                 </div>
 
-                {/* apa yang anda butuhkan */}
+                {/* Prompt */}
                 {chatHistory.length === 0 && (
                     <div className='mb-4 text-center text-blue-900 font-medium'>
                         <span>{t('chatbot.whatDoYouNeed')}</span>
@@ -272,10 +275,10 @@ export default function ChatbotClient() {
                     <input
                         value={userInput}
                         type='text'
-                        placeholder={`${t('chatbot.typeYourMessage')}`}
+                        placeholder={t('chatbot.typeYourMessage')}
                         className='w-full bg-white/80 border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition'
                         onChange={handleUserInput}
-                        onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+                        onKeyDown={handleInputKeyDown}
                         onFocus={() => {
                             setTimeout(() => {
                                 modalRef.current?.scrollTo({
@@ -288,14 +291,14 @@ export default function ChatbotClient() {
                     />
                     <div className='flex gap-3'>
                         <button
-                            className='flex-1 hover:scale-105 px-2 py-2 bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900 font-semibold rounded-xl shadow-md flex justify-center items-center gap-2 '
+                            className='flex-1 hover:scale-105 px-2 py-2 bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900 font-semibold rounded-xl shadow-md flex justify-center items-center gap-2'
                             onClick={clearChat}
                             disabled={isLoading || chatHistory.length === 0}
                         >
                             <FiDelete /> {t('chatbot.clearChat')}
                         </button>
                         <button
-                            className='flex-1 hover:scale-105 px-2 py-2 bg-blue-900 text-blue-900 font-semibold rounded-xl shadow-md flex justify-center items-center gap-2 text-white'
+                            className='flex-1 hover:scale-105 px-2 py-2 bg-blue-900 text-white font-semibold rounded-xl shadow-md flex justify-center items-center gap-2'
                             onClick={sendMessage}
                             disabled={isLoading || !userInput.trim()}
                         >
