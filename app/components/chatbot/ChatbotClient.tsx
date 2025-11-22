@@ -77,24 +77,16 @@ export default function ChatbotClient() {
     const [isLoading, setIsLoading] = useState(false);
     const [homePopupVisible, setHomePopupVisible] = useState(false);
     const modalRef = useRef<HTMLDivElement | null>(null);
-
+    const [isMobile, setIsMobile] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const [modalBottom, setModalBottom] = useState(24);
 
     useEffect(() => {
-        // Hanya berjalan di browser yang mendukung visualViewport
-        const handleResize = () => {
-            if (window.visualViewport) {
-                // Jika viewport height berkurang drastis, kemungkinan keyboard muncul
-                const keyboardHeight =
-                    window.innerHeight - window.visualViewport.height;
-                setModalBottom(keyboardHeight > 0 ? keyboardHeight + 8 : 24);
-            }
-        };
-
-        window.visualViewport?.addEventListener('resize', handleResize);
-        return () => {
-            window.visualViewport?.removeEventListener('resize', handleResize);
-        };
+        setMounted(true);
+        const checkMobile = () => setIsMobile(window.innerWidth <= 640);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
     const { t } = useTranslation('global');
@@ -193,14 +185,23 @@ export default function ChatbotClient() {
         setChatHistory([]);
     };
 
+    if (!mounted) return null;
+
     return (
         <div
-            className='fixed z-[2147483647] right-8'
-            style={{ bottom: modalBottom + 60 }}
+            className={`fixed z-[2147483647] right-8 ${
+                isMobile ? 'right-0 left-0' : ''
+            }`}
+            style={isMobile ? { bottom: 0 } : { bottom: modalBottom + 60 }}
         >
             {!homePopupVisible && (
                 <button
-                    className='bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900 rounded-xl p-3 shadow-md hover:scale-105 transition-transform duration-200 flex justify-center items-center gap-2'
+                    className={`bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900 rounded-xl p-3 shadow-md hover:scale-105 transition-transform duration-200 flex justify-center items-center gap-2
+                    ${
+                        isMobile
+                            ? 'fixed bottom-6 left-1/2 -translate-x-1/2 right-auto z-[2147483648]'
+                            : ''
+                    }`}
                     onClick={handleToggleModal}
                 >
                     AI Assistant
@@ -210,14 +211,31 @@ export default function ChatbotClient() {
 
             <div
                 ref={modalRef}
-                style={{ bottom: modalBottom + 60 }}
-                className={`fixed right-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl shadow-lg p-4 sm:p-6 md:p-8 
-                sm:w-[80vw] sm:max-w-lg 
-                md:w-[60vw] md:max-w-xl 
-                lg:w-[30vw] lg:max-w-2xl 
-                flex flex-col justify-between 
-                max-h-[90vh] sm:max-h-[90vh] md:max-h-[90vh] overflow-y-auto
-                transition-all duration-300 ease-in-out ${
+                style={
+                    isMobile
+                        ? {
+                              bottom: 0,
+                              right: 0,
+                              left: 0,
+                              top: 0,
+                              borderRadius: 0,
+                              maxWidth: '100vw',
+                              maxHeight: '100vh',
+                          }
+                        : { bottom: modalBottom + 60 }
+                }
+                className={`fixed bg-gradient-to-bl from-neutral-50 to-blue-200 shadow-lg p-4 sm:p-6 md:p-8
+                flex flex-col justify-between overflow-y-auto transition-all duration-300 ease-in-out
+                ${
+                    isMobile
+                        ? `left-0 right-0 top-0 bottom-0 w-full h-full rounded-none z-[2147483649]`
+                        : `right-8 rounded-xl
+                        sm:w-[80vw] sm:max-w-lg 
+                        md:w-[60vw] md:max-w-xl 
+                        lg:w-[30vw] lg:max-w-2xl 
+                        max-h-[90vh] sm:max-h-[90vh] md:max-h-[90vh]`
+                }
+                ${
                     isOpen
                         ? 'opacity-100 scale-100'
                         : 'opacity-0 scale-90 pointer-events-none'
