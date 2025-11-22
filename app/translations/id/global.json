@@ -430,6 +430,11 @@
             "batteryAA": "Baterai and Automotive Aftermarket"
         },
         "disclaimer": "Penampilan dan penyebutan merek ITech, Kobelco, Garrett, Redat, Delphi, Denso, Ford, JCB, Scania, KIA, Sumitomo, Komatsu, Hitachi, Case, Bosch, LiuGong, Caterpillar, Liwei, Perkins, Renault, Daihatsu, Continental, Sany, Yanmar, Mazda, Volvo, FAW, Nissan, Cummins, Crone, Chevrolet, dan Mitsubishi pada situs web ini hanya untuk tujuan informasi dan referensi. indo-teknik.com tidak mengklaim kepemilikan atau afiliasi dengan merek-merek tersebut."
+    },
+    "chatbot": {
+        "clearChat": "Hapus",
+        "sendMessage": "Kirim",
+        "whatDoYouNeed": "Apa yang Anda butuhkan?",
+        "typeYourMessage": "Tulis pesan Anda..."
     }
-    
 }

@@ -1,0 +1,492 @@
+{
+  "CommonRail": {
+    "commandPiston": [
+      {"name": "Command Piston Hilux 1175 3.800(+1)"},
+      {"name": "Command Piston Triton 5600 4.301(+1)"}
+    ],
+    "controlValve": [
+      {"name": "Control Valve F 0OR J01 819 "},
+      {"name": "Control Valve F00VC01356"},
+      {"name": "Control Valve F00RJ01428"},
+      {"name": "Control Valve 0445110927 "},
+      {"name": "Control Valve 0445111091"},
+      {"name": "Control Valve F00RJ01278"},
+      {"name": "Control Valve F00RJ01941"},
+      {"name": "Control Valve F00RJ02130"},
+      {"name": "Control Valve F00RJ02266"},
+      {"name": "Control Valve F00RJ02472"},
+      {"name": "Control Valve F00VC01349"},
+      {"name": "Control Valve F00VC01356"},
+      {"name": "Control Valve F00VC01369"},
+      {"name": "Control Valve F00VC01379"},
+      {"name": "Control Valve Ford 2200 Complete"}
+    ],
+    "cupNozzleInjector": [
+      {"name": "Cup Nozzle Injector 093164-1020"},
+      {"name": "Cup Nozzle Injector E1022001"}
+    ],
+    "injectorAssy": [
+      {"name": "Injector Assy 8-98160061-3"},
+      {"name": "Injector Assy 8-98246130-0"},
+      {"name": "Injector Assy 8-98246751-0"},
+      {"name": "Injector Assy 8-98247354-0"},
+      {"name": "Injector Assy 1465A041 Triton Pajero 095000-5600"},
+      {"name": "Injector Assy 1465A257 Triton Pajero 095000-9560"},
+      {"name": "Injector Assy 1465A323"},
+      {"name": "Injector Assy 1465A439 Triton Pajero 2.4 295050-1760"},
+      {"name": "Injector Assy 23670-0E020"},
+      {"name": "Injector Assy 23670-0E070"},
+      {"name": "Injector Assy 23670-0L050"},
+      {"name": "Injector Assy 23670-0L070"},
+      {"name": "Injector Assy 23670-0232 23670-E0400"},
+      {"name": "Injector Assy 23670-51030"},
+      {"name": "Injector Assy 23670-51060"},
+      {"name": "Injector Assy 095000-0073"},
+      {"name": "Injector Assy 095000-0640"},
+      {"name": "Injector Assy 095000-1520"},
+      {"name": "Injector Assy 095000-5450"},
+      {"name": "Injector Assy 095000-6250"},
+      {"name": "Injector Assy 095000-6376"},
+      {"name": "Injector Assy 095000-6491"},
+      {"name": "Injector Assy 095000-6593"},
+      {"name": "Injector Assy 295050-0670"},
+      {"name": "Injector Assy 295050-0810"},
+      {"name": "Injector Assy 295050-1020"},
+      {"name": "Injector Assy 295050-1050"},
+      {"name": "Injector Assy 295050-1550 "},
+      {"name": "Injector Assy 295050-2870 "},
+      {"name": "Injector Assy 295050-3360"},
+      {"name": "Injector Assy 295900-0641 or 8-98280697-1 "},
+      {"name": "Injector Assy 12644527 Chevrolet Colorado"},
+      {"name": "Injector Assy 28264952 (28489562)"},
+      {"name": "Injector Assy 0445110307"},
+      {"name": "Injector Assy 0445110603"},
+      {"name": "Injector Assy 0445120006"},
+      {"name": "Injector Assy 0445120048 Canter Sany "},
+      {"name": "Injector Assy 0445120121"},
+      {"name": "Injector Assy 0445120123"},
+      {"name": "Injector Assy 0445120203"},
+      {"name": "Injector Assy 0445120218 "},
+      {"name": "Injector Assy 0445120266"},
+      {"name": "Injector Assy 0445120371"},
+      {"name": "Injector Assy 0445120383"},
+      {"name": "Injector Assy 0445120571"},
+      {"name": "Injector Assy 0445124042"},
+      {"name": "Injector Assy CAT 320-0680 2645A747"},
+      {"name": "Injector Assy Cat 320D"},
+      {"name": "Injector Assy CAT 320D"},
+      {"name": "Injector Assy CAT 321-3600 2645A753 "},
+      {"name": "Injector Assy Cat 2645A746 Itech "},
+      {"name": "Injector Assy Cummins 4914308 "},
+      {"name": "Injector Assy Cummins NT855 3047973 "},
+      {"name": "Injector Assy Delphi 28229873 Itech"},
+      {"name": "Injector Assy Delphi 28236381 Itech"},
+      {"name": "Injector Assy Denso 23670-51060 (6,2)"},
+      {"name": "Injector Assy Ford 2.5 0445110250"},
+      {"name": "Injector Assy Ford 3.0 0445110249"},
+      {"name": "Injector Assy Fuso 6M60 ITech 095000-8920 atau 5450"},
+      {"name": "Injector Assy Fuso Great 6M70 ME356137 0445120058 "},
+      {"name": "Injector Assy Hilux 23670-0L090 "},
+      {"name": "Injector Assy Hino Dutro Euro 4 295700-1190 23670-E9301"},
+      {"name": "Injector Assy Isuzu Dmax 3.0 ITECH 4JJ1 8-98011604-5"},
+      {"name": "Injector Assy 095000-6491"},
+      {"name": "Injector Assy IVECO 0445120157 (504255185) "},
+      {"name": "Injector Assy Kobelco SK130 0445120126 IT"},
+      {"name": "Injector Assy Kobelco SK200 095000-6593 IT"},
+      {"name": "Injector Assy Kobelco SK200-8 095000-6353"},
+      {"name": "Injector Assy Komatsu PC200 0445120231 "},
+      {"name": "Injector Assy Komatsu PC300 0445120236 "},
+      {"name": "Injector Assy Nissan CWM 330 095000-6632 "},
+      {"name": "Injector Assy Sumitomo Sh210 0660 "},
+      {"name": "Injector Assy Volvo EC210 0445120067"},
+      {"name": "Injector Assy Volvo EC240 0445120066  "},
+      {"name": "Injector Assy Wechai 0445120266 "}
+    ],
+    "orificeValve": [
+      {"name": "Orifice Valve #07"},
+      {"name": "Orifice Valve #10"},
+      {"name": "Orifice Valve #28"},
+      {"name": "Orifice Valve #507"},
+      {"name": "Orifice Valve #509"},
+      {"name": "Orifice Valve #517"},
+      {"name": "Orifice Valve #SF03"}
+    ],
+    "repairKitInjector": [
+      {"name": "Injector Repair Kit 8-98011604-5"},
+      {"name": "Injector Repair Kit 1465A041"},
+      {"name": "Injector Repair Kit 1465A257"},
+      {"name": "Injector Repair Kit 1465A439"},
+      {"name": "Injector Repair Kit 23670-0E020"},
+      {"name": "Injector Repair Kit 23670-0L050"},
+      {"name": "Injector Repair Kit 23670-0L070"},
+      {"name": "Injector Repair Kit 23670-0L090"},
+      {"name": "Injector Repair Kit 23670-0L110"},
+      {"name": "Injector Repair Kit 095000-0660"},
+      {"name": "Injector Repair Kit 095000-6250"},
+      {"name": "Injector Repair Kit 095000-6353"},
+      {"name": "Injector Repair Kit 0445110249"},
+      {"name": "Injector Repair Kit 0445110250"},
+      {"name": "Injector Repair Kit 0445120231"},
+      {"name": "Injector Repair Kit 0445120236"}
+    ],
+    "scv": [
+      {"name": "SCV Supply Pump Toyota Innova 2500 cc 2.5 2.5L 2KD Sensor Switch ITech"},
+      {"name": "SCV Supply Pump Toyota Fortuner 2.5 2500 cc 2KD Sensor Switch ITech"},
+      {"name": "SCV Supply Pump Nissan Navara 2.5 2500 cc 0360 Sensor Switch Itech"}
+    ],
+    "solenoid": [
+      {"name": "Selenoid Injector Komatsu Head Code PC 200-8 0445120231"},
+      {"name": "Selenoid Injector Toyota Hilux 2KD Vigo 2.5cc 2500cc 23670-0L090 Head Code 18"},
+      {"name": "Selenoid Injector Toyota Innova Fortuner 2.5cc 23670-0L110 Pin Head Code 26"},
+      {"name": "Selenoid Injector Toyota Innova Fortuner 2.5cc 23670-0L070 0L010 Head Code 22"},
+      {"name": "Selenoid Injector Mitsubishi Triton Pajero Sport 2.500cc 1465A041 Head Code 90"},
+      {"name": "Solenoid Injector Dmax Head Code 5F - Selenoid Injector Dmax 3.0 3000 5F"}
+    ],
+    "supplyPump": [
+      {"name": "Supply Pump 0 445 010 408"},
+      {"name": "Supply Pump 0 445 020 539"},
+      {"name": "Supply Pump 0 445 025 058"},
+      {"name": "Supply Pump 1460A053"},
+      {"name": "Supply Pump 1460A096"},
+      {"name": "Supply Pump 22100-E0532/294050-0940"},
+      {"name": "Supply Pump 294050-0461"},
+      {"name": "Supply Pump Isuzu Giga 8-97605946-7 294050-0423"},
+      {"name": "Supply Pump 0 445 020 070"},
+      {"name": "Supply Pump KIA 0 445 010 511 33100-2F000"},
+      {"name": "Supply Pump Komatsu PC200-8 0 445 020 122"},
+      {"name": "Supply Pump Mitsubishi Triton 1460A097"},
+      {"name": "Supply Pump Nissan CWM 16730 Z600A 294050-0073"},
+      {"name": "Supply Pump Triton 1460A095 294000-2330"},
+      {"name": "Supply Pump Triton 1460A096 294000-2340"}
+    ],
+    "valveSeatRetainingNut": [
+      {"name": "Valve Seat Retaining Nut Triton Hilux"},
+      {"name": "Valve Seat Retaining Nut Triton"}
+    ]
+  },
+  "Electric": {
+    "eui": [
+      {"name": "Electric Unit Injector Volvo 21379931"}
+    ]
+  },
+  "FuelInjectionPump": {
+    "deliveryValveInline": [
+      {"name": "Delivery Valve 090140-1350"},
+      {"name": "Delivery Valve 090140-1990"},
+      {"name": "Delivery Valve 090140-2590"},
+      {"name": "Delivery Valve 096420-0510"},
+      {"name": "Delivery Valve 131110-4720 A28"},
+      {"name": "Delivery Valve 131110-8020 A61"},
+      {"name": "Delivery Valve 131160-0420 A85"},
+      {"name": "Delivery Valve 131160-2920 12A"},
+      {"name": "Delivery Valve 131160-5320 39A"}
+    ],
+    "deliveryValveRotary": [
+      {"name": "Delivery Valve 134110-0520 P4"},
+      {"name": "Delivery Valve 134110-4220 P41"},
+      {"name": "Delivery Valve 134110-4420 P43"},
+      {"name": "Delivery Valve 134110-4920 P43"},
+      {"name": "Delivery Valve 134110-5420 P53"},
+      {"name": "Delivery Valve 134110-7520 P74"},
+      {"name": "Delivery Valve 134180-0420 MP3"},
+      {"name": "Delivery Valve 135182-0120 MM3"},
+      {"name": "Delivery Valve 140110-3620 K15"}
+    ],
+    "fuelHandPumpAssy": [
+      {"name": "Fuel Hand Pump Assy 9 440 360 006"},
+      {"name": "Fuel Hand Pump Assy 092100-1550"},
+      {"name": "Fuel Hand Pump Assy 105210-4661"},
+      {"name": "Fuel Hand Pump Assy 105210-4661"},
+      {"name": "Fuel Hand Pump Assy 105237-4410"},
+      {"name": "Fuel Hand Pump Assy 105237-4410"}
+    ],
+    "linerFeedPump": [
+      {"name": "Liner Feed Pump 146100-0120"},
+      {"name": "Liner Feed Pump 146100-0420"},
+      {"name": "Liner Feed Pump 146100-0720"}
+    ],
+    "nozzleAssy": [
+      {"name": "Nozzle Assy Pencil 4W7015"},
+      {"name": "Nozzle Assy Pencil 4W7016"},
+      {"name": "Nozzle Assy Pencil 4W7018"},
+      {"name": "Nozzle Assy Pencil 8N7005"},
+      {"name": "Nozzle Assy Pencil 170-5187"}
+    ],
+    "nozzleFIP": [
+      {"name": "Nozzle Isuzu 4JA1 NKR55 /OHMP001"},
+      {"name": "Nozzle Injector Mercedes Benz Axor DLLA150 P1164"},
+      {"name": "Nozzle Mitsubishi Fuso Canter 4D34 4D34T - DLLA158PN104"},
+      {"name": "Nozzle Injector Isuzu Elf PS135 4HF1 105017-1860"},
+      {"name": "Nozzle Injector Hino H07D 093400-2630"},
+      {"name": "Nozzle Mitsubishi Fuso 8M20 6D24 ME738594"},
+      {"name": "Nozzle Injector Isuzu 10PC1 105015-6250"},
+      {"name": "Nozzle Injector Isuzu 6BG1TRW itech 105025-3030"},
+      {"name": "Nozzle Injektor Dutro PS 125 HT 093400-3460"},
+      {"name": "Nozzle Injector Hino Lohan J08C 093400-2960"},
+      {"name": "Nozzle Injector Kubota 105007-1170"}
+    ],
+    "Plunger": [
+      {"name": "Plunger 1W6541"},
+      {"name": "Plunger 2 418 445 997"},
+      {"name": "Plunger 2 418 455 402"},
+      {"name": "Plunger 2 418 455 711"},
+      {"name": "Plunger 7W0182"},
+      {"name": "Plunger 7W5929 "},
+      {"name": "Plunger 9H5797 "},
+      {"name": "Plunger 542 "},
+      {"name": "Plunger 564"},
+      {"name": "Plunger 090150-0330 185-7"},
+      {"name": "Plunger 090150-1620 184-8"},
+      {"name": "Plunger 090150-2700"},
+      {"name": "Plunger 090150-3050"},
+      {"name": "Plunger 090150-3253"},
+      {"name": "Plunger 090150-4300"},
+      {"name": "Plunger 090150-4661"},
+      {"name": "Plunger 090150-4693"},
+      {"name": "Plunger 090150-4790 4790"},
+      {"name": "Plunger 090150-4810"},
+      {"name": "Plunger 090150-5882"},
+      {"name": "Plunger 090150-5900"},
+      {"name": "Plunger 090150-5971 "},
+      {"name": "Plunger 090150-6410"},
+      {"name": "Plunger 090150-6470 "},
+      {"name": "Plunger 090150-6820"},
+      {"name": "Plunger 090150-7653 "},
+      {"name": "Plunger 090150-35253 3253"},
+      {"name": "Plunger 129506-51100 M5 "},
+      {"name": "Plunger 131101-7020 (04)"},
+      {"name": "Plunger 131150-2120 A809"},
+      {"name": "Plunger 131150-3420 A822 "},
+      {"name": "Plunger 131150-4320 A831 "},
+      {"name": "Plunger 131150-4820 A836"},
+      {"name": "Plunger 131151-0320 A125"},
+      {"name": "Plunger 131151-2220 A38"},
+      {"name": "Plunger 131151-2720 A43"},
+      {"name": "Plunger 131151-3220 A44"},
+      {"name": "Plunger 131151-5820 A74"},
+      {"name": "Plunger 131151-6320 A78"},
+      {"name": "Plunger 131151-7320 A809"},
+      {"name": "Plunger 131152-2120 A146"},
+      {"name": "Plunger 131152-2220 A148"},
+      {"name": "Plunger 131152-3220 A160"},
+      {"name": "Plunger 131152-4020 A168"},
+      {"name": "Plunger 131152-5320 A183"},
+      {"name": "Plunger 131152-8720 A229"},
+      {"name": "Plunger 131153-0520 A147"},
+      {"name": "Plunger 131153-2220 A701"},
+      {"name": "Plunger 131153-9120 A770"},
+      {"name": "Plunger 131153-9920 A778"},
+      {"name": "Plunger 131154-3920 A281"},
+      {"name": "Plunger 131154-5620 A298"},
+      {"name": "Plunger 131154-6920 A311"},
+      {"name": "Plunger 134101-1520 P3 "},
+      {"name": "Plunger 134101-1620 P4 "},
+      {"name": "Plunger 134101-6420 P49"},
+      {"name": "Plunger 134101-6620 (P51)"},
+      {"name": "Plunger 134101-7120 P55"},
+      {"name": "Plunger 134110-2620 P25 "},
+      {"name": "Plunger 134147-2820 PT46"},
+      {"name": "Plunger 134151-4120 P121"},
+      {"name": "Plunger 134151-6620 P145"},
+      {"name": "Plunger 134151-9020 P170"},
+      {"name": "Plunger 134151-9120 P171"},
+      {"name": "Plunger 134152-4920 P229"},
+      {"name": "Plunger 134152-6520 P245"},
+      {"name": "Plunger 134153-2420 P305"},
+      {"name": "Plunger 134154-0720 P388"},
+      {"name": "Plunger 134176-1420 PT20"},
+      {"name": "Plunger 134178-1320 PT40"},
+      {"name": "Plunger 134178-4200 PT68"},
+      {"name": "Plunger 134178-4220 PT68"},
+      {"name": "Plunger 134178-5220 PT78"},
+      {"name": "Plunger 135176-3220 M33"},
+      {"name": "Plunger 135176-4120 M42"},
+      {"name": "Plunger 140163-4220 K334"},
+      {"name": "Plunger A45"},
+      {"name": "Plunger 2 418 455 402"},
+      {"name": "Plunger 131151-5820 A737"},
+      {"name": "Plunger P51"},
+      {"name": "Plunger SAY120PB202"},
+      {"name": "Plunger IZ"},
+      {"name": "Plunger M42"},
+      {"name": "Plunger P42"},
+      {"name": "Plunger P51"},
+      {"name": "Plunger S32"},
+      {"name": "Plunger SAY95AD21"},
+      {"name": "Plunger SAY100AD24"},
+      {"name": "Plunger T44"},
+      {"name": "Plunger U47A"},
+      {"name": "Plunger X170S"}
+    ],
+    "rotorhead": [
+      {"name": "Rotor Head 096400-1320"},
+      {"name": "Rotor Head 1 468 333 342", "vehicle": "Mitsubishi 4D55"},
+      {"name": "Rotor Head 1 468 374 020"},
+      {"name": "Rotor Head 1 468 374 036"},
+      {"name": "Rotor Head 096400-0232"},
+      {"name": "Rotor Head 096400-1030"},
+      {"name": "Rotor Head 096400-1160"},
+      {"name": "Rotor Head 096400-1240"},
+      {"name": "Rotor Head 096400-1250", "vehicle": "Toyota Kijang 7K"},
+      {"name": "Rotor Head 096400-1680"},
+      {"name": "Rotor Head 096400-1890"},
+      {"name": "Rotor Head 146400-5521", "vehicle": "Isuzu Panther 2,3"},
+      {"name": "Rotor Head 146401-0221"},
+      {"name": "Rotor Head 146401-4220", "vehicle": "NISSAN DIESEL QD32"},
+      {"name": "Rotor Head 146401-4720"},
+      {"name": "Rotor Head 146402-3120", "vehicle": "Nissan 4 Cylinder"},
+      {"name": "Rotor Head 146402-4420", "vehicle": "Isuzu Panther 2,5"},
+      {"name": "Rotor Head 146402-4720"},
+      {"name": "Rotor Head 146402-5220"},
+      {"name": "Rotor Head 146403-6820", "vehicle": "Ford Ranger Everest 2.5"},
+      {"name": "Rotor Head 146405-4420"},
+      {"name": "Rotor Head X9"},
+      {"name": "Rotor Head X4 12902-51741"},
+      {"name": "Rotor Head X6 129604-51740 "}
+    ]
+  },
+  "OtherProducts": {
+    "3PinInjector": [
+      {"name": "Tool Open Injector Nozzle Nosel Denso 3 Pins - Three Pin Wrench SST Repair Tools Denso"}
+    ],
+    "cartridgeTurbo": [
+      {"name": "Cartridge Turbo HX35 (4031507)"},
+      {"name": "Cartridge Turbo RHF5 (WL85C)"},
+      {"name": "Cartridge Turbo TD05H-14G (49178-02391)"},
+      {"name": "Cartridge Turbo TD03L4-09GK- 2.7 BK3Q-6K682-NA"},
+      {"name": "Cartridge Turbo CT16 17201-11070"},
+      {"name": "Cartridge Turbo CT16 17201-OL030"},
+      {"name": "Cartridge Turbo CT16 17201-OL040"},
+      {"name": "Cartridge Turbo CT16 17201-OL070"},
+      {"name": "Cartridge Turbo GT2056V 14411-EB70C"},
+      {"name": "Cartridge Turbo GT2259LS 761916-12"},
+      {"name": "Cartridge Turbo GT3576D 24100-3251C"},
+      {"name": "Cartridge Turbo GT3576DL (17201-EW041)"},
+      {"name": "Cartridge Turbo GTB1749VK 787556-17"},
+      {"name": "Cartridge Turbo HX35 (3539967)"},
+      {"name": "Cartridge Turbo RHF4 1515A029"},
+      {"name": "Cartridge Turbo RHF4 8980118922"},
+      {"name": "Cartridge Turbo RHF5 8981851951"},
+      {"name": "Cartridge Turbo RHV4 1515A170"},
+      {"name": "Cartridge Turbo RHV4 VJ38"},
+      {"name": "Cartridge Turbo TD04L (49189-00570)"},
+      {"name": "Cartridge Turbo TF035HL 1515A295"},
+      {"name": "Cartridge Turbo TD07-9 (ME073978, FINM211003)"}
+    ],
+    "coverL": [
+      {"name": "Cover L Canter Euro 4 Injector Return Oil Hose - Cover L"},
+      {"name": "Cover L Ford Everest Ranger 2.5 cc Injector Return Oil Hose - COVER L"}
+    ],
+    "coverT": [
+      {"name": "Mitsubishi Strada Triton Pajero Injector Return Oil Hose T Cover"},
+      {"name": "Cover T Mitsubishi Canter Euro 4 Injector Return Oil Hose Canter Euro 4"},
+      {"name": "Ford Everest Ranger 2.5 cc Injector Return Oil Hose T Cover"}
+    ],
+    "crC": [
+      {"name": "CR-C (V2) Common Rail Injector Tester"},
+      {"name": "CR-C (V2) PRO Common Rail Injector Tester"}
+    ],
+    "filterWrenchTool": [
+      {"name": "Oil Filter Dismantling Tool - Removal Fuel Filter Injector Tool"}
+    ],
+    "hexKey": [
+      {"name": "Screwdriver Bit Shock Wrench Nut Bolt Nutdriver Hexagonal CRV 3-14mm - 3.5mm"}
+    ],
+    "nozzleTester": [
+      {"name": "Nozzle Tester Plastic Base 0 681 200 502"},
+      {"name": "Nozzle Tester Steel Base 0 681 200 502"}
+    ],
+    "nozzleTesterPipe": [
+      {"name": "Nozzle Tester Pipe 17-19"},
+      {"name": "Nozzle Tester Pipe 19-19"}
+    ],
+    "pinTool": [
+      {"name": "Denso 3 Pin Injector Nozzle Open Pin Tool - Three Pin Set Denso SST Repair Tool"}
+    ],
+    "plungerTesterNozzle": [
+      {"name": "Plunger Nozzle Tester 10mm for S60h - Plunger for Nozzle Tester Tool"}
+    ],
+    "pressureGauge": [
+      {"name": "Pressure Gauge Nozzle Tester S60H Pressure Metering 60 MPA 8000 PSI"}
+    ],
+    "repairKitTurbo": [
+      {"name": "Repairkit Turbo GT3576"},
+      {"name": "Repairkit Turbo GT3576 (24100-3251C)"},
+      {"name": "Repairkit Turbo TD07-9 (ME073978)"}
+    ],
+    "sensorCKP": [
+      {"name": "Sensor CKP Ford 0281002410 - Crankshaft Ford Everest Ranger 2.5 3.0cc"}
+    ],
+    "sensorCommonRail": [
+      {"name": "Pressure Sensor 0281002908"},
+      {"name": "Pressure Sensor 0281006018"},
+      {"name": "Pressure Sensor 0281006327"},
+      {"name": "Rail Pressure Sensor 499000-6320"},
+      {"name": "Sensor 55PP05-01"},
+      {"name": "Sensor 89458-60010"},
+      {"name": "Sensor 89458-71010"},
+      {"name": "Sensor 0281002937"}
+    ],
+    "sensorLimiter": [
+      {"name": "Sensor Limiter Valve 8-98032549-0 Isuzu D-MAX 3000cc 4HK1 triton 2.5cc"},
+      {"name": "Fuel Pressure Limiter Valve fortuner 2.5cc 2KD 23810-0L010 095420-0670"},
+      {"name": "Sensor Valve Limiter DMax 3.0 3000 cc Limiter Pressure D-max 0281"},
+      {"name": "Sensor Valve Limiter Triton 2.5 2500 cc limiter Pressure Triton 0281"}
+    ],
+    "socketOilTemperature": [
+      {"name": "Socket Oil Temperature Sensor Denso"}
+    ],
+    "socketSCVInjector": [
+      {"name": "Socket SCV Denso Injector Denso Dmax (Rp.30.000)"}
+    ],
+    "socketSolenoidValve": [
+      {"name": "Socket Selenoid Valve Hydrolic"}
+    ],
+    "solenoidTurbo": [
+      {"name": "Actuator Vacum turbo Ford XLT XLS"},
+      {"name": "Actuator Vacum turbo Ford base"}
+    ],
+    "standSketmat": [
+      {"name": "Stand SketMat and Sketmat"}
+    ],
+    "toolsCat": [
+      {"name": "Tool Injector CAT 320D - SST Tools Repair Kit Injector"}
+    ],
+    "toolShim": [
+      {"name": "Injector Shim Thinning Tool E1024072 Shim Polish Injector Nozzle Tool"}
+    ],
+    "turboAssy": [
+      {"name": "Turbo Charger B2G (2674A256)"},
+      {"name": "Turbo Charger CT16 17201-11070"},
+      {"name": "Turbo Charger CT16 17201-OL030"},
+      {"name": "Turbo Charger CT16 17201-OL040"},
+      {"name": "Turbo Charger CT16 17201-OL070"},
+      {"name": "Turbo Charger GT2056V 14411-EB70C"},
+      {"name": "Turbo Charger GT2259LS (761916-12)"},
+      {"name": "Turbo Charger GT2556S 32006047 "},
+      {"name": "Turbo Charger GT3576D 24100-3251C"},
+      {"name": "Turbo Charger GT3576DL 17201-EW041"},
+      {"name": "Turbo Charger GTB1749VK 787556-17"},
+      {"name": "Turbo Charger GTB1749VK BK3Q-6K682-CB"},
+      {"name": "Turbo Charger GTB2256VK BK3Q-6K682-AB"},
+      {"name": "Turbo Charger HX35 (3539967)"},
+      {"name": "Turbo Charger HX35 (4031507)"},
+      {"name": "TURBO CHARGER HX40W 4050203 "},
+      {"name": "Turbo Charger RH6 8980787779"},
+      {"name": "Turbo Charger RHF4 1515A029"},
+      {"name": "Turbo Charger RHF4 8980118922"},
+      {"name": "Turbo Charger RHF5 (WL85C)"},
+      {"name": "Turbo Charger RHF5 8981851951"},
+      {"name": "Turbo Charger RHV4 1515A170"},
+      {"name": "Turbo Charger RHV4 VJ38"},
+      {"name": "TURBO CHARGER S310G080 (216-7815)"},
+      {"name": "TURBO CHARGER TD03L4-09GK- 2.7 BK3Q-6K682-NA"},
+      {"name": "Turbo Charger TD04L (49189-00570)"},
+      {"name": "Turbo Charger TD05H-14G (49178-02391)"},
+      {"name": "Turbo Charger TD07 49187-00271"},
+      {"name": "Turbo Charger TD07-9 (ME073978)"},
+      {"name": "Turbo Charger TD07S-25A,13 49187-00271"},
+      {"name": "Turbo Charger TF035HL 1515A295"}
+    ]
+  }
+}

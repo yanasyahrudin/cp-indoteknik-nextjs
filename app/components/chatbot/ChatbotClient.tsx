@@ -1,13 +1,19 @@
 'use client';
 import { GoogleGenAI } from '@google/genai';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { useRef, useEffect } from 'react';
-import { IoIosCloseCircle, IoLogoWhatsapp } from 'react-icons/io';
-import { IoChatbox } from 'react-icons/io5';
+import { IoIosCloseCircle } from 'react-icons/io';
+import { RiRobot2Fill } from 'react-icons/ri';
+import data from '../../translations/id/global.json';
+import allItechProducts from '../../data/allItechProducts/allProducts.json';
+import i18next from 'i18next';
+import { FiDelete } from 'react-icons/fi';
+import { IoSend } from 'react-icons/io5';
+import { FaUser } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const ai = new GoogleGenAI({
-    apiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY || 'AIzaSyDsFZfKymzJJEMsdvr0I8JxwjGyoGX4_IE',
+    apiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY || '',
 });
 
 // Add type for messages
@@ -28,14 +34,21 @@ const ChatHistory = ({ chatHistory }) => {
                             : 'bg-blue-100 text-blue-800'
                     }`}
                 >
-                    {message.type === 'user' && (
-                        <span className='mr-2 font-bold text-gray-600'>
-                            You: {message.text}
-                        </span>
-                    )}
-
-                    <div>
-                        <ReactMarkdown>{message.message}</ReactMarkdown>
+                    <div className='mt-1'>
+                        {message.type === 'user' ? (
+                            <FaUser className='text-gray-500' size={20} />
+                        ) : (
+                            <RiRobot2Fill className='text-blue-700' size={20} />
+                        )}
+                    </div>
+                    <div className='flex-1 gap-2 ml-2'>
+                        {message.type === 'user' ? (
+                            <span>{message.text}</span>
+                        ) : (
+                            <ReactMarkdown>
+                                {message.message || message.text}
+                            </ReactMarkdown>
+                        )}
                     </div>
                 </div>
             ))}
@@ -65,12 +78,39 @@ export default function ChatbotClient() {
     const [homePopupVisible, setHomePopupVisible] = useState(false);
     const modalRef = useRef<HTMLDivElement | null>(null);
 
+    const [modalBottom, setModalBottom] = useState(24);
+
+    useEffect(() => {
+        // Hanya berjalan di browser yang mendukung visualViewport
+        const handleResize = () => {
+            if (window.visualViewport) {
+                // Jika viewport height berkurang drastis, kemungkinan keyboard muncul
+                const keyboardHeight =
+                    window.innerHeight - window.visualViewport.height;
+                setModalBottom(keyboardHeight > 0 ? keyboardHeight + 8 : 24);
+            }
+        };
+
+        window.visualViewport?.addEventListener('resize', handleResize);
+        return () => {
+            window.visualViewport?.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const { t } = useTranslation('global');
+
     const handleToggleModal = () => {
         setIsOpen(!isOpen);
     };
 
     const handleUserInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserInput(e.target.value);
+    };
+
+    const knowledgeData = {
+        global: data,
+        translation: i18next.options?.resources?.id?.translation || {},
+        products: allItechProducts,
     };
 
     const sendMessage = async () => {
@@ -85,7 +125,38 @@ export default function ChatbotClient() {
         try {
             const result = await ai.models.generateContent({
                 model: 'gemini-2.5-pro',
-                contents: [{ role: 'user', parts: [{ text: userInput }] }],
+                contents: [
+                    {
+                        role: 'user',
+                        parts: [{ text: userInput }],
+                    },
+                ],
+                config: {
+                    systemInstruction: `
+                    You are a customer service agent named AI Assistant. 
+                    Company data: ${JSON.stringify(knowledgeData)}.
+
+                    All products from the Itech brand are available at Indo Teknik.
+
+                    Company Contact Information:
+                    - WhatsApp: +62 811-7531-881, +62 8123-6891-888
+                    - Email: customerservice@indo-teknik.com
+                    - Instagram: [@indoteknik](https://www.instagram.com/indoteknik/)
+                    - TikTok: [@indoteknikofficial](https://www.tiktok.com/@indoteknikofficial)
+                    - Marketplace:
+                        - Tokopedia: [Kunjungi => Tokopedia](https://tokopedia.link/qoZIKIkdcNb)
+                        - Shopee: [Kunjungi => Shopee](https://shopee.co.id/indoteknikpekanbaru)
+
+                    Rules:
+                    - Always respond in Indonesian or English based on the user's input language.
+                    - Answer briefly, clearly, accurately, and politely.
+                    - Only provide answers based on the company data provided.
+                    - If the answer is not found in the data, respond with:
+                    • "Maaf, saya tidak memiliki informasi tersebut saat ini."  
+                    • or "Sorry, I don't have that information at the moment."
+                    - Do NOT create or assume information that is not included in the data.
+                            `,
+                },
             });
 
             const responseText =
@@ -123,19 +194,30 @@ export default function ChatbotClient() {
     };
 
     return (
-        <div className='fixed z-[2147483647] left-8 bottom-24'>
+        <div
+            className='fixed z-[2147483647] right-8'
+            style={{ bottom: modalBottom + 60 }}
+        >
             {!homePopupVisible && (
                 <button
                     className='bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900 rounded-xl p-3 shadow-md hover:scale-105 transition-transform duration-200 flex justify-center items-center gap-2'
                     onClick={handleToggleModal}
                 >
-                    Tanya AI <IoChatbox />
+                    AI Assistant
+                    <RiRobot2Fill />
                 </button>
             )}
 
             <div
                 ref={modalRef}
-                className={`fixed left-8 bottom-24 top-24 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl shadow-lg p-8 lg:w-1/5 flex flex-col justify-between transition-all duration-300 ease-in-out ${
+                style={{ bottom: modalBottom + 60 }}
+                className={`fixed right-8 bg-gradient-to-bl from-neutral-50 to-blue-200 rounded-xl shadow-lg p-4 sm:p-6 md:p-8 
+                sm:w-[80vw] sm:max-w-lg 
+                md:w-[60vw] md:max-w-xl 
+                lg:w-[30vw] lg:max-w-2xl 
+                flex flex-col justify-between 
+                max-h-[90vh] sm:max-h-[90vh] md:max-h-[90vh] overflow-y-auto
+                transition-all duration-300 ease-in-out ${
                     isOpen
                         ? 'opacity-100 scale-100'
                         : 'opacity-0 scale-90 pointer-events-none'
@@ -160,31 +242,46 @@ export default function ChatbotClient() {
                     <Loading isLoading={isLoading} />
                 </div>
 
+                {/* apa yang anda butuhkan */}
+                {chatHistory.length === 0 && (
+                    <div className='mb-4 text-center text-blue-900 font-medium'>
+                        <span>{t('chatbot.whatDoYouNeed')}</span>
+                    </div>
+                )}
+
                 {/* Input & Buttons */}
-                <div className='flex flex-col gap-3'>
+                <div className='flex flex-col gap-3 backdrop-blur rounded-lg'>
                     <input
                         value={userInput}
                         type='text'
-                        placeholder='Tulis pertanyaan...'
-                        className='w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition'
+                        placeholder={`${t('chatbot.typeYourMessage')}`}
+                        className='w-full bg-white/80 border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition'
                         onChange={handleUserInput}
-                        onKeyDown={e => e.key === 'Enter' && sendMessage()}
+                        onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+                        onFocus={() => {
+                            setTimeout(() => {
+                                modalRef.current?.scrollTo({
+                                    top: modalRef.current.scrollHeight,
+                                    behavior: 'smooth',
+                                });
+                            }, 300);
+                        }}
                         disabled={isLoading}
                     />
                     <div className='flex gap-3'>
                         <button
-                            className='flex-1 bg-red-600 text-white p-2 rounded-lg hover:bg-red-700 transition'
+                            className='flex-1 hover:scale-105 px-2 py-2 bg-gradient-to-bl from-neutral-50 to-blue-100 text-blue-900 font-semibold rounded-xl shadow-md flex justify-center items-center gap-2 '
                             onClick={clearChat}
                             disabled={isLoading || chatHistory.length === 0}
                         >
-                            Clear Message
+                            <FiDelete /> {t('chatbot.clearChat')}
                         </button>
                         <button
-                            className='flex-1 bg-blue-900 text-white p-2 rounded-lg hover:bg-blue-700 transition'
+                            className='flex-1 hover:scale-105 px-2 py-2 bg-blue-900 text-blue-900 font-semibold rounded-xl shadow-md flex justify-center items-center gap-2 text-white'
                             onClick={sendMessage}
                             disabled={isLoading || !userInput.trim()}
                         >
-                            Send
+                            <IoSend /> {t('chatbot.sendMessage')}
                         </button>
                     </div>
                 </div>

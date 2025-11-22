@@ -420,5 +420,11 @@
             "batteryAA": "Battery and Automotive Aftermarket"
         },
         "disclaimer": "The appearance and mention of the brands ITech, Kobelco, Garrett, Redat, Delphi, Denso, Ford, JCB, Scania, KIA, Sumitomo, Komatsu, Hitachi, Case, Bosch, LiuGong, Caterpillar, Liwei, Perkins, Renault, Daihatsu, Continental, Sany, Yanmar, Mazda, Volvo, FAW, Nissan, Cummins, Crone, Chevrolet, and Mitsubishi on this website is for informational and reference purposes only. indo-teknik.com has no ownership rights or affiliation with those brands."
+    },
+    "chatbot": {
+        "clearChat": "Clear",
+        "sendMessage": "Send",
+        "whatDoYouNeed": "What do you need?",
+        "typeYourMessage": "Type your message..."
     }
 }

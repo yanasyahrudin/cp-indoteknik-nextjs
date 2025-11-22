@@ -20,7 +20,7 @@ export default function RootLayout({
                     <Header />
                     <main>{children}</main>
                     <Footer />
-                    <ContactModal />
+                    {/* <ContactModal /> */}
                     <ChatbotPage />
                 </I18nProvider>
                 <GoogleAnalytics gaId='G-HWTRNMB1SN' />
