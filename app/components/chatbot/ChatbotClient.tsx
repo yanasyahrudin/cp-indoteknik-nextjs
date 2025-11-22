@@ -135,8 +135,8 @@ export default function ChatbotClient({ data, allItechProducts }) {
 
                         All products from the Itech brand are available at Indo Teknik.
 
-                        Company Contact Information:
-                        - WhatsApp: +62 811-7531-881, +62 8123-6891-888
+                        Company Contact Information (Must inform below when asked and inform!!):
+                        - WhatsApp: [0811-7531-881](https://wa.me/628117531881), [0812-3689-1888](https://wa.me/6281236891888)
                         - Email: customerservice@indo-teknik.com
                         - Instagram: [@indoteknik](https://www.instagram.com/indoteknik/)
                         - TikTok: [@indoteknikofficial](https://www.tiktok.com/@indoteknikofficial)
@@ -145,6 +145,7 @@ export default function ChatbotClient({ data, allItechProducts }) {
                             - Shopee: [Kunjungi => Shopee](https://shopee.co.id/indoteknikpekanbaru)
 
                         Rules:
+                        - When informing WhatsApp contact, always say: "Silakan klik nomor WhatsApp berikut untuk chat langsung:" and display the WhatsApp numbers as bold clickable links: **[0811-7531-881](https://wa.me/628117531881)**, **[0812-3689-1888](https://wa.me/6281236891888)**.
                         - Always respond in Indonesian or English based on the user's input language.
                         - Answer briefly, clearly, accurately, and politely.
                         - Only provide answers based on the company data provided.
